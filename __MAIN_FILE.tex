@@ -1,8 +1,8 @@
-\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc, ngerman]{scrreprt}
 %-----------------------------------------------------------------
 \usepackage{etoolbox}
 \newbool{deutsch}
-% \booltrue{deutsch}	% comment out to switch document to english
+\booltrue{deutsch}	% comment out to switch document to english
 %-----------------------------------------------------------------
 \input{pre-packages}
 \input{pre-variables}
@@ -16,9 +16,10 @@
 \DeclareNameAlias{translator}{family-given}
 \addbibresource{literature.bib}
 %------DEBUGGING--------------------------------------------------
-% \usepackage[showframe]{geometry} % comment for live version
+% \usepackage[showframe]{geometry} % comment out for live version
 % \usepackage{layout}
 % \usepackage{showframe}
+% \usepackage[export]{adjustbox} % adds aside others the <frame> option to \includegraphics[]{}. this makes there borders visible and helps debugging/aligning
 %-----------------------------------------------------------------
 \begin{document}
 %-----------------------------------------------------------------

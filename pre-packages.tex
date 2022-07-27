@@ -52,9 +52,9 @@
 %\usepackage{pgfplots}
 \usepackage[figuresright]{rotating}
 \usepackage{scrlayer-scrpage}
-%\usepackage{sistyle}
-%\usepackage[locale=DE]{siunitx} %nicht zusammen mit sistyle %---------
-\usepackage[locale=DE,per-mode=symbol]{siunitx} %nicht zusammen mit sistyle %---------
+\usepackage[locale=DE,per-mode=symbol,range-units = repeat,separate-uncertainty=true]{siunitx} %nicht zusammen mit sistyle %---------
+\DeclareSIUnit{\amperehour}{Ah}
+\DeclareSIUnit{\watthour}{Wh}
 % \usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % für die Unterbilder %---------
 \usepackage{subcaption}
 \usepackage{shortvrb}
@@ -70,7 +70,7 @@
 \usepackage{wrapfig}
 \usepackage{xr-hyper}
 \usepackage{arydshln} %für \hdashline[5pt/2pt] % muss am Ende stehen, sonst gibt es Probleme mit xcolor
-\usepackage{hyperref} % muss am Schluss stehen
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true, % Color links instead of disgusting boxes :barfing_emoji:
     linkcolor={black}, % Color of internal links
@@ -82,15 +82,14 @@
 \usepackage[nonumberlist, acronym, toc, section]{glossaries} % muss nach hypersetup stehen
 %----------------
 %\usepackage{romannum} % Seitenzahlen in römischen Ziffern
-%\usepackage{adjustbox}
 \usepackage{scrhack}
-\usepackage[style=numeric, citestyle=numeric, backend=biber]{biblatex}
+\usepackage[style=numeric, citestyle=numeric, backend=biber, date=short]{biblatex}
 \usepackage[useregional]{datetime2}
-\usepackage{cleveref} % löscht labels!!!!!!!!!! <--- warum? habs trotzdem eingefügt weil es die referencen nice macht ohne newcommands dafür zu brauchen. außerdem steht intellisense drauf ;)
+\usepackage{cleveref}
 % \usepackage{isotope} % um chemische gleichungen hübscher darstellen zu können
-\usepackage{framed} % rahmen um dinge malen können
-\usepackage{svg} % um auch vektorgrafiken als bild einfügen zu können
-\usepackage{adjustbox} % skaliert floats dynamischer (anti-over/underfull)
+% \usepackage{framed} % rahmen um dinge malen können
+\usepackage[inkscapearea=page]{svg} % um auch vektorgrafiken als bild einfügen zu können https://ctan.org/pkg/svg
+% \usepackage{adjustbox} % skaliert floats dynamischer (anti-over/underfull)
 \usepackage[numbered]{bookmark} % platziert im pdf reader bei der kapitelübersicht die jeweiligen kapitelnummer vor die kapitelüberschriften
 % ---------- Make floats stay within the chapter/section/subsection they got placed ------------------
 \usepackage{placeins}
