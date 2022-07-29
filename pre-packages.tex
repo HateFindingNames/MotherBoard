@@ -24,7 +24,9 @@
 % bf --> bold face
 % sf --> sans serif
 \usepackage[table]{xcolor}
-\usepackage[right]{eurosym}
+% \usepackage[right]{eurosym}
+\usepackage{currency}
+\DefineCurrency{EUR}{name={Euro},plural={Euro},iso={EUR},kind=iso,symbol={\€}}
 \usepackage{ellipsis}
 \usepackage{graphicx}
 \usepackage{float}
@@ -52,9 +54,9 @@
 %\usepackage{pgfplots}
 \usepackage[figuresright]{rotating}
 \usepackage{scrlayer-scrpage}
-\usepackage[locale=DE,per-mode=symbol,range-units = repeat,separate-uncertainty=true]{siunitx} %nicht zusammen mit sistyle %---------
-\DeclareSIUnit{\amperehour}{Ah}
-\DeclareSIUnit{\watthour}{Wh}
+\usepackage[locale=DE,per-mode=fraction,range-units=repeat,separate-uncertainty=true]{siunitx} %nicht zusammen mit sistyle %---------
+\DeclareSIUnit\amperehour{Ah}
+\DeclareSIUnit\watthour{Wh}
 % \usepackage[font={scriptsize,sl},captionskip=3pt]{subfig} % für die Unterbilder %---------
 \usepackage{subcaption}
 \usepackage{shortvrb}
@@ -65,7 +67,6 @@
 \usepackage{tocbasic}
 % \usepackage{tikz}
 \usepackage{times}
-\usepackage{units}
 \usepackage{xurl}
 \usepackage{wrapfig}
 \usepackage{xr-hyper}

@@ -1,2 +1,25 @@
 % LTeX: language=de-DE
 \chapter{Mechanik}
+	Wie in \cref{sec:constructive limitations} besprochen beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren.
+	BLDC-Motoren sind auf dem Markt als \textit{Inrunner} und \textit{Outrunner} erhältlich.
+	In ersteren sind die Statorwicklungen an der Außenseite angeordnet, zweitere ordnen sie an der Innenseite an.
+	\begin{figure}[h]
+		\centering
+		\includesvg[width=.8\textwidth]{Assets/Inrunner_Outrunner}
+		\caption[Gegenüberstellung von Inrunner und Outrunner]{Schematische Gegenüberstellung von BLDC-Motoren als Inrunner (links) bzw. Outrunner (rechts) ausgeführt~\cite{inrunner.outrunner.2022}.}
+		\label{fig:inrunner outrunner}
+	\end{figure}
+	Das Funktionsprinzip bleibt so zwar unverändert, durch den vergrößerten Radius des Angriffspunktes der magnetischen Kopplung kann bei gleicher Baugröße und gleichem Phasenstrom ein höheres Drehmoment erzeugt werden.
+	Sind größere Drehzahlen gefordert, so ist die Bauweise des Inrunners durch den reduzierten Durchmesser des Rotors vorteilhaft.
+	Da hohe Drehzahlen gegenüber einem zu erzeugenden Drehmoment für das zu konstruierende Antriebssystem von untergeordneter Priorität sind und sich oberhalb eines Schwellwertes sogar kontraproduktiv auswirken können fällt hier die Wahl auf das Outrunnerprinzip.\par\medskip
+	%
+	Auch während Lenkmanövern muss eine Übertragung des Drehmomentes auf die Rollen der Trucks sichergestellt sein.
+	Praktikabel und mit einfachen Mitteln denkbar sind hier eine koaxiale Positionierung des Motors mit der angetrieben Rolle.
+	Der Motor kann hier unter eines Offsets weiter im Zentrum des Hangers platziert werden, setzt in dem Fall jedoch eine Hohlwelle zwingend vorraus.
+	Eine weitere Option bildet die Positionierung des Motors in der Rolle selbst.
+	So bildet das rotierende Gehäuse des Motors selbst die Rolle.
+	Ein Vorteil dieser Variante ist einfache Marktverfügbarkeit und deutliche Reduktion mechanischer Komplexität.
+	Nachteilig sind hier im Vergleich deutlich erhöhte Preise, weniger Auswahl und schlechtere Wartungsmöglichkeiten.\par
+	Letztlich kann die Motorachse parallel zur Achse der Rollen positioniert werden.
+	Da diese Lösungsvariante die geringsten Anforderungen an die Bauweise der Motoren stellt, sind hier Motoren sehr günstig und in großer Vielfalt am Markt verfügbar.
+	Dem gegenüber steht ein höherer Komplexitätsgrad zur mechanischen Kopplung des Drehmomentes der Motorachse mit den Rollen.

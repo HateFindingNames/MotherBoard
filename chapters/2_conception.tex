@@ -20,13 +20,12 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Longboard.svg}
-			\caption[Grundlegender Aufbau eines Longboards]{Grundlegender Aufbau eines Longboards. 15~Deck, 16~Truck Bolts, 17~Truck Bolt Nuts, 18~Riser Pad.}
-			\label{fig:longboard}
+			\caption[Grundlegender Aufbau eines Longboards]{Grundlegender Aufbau eines Longboards. 15~Deck, 16~Truck Bolts, 17~Truck Bolt Nuts, 18~Riser Pad.}\label{fig:longboard}
 		\end{figure}
 		%
 		\Cref{fig:longboard} zeigt zunächst den grundlegenden Aufbau eines Longboards.
 		Erkennbar sind hier vordergründig das Deck~(15), welches die fahrende Person trägt und hierbei einen Großteil der wirkenden Kräfte aufnehmen muss.
-		Je nach Fahrstil werden weichere oder härtere Materialien gewünscht um etwa Unebenheiten des Untergrundes auszugleichen oder die Ausführung von Tricks\footnote{Über die rein laterale Fortbewegung hinausgehende, meist kunstvoll ausgeführte Bewegungen des Boards mit und unter den Füßen.}~positiv zu beeinflussen.
+		Je nach Fahrstil werden weichere oder härtere Materialien gewünscht um etwa Unebenheiten des Untergrundes auszugleichen oder die Ausführung von Tricks\footnote{Über die rein laterale Fortbewegung hinausgehende, meist kunstvoll ausgeführte Bewegungen des Boards mit und unter den Füßen.}~positiv zu beeinflussen.\linebreak
 		Meist kommt hier Schichtholz mit oder ohne eingearbeitetem Glas-, Aramid- oder Kohlefasergewebe zum Einsatz, es sind bisweilen aber auch exotischere Materialien wie Aluminium, ABS\footnote{Acrylnitrilbutadienstyrol.}~vertreten.
 		In \cref{fig:longboard} befinden sich links und rechts, zentral entlang der Längsachse des Decks angeordnet die Trucks genannten Baugruppen zusammen mit jeweils zwei Rollen.
 		Eine mechanisch belastbare Verbindung zum Deck wird durch \textit{Truck Bolts}~(16) und \textit{Truck Bolt Nuts}~(17) hergestellt.
@@ -37,8 +36,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[height=.6\textheight]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Truck}
-			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textsc{Caliper II}. Sichtbar sind hier: 1~Baseplate, 2~Pivot Cup, 3~Kingpin, 4~Hanger, 5~RS Bushing, 6~BS Bushing, 7~BS Washer, 8~RS Washer, 9~Kingpin Nut.}
-			\label{fig:caliper exploded}
+			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textsc{Caliper II}. Sichtbar sind hier: 1~Baseplate, 2~Pivot Cup, 3~Kingpin, 4~Hanger, 5~RS Bushing, 6~BS Bushing, 7~BS Washer, 8~RS Washer, 9~Kingpin Nut.}\label{fig:caliper exploded}
 		\end{figure}
 		%
 		Der Aufbau der Trucks selbst wird in \cref{fig:caliper exploded} exemplarisch am Typ \textsc{Caliber II} gezeigt.
@@ -53,6 +51,12 @@
 		Unterschieden wird hier, da sich verschiedene Geometrien und Härtegrade der \textit{Bushings} nicht unabhängig ihrer Position merklich auf das Fahrgefühl und Lenkvermögen auswirken können\footnote{Durch Drehen der \textit{Kingpin Nut} und damit einer Änderung der Vorspannung der \textit{Bushings}~kann hier auch im Feld relativ unkompliziert nachjustiert werden}.
 		Um die Lasten besser auf die Oberfläche der \textit{Bushings} zu verteilen werden üblicherweise tellerförmige Scheiben, die \textit{RS} und \textit{BS Washer}~(5,6) auf den \textit{Hanger} abgewandten Seite platziert.\par\medskip
 		%
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Wheels NT}
+			\caption[Montage der Rollen an der Achse des Hanger]{Montage der Rollen an der Achse des Hangers. Links in explodierter und rechts in Schnittansicht. Zu sehen sind: 10~Rolle, 11~Kugellager, 12~Speedring, 13~Spacer, 14~Achsmutter.}\label{fig:wheel NT exploded}
+		\end{figure}
+		%
 		Je nach gewünschter Laufruhe und in Abwägung zwischen Traktion und Rollwiderstand werden Rollen verschiedener Größen und Materialien drehbar auf den \textit{Hanger}-Achsen gelagert.
 		Mit Blick auf \cref{fig:wheel NT exploded} wird Konzentrisch in den Kern der Rolle~(10) -- vergleichbar mit einer Felge, die das weichere Mantelmaterial trägt -- beidseitig jeweils ein 608 Kugellager~(11) platziert.
 		Diese Kugellager sind Radialrillenkugellager und gebaut, um besonders gut radiale Kräfte aufnehmen und ableiten zu können.
@@ -62,57 +66,76 @@
 		Ihre Dimensionen entsprechen denen des \textit{Spacers}, allerdings mit nur \qty{1}{\milli\metre} eine deutlich geringere Länge.
 		Letztlich wird alles mit einer \textit{Achsmutter} auf der \textit{Hanger}-Achse fixiert.
 		%
-		\begin{figure}[h]
-			\centering
-			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Wheels NT}
-			\caption[Montage der Rollen an der Achse des Hanger]{Montage der Rollen an der Achse des Hangers. Links in explodierter und rechts in Schnittansicht. Zu sehen sind: 10~Rolle, 11~Kugellager, 12~Speedring, 13~Spacer, 14~Achsmutter.}
-			\label{fig:wheel NT exploded}
-		\end{figure}
+	\section{Konstruktive Rahmenbedingungen}\label{sec:constructive limitations}
 		%
-	\section{Konstruktive Rahmenbedingungen}
-		%
-		Das Antriebssystem soll in ein bestehendes System aus Batterie, Batteriemanagement, Motorcontrollern und Deck integriert werden.
+		Das Antriebssystem soll in ein bestehendes System aus Batterie, Batteriemanagement, Motorcontrollern und Deck integriert und die Einsatzbedingungen müssen berücksichtigt werden.
 		Hieraus ergeben sich konstruktive Rahmenbedingungen, die bei der Planung berücksichtigt werden müssen.
-		Die Batterie besteht aus 40~Lithium-Ionen Zellen in 10S4P-Konfiguration vom Typ \textsc{Samsung INR18650-30Q} mit einer nominellen Zellspannung von \qty{3,6}{\volt}, einer Mindestzellentladekapazität von \qty{2950}{\milli\amperehour} und einem maximalen Entladestrom von \qty{15}{\ampere} (vgl.~\cref{tab:cellspecifications} und~\cite{INR18650.30Q.Specs.202202}).
 		%
-		\begin{table}[h]
-			\caption[Zellspezifikationen \textsc{Samsung INR18650-30Q}]{Zellspezifikationen \textsc{Samsung INR18650-30Q}~\cite{INR18650.30Q.Specs.202202}.}
-			\label{tab:cellspecifications}
-			\centering
-			\begin{tabular}{@{}ll@{}}
-				\toprule
-				Charakteristik				& Spezifikationen \\ \midrule
-				Minimale Entladekapazität	& \qty{2950}{\milli\amperehour} \\
-				Nominelle Zellspannung		& \qty{3,6}{\volt} \\
-				Standard Ladebedingungen	& CC/CV, \qty{1,5}{\ampere}, \qty{4,2 +- 0,05}{\volt} \\
-				Maximale Ladebedingungen	& CC/CV, \qty{4}{\ampere}, \qty{4,2 +- 0,05}{\volt} \\
-				Maximaler Dauerentladestrom & \qty{15}{\ampere} bei \qty{25}{\degreeCelsius} \\
-				Minimale Zellspannung		& \qty{2,5}{\volt} \\
-				Gewicht						& \qty{48}{\gram} \\
-				Betriebstemperatur			& Laden: \qtyrange{0}{50}{\degreeCelsius}, Entladen: \qtyrange{-20}{75}{\degreeCelsius} \\ \bottomrule
-			\end{tabular}
-		\end{table}
-		%
-		%
-		10S4P meint hier jeweils vier Zellen parallel geschaltet mit 10 jener Sub-Zellen in Reihe (vgl.~hierzu~\cref{fig:battery pack}).
-		So ergibt sich eine nominelle Spannung der Batterie von \qty{36}{\volt}, eine Kapazität von \qty{11,8}{\amperehour} und ein maximaler Dauerentladestrom von \SI{60}{\ampere}.
-		\begin{figure}[h]
-			\centering
-			\includegraphics[width=.9\textwidth]{Footage/Pictures/Battery pack.jpg}
-			\caption[Der verbaute Lithium-Ionen Zellverband]{Der verbaute Lithium-Ionen Zellverband. Zu erkennen sind die 10 Sub-Zellen bestehend aus jeweils vier Einzelzellen.}
-			\label{fig:battery pack}
-		\end{figure}\par
-		%
-		Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei \textit{Elektronischen Speed Controllern} (ESC) des Typs \textsc{FSESC 4.12}\footnote{Die wiederum industriell gefertigte 1:1 Nachbauten des populären \textsc{VESC} von Benjamin~Vedder sind.} angesteuert werden.
-		ESC sind elektronische Komponenten vornehmlich zur elektronischen Kommutation von bürstenlosen Gleichstrommotoren (\textit{Brushless Direct Current}, BLDC).
-		Als solche schränken sie die Auswahl der Motortypen zwar nicht exklusiv auf BLDCs ein -- Gleichstrommotoren mit Schleifkontakt sind auch denkbar -- allerdings bieten sie in Kombination mit BLDCs einen deutlich höheren Funktionsumfang.
-		Darüber hinaus sind BLDC gegenüber Gleichstrommotoren mit Schleifkontakten effizienter, bieten eine höhere Leistungsdichte und sind bauartbedingt unempfindlich gegenüber Nässe\footnote{Je nach Art der Lagerung. Dies betrifft jedoch ausschließlich die mechanischen Komponenten der Motoren.}.
-		\begin{figure}[h]
-			\centering
-			\includegraphics[width=.9\textwidth]{Footage/Pictures/Electronics.jpg}
-			\caption[Eingesetzte ESC]{Unten im Bild die beiden eingesetzten ESC vom Typ \textsc{FSESC 4.12}. Weiter im Bild zu sehen oben links ein HC-06 Bluetooth Modul, darunter das Batteriemanagementsystem. Auf der rechten Seite im Bild von links nach rechts: Spannungsregler, elektronischer Schalter und der Funkempfänger für die Steuersignale.}
-			\label{fig:electronics}
-		\end{figure}
-		%
+		\subsection{Bestehendes System}
+			%
+			Die Batterie besteht aus 40~Lithium-Ionen Zellen in 10S4P-Konfiguration vom Typ \textsc{Samsung INR18650-30Q} mit einer nominellen Zellspannung von \qty{3,6}{\volt}, einer Mindestzellentladekapazität von \qty{2950}{\milli\amperehour} und einem maximalen Entladestrom von \qty{15}{\ampere} (vgl.~\cref{tab:cellspecifications} und~\cite{INR18650.30Q.Specs.202202}).
+			%
+			\begin{table}[h]
+				\caption[Zellspezifikationen \textsc{Samsung INR18650-30Q}]{Zellspezifikationen \textsc{Samsung INR18650-30Q}~\cite{INR18650.30Q.Specs.202202}.}\label{tab:cellspecifications}
+				\centering
+				\begin{tabular}{@{}ll@{}}
+					\toprule
+					Charakteristik				& Spezifikationen \\ \midrule
+					Minimale Entladekapazität	& \qty{2950}{\milli\amperehour} \\
+					Nominelle Zellspannung		& \qty{3,6}{\volt} \\
+					Standard Ladebedingungen	& CC/CV, \qty{1,5}{\ampere}, \qty{4,2 +- 0,05}{\volt} \\
+					Maximale Ladebedingungen	& CC/CV, \qty{4}{\ampere}, \qty{4,2 +- 0,05}{\volt} \\
+					Maximaler Dauerentladestrom & \qty{15}{\ampere} bei \qty{25}{\degreeCelsius} \\
+					Minimale Zellspannung		& \qty{2,5}{\volt} \\
+					Gewicht						& \qty{48}{\gram} \\
+					Betriebstemperatur			& Laden: \qtyrange{0}{50}{\degreeCelsius}, Entladen: \qtyrange{-20}{75}{\degreeCelsius} \\ \bottomrule
+				\end{tabular}
+			\end{table}
+			%
+			%
+			10S4P meint hier jeweils vier Zellen parallel geschaltet mit 10 jener Sub-Zellen in Reihe (vgl.~hierzu~\cref{fig:battery pack}).
+			So ergibt sich eine nominelle Spannung der Batterie von \qty{36}{\volt}, eine Kapazität von \qty{11,8}{\amperehour} und eine abrufbare Leistung von \(\sim \SI{425}{\watthour}\) bei einem maximalen Dauerentladestrom von \SI{60}{\ampere}.
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=.9\textwidth]{Footage/Pictures/Battery pack.jpg}
+				\caption[Der verbaute Lithium-Ionen Zellverband]{Der verbaute Lithium-Ionen Zellverband. Zu erkennen sind die 10 Sub-Zellen bestehend aus jeweils vier Einzelzellen.}\label{fig:battery pack}
+			\end{figure}\par
+			%
+			Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei \textit{Elektronischen Speed Controllern} (ESC) des Typs \textsc{FSESC 4.12}\footnote{Die wiederum industriell gefertigte 1:1 Nachbauten des populären \textsc{VESC} von Benjamin~Vedder sind.} angesteuert werden.
+			ESC sind elektronische Komponenten vornehmlich zur elektronischen Kommutation von bürstenlosen Gleichstrommotoren (\textit{Brushless Direct Current}, BLDC).
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=.9\textwidth]{Footage/Pictures/Electronics.jpg}
+				\caption[Eingesetzte ESC]{Unten im Bild die beiden eingesetzten ESC vom Typ \textsc{FSESC 4.12}. Weiterhin im Bild zu sehen oben links ein HC-06 Bluetooth Modul, darunter das Batteriemanagementsystem. Auf der rechten Seite im Bild von links nach rechts: Spannungsregler, elektronischer Schalter und der Funkempfänger für die Steuersignale.}\label{fig:electronics}
+			\end{figure}
+			Als solche schränken sie die Auswahl der Motortypen zwar nicht exklusiv auf BLDCs ein -- Gleichstrommotoren mit Schleifkontakt sind auch denkbar -- allerdings bieten sie in Kombination mit BLDCs einen deutlich höheren Funktionsumfang.
+			Darüber hinaus sind BLDC gegenüber Gleichstrommotoren mit Schleifkontakten effizienter, bieten eine höhere Leistungsdichte und sind bauartbedingt unempfindlich gegenüber Nässe\footnote{Je nach Art der Lagerung. Dies betrifft jedoch ausschließlich die mechanischen Komponenten der Motoren.}.
+			%
+		\subsection{Einsatzumgebung und -bedingungen}
+			%
+			Das Gewicht des Fahrers wird inklusive Kleidung und transportiertem Gepäck mit \qty{90}{\kilo\gram} angenommen.
+			Hinzu zu addieren sind \(\sim \qty{5}{\kilo\gram}\) durch Deck, Batterie und Elektronik und pessimistisch geschätzte weitere \qty{5}{\kilo\gram} durch die beiden Trucks zusammen mit dem Antriebssystem.
+			So ergibt sich ein geschätztes, vom Antriebssystem zu beschleunigendes Gesamtgewicht von \(\sim \qty{100}{\kilo\gram}\)\par
+			Weiter soll die fertige Maschine auf in urbanen Gebieten üblichen Untergründen betrieben werden können.
+			Es wird also mit leichten bis moderaten Steigungen und Asphalt in Form des Bodenbelages gerechnet.\par\medskip
+			%
+			Die Maschine soll vorrangig als Sportgerät für milde bis sonnige Wetterlagen gedacht werden.
+			Extrembedingungen wie Starkregen, Schnee oder Eisglätte finden hier also keine weitere Beachtung.
+
 	\section{Designziele}
-		%
+		Mit in den obigen Kapiteln genannten Einschränkungen können einige Soll-Forderungen formuliert werden.
+		So muss das System\ldots
+		\begin{itemize}
+			\item \ldots in der Lage sein mindestens das angenommene Gesamtgewicht von \qty{100}{\kilo\gram} moderate Steigungen hinauf befördern zu können.
+			Als Designrichtlinie wird hier eine Steigung von \qty{5}{\percent} festgelegt.
+			\item \ldots auf ebenem Asphalt auf mindestens \qty{25}{\kilo\metre\per\hour} beschleunigen können.
+			In Kombination mit obiger Forderung wird hier auf das Festlegen eines Zeitintervalls, innerhalb dessen die Endgeschwindigkeit erreicht werden soll, verzichtet.
+			\item \ldots einfach zu Warten sein.
+		\end{itemize}
+		Neben den harten Zielen ist wünschenswert, dass das System...
+		\begin{itemize}
+			\item \ldots möglichst aus selbst herstellbaren Komponenten besteht.
+			\item \ldots kostengünstig ist.
+			Als Richtwert soll hier \dEUR{300} angelegt werden.
+			\item \ldots die von der Batterie zur Verfügung gestellte Leistung von \SI{425}{\watthour} bezogen auf die erreichbare Reichweite möglichst effizient nutzt.
+		\end{itemize}
