@@ -20,11 +20,15 @@
 	Vorteile dieser Variante sind sowohl eine gute Marktverfügbarkeit, als auch eine deutliche Reduktion mechanischer Komplexität des Antriebssystems.
 	Nachteilig sind hier im Vergleich deutlich höhere Preise, weniger Auswahl und schlechte Wartungsmöglichkeiten.\par
 	Letztlich kann die Motorachse parallel zur Rollenachse positioniert werden.
-	So ist zwar die Kraftübertragung von Welle zu Rolle aufwändiger herzustellen, es werden aber die geringsten Anforderungen an die Motoren bezüglich ihrer Bauform gestellt wodurch sie besonders günstig und in großer Vielfalt am Markt verfügbar sind.\par
+	So ist zwar die Kraftübertragung von Welle zu Rolle aufwändiger herzustellen, es werden aber die geringsten Anforderungen an die Motoren bezüglich ihrer Bauform gestellt wodurch sie besonders günstig und in großer Vielfalt am Markt verfügbar sind.\par\medskip
+	%
+	Gegenüber BLDC-Motoren, die etwa für den Bau von Drohnen für besonders hohe Drehzahlen optimiert sind, steht in der vorliegenden Anwendung das erreichbare Drehmoment im Vordergrund.
 	
+	Als praktikabel hat sich der Motor mit Handelsnamen \textit{TorqueBoards} und der Typenbezeichnung \textit{6355 190KV} gezeigt.
 	%
 	\section{Motorbefestigung}\label{sec:motorbefestigung}
 		Mit obigen Überlegungen fällt die Lösungswahl auf parallel zur Rollachse angeordnete Outrunnermotoren.
+
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
@@ -39,9 +43,17 @@
 		\end{figure}
 		%
 	\section{Transmission}\label{sec:transmission}
+	Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
+	Seine breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag \cite{gates.catalogue.2021}
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
+			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
 			\caption{HTD-5M Zahnscheibe}
 			\label{fig:htd 5m driven}
+		\end{figure}
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
+			\caption{Konterscheibe.}
+			\label{fig:orangatang kegel flat face}
 		\end{figure}
