@@ -47,7 +47,7 @@
 	%------------------------------------------------
 	%	Subtitle
 	%------------------------------------------------
-	\textsc{\LARGE \titleLV}\vspace{0.5cm}%
+	\textsc{\Large \titleLV}\vspace{0.5cm}%
 	\vspace*{3\baselineskip} % Whitespace under the subtitle
 
 	%------------------------------------------------
@@ -58,9 +58,13 @@
 	}{%
 		\underline{Author}\par\vspace{0.5cm}
 	}
-	\vspace{0.5\baselineskip} % Whitespace before the editors
-	{\scshape\Large \nameA \\} % Editor list
+	\vspace{0.5\baselineskip} % Whitespace above the editors
+	{\scshape\LARGE \nameA \\} % Editor list
 	\vspace{0.5\baselineskip} % Whitespace below the editor list
+
+	%------------------------------------------------
+	%	Publisher
+	%------------------------------------------------
 	\ifbool{deutsch}{%
 		\textit{Hochschule RheinMain \\ Fachbereich Ingenieurwissenschaften \\ Studienbereich Angewandte Physik \& Medizintechnik}
 	}{%
@@ -68,9 +72,6 @@
 	}
 	\vfill % Whitespace between editor names and publisher logo
 
-	%------------------------------------------------
-	%	Publisher
-	%------------------------------------------------
 	\begin{center}
 		\includegraphics[width=0.15\textwidth]{logo-hsrm.jpg} % Logo
 	\end{center}
