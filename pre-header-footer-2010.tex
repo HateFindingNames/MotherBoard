@@ -1,5 +1,6 @@
 %Einstellungen für Kopf- und Fusszeilen mit dem KOMA-Skript und \usepackage{scrpage2}
 \pagestyle{scrheadings}
+\clearpairofpagestyles  
 %\pagestyle{scrplain}
 % le --> links, gerade Seite
 % ce --> mittig, gerade Seite
@@ -16,6 +17,7 @@
 % \leftmark --> ??
 % \rightmark --> ??
 %::::::::::::::::::::::::::::::::::: Kopfzeile
+\ohead{\leftmark\ifstr{\rightmark}{\leftmark}{}{ -- \rightmark}}
 % Kopfzeile gerade Seite
 \automark[chapter]{chapter}
 \lehead[]{\titelkopfzeilelinkseven}
