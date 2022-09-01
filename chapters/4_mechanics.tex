@@ -25,35 +25,108 @@
 	Gegenüber BLDC-Motoren, die etwa für den Bau von Drohnen für besonders hohe Drehzahlen optimiert sind, steht in der vorliegenden Anwendung das erreichbare Drehmoment im Vordergrund.
 	
 	Als praktikabel hat sich der Motor mit Handelsnamen \textit{TorqueBoards} und der Typenbezeichnung \textit{6355 190KV} gezeigt.
+	Die äußeren Dimensionen können \cref{fig:motor} entnommen werden\footnote{Eigene Zeichnung mangels technischer Zeichnungen seitens des Herstellers.
+	Alle Dimensionen wurden der Produktbeschreibung entnommen oder wo fehlend messtechnisch ergänzt.}.
+	\begin{figure}[h]
+		\centering
+		\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Motor}
+		\caption{Relevante Dimensionen des Motors \textit{TorqueBoards 6355 190KV}.}
+		\label{fig:motor}
+	\end{figure}
 	%
 	\section{Motorbefestigung}\label{sec:motorbefestigung}
 		Mit obigen Überlegungen fällt die Lösungswahl auf parallel zur Rollachse angeordnete Outrunnermotoren.
+		Die Verbindung zwischen Motor und Hangar wird in zwei Teilen hergestellt: eine Scheibe, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert.
+		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Scheibe mit allen relevanten Dimensionen.
+		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hanger mit senkrechter Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
+			\caption[Scheibe zur Montage der Motorhalterung am Hanger]{Scheibe zur Montage der Motorhalterung am Hanger.}
+			\label{fig:hanger clamp drawing}
+		\end{figure}
+		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen um flach anliegend die Motorscheibe anbringen zu können.
+		Die drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Scheibenpaaren anbringen zu können.
+		Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheiben, andererseits wirken sie als Käfig zum Schutz der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.\par\medskip
+		Die komplementäre Komponente ist eine Platte, die, flach an die Hangerscheibe angeschraubt, eine steife Verbindung zwischen Hanger und Motor bildet.
+		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Hangerscheibe.
+		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
+		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
+		Rechts befinden sich vier weitere Langlöcher von \qty{6}{\milli\metre} Länge zur Befestigung des Motors.
+		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.\par
+		Vier Bohrungen innerhalb der Höcker außen um den Motor sollen es später ermöglichen bei Bedarf einen Riemenschutz anbringen zu können.
+		Die Höcker selbst sollen den Zweck eines Puffermaterial im Falle eines Bodenkontaktes erfüllen.
 
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
-			\caption{The Hanger Clamp}
-			\label{fig:hanger clamp drawing}
-		\end{figure}
-		\begin{figure}[h]
-			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece - v1}
-			\caption{The Motor Piece}
+			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
+			\caption[Verbindungsplatte zwischen Motor und Hangerscheibe]{Verbindungsplatte zwischen Motor und Hangerscheibe. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse der Platte ausgerichtete Langlöcher zur Justage der Riemenspannung.}
 			\label{fig:motor piece drawing}
 		\end{figure}
 		%
 	\section{Transmission}\label{sec:transmission}
-	Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
-	Seine breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag \cite{gates.catalogue.2021}
+		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
+		Seine vergleichsweise breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz \cite{gates.catalogue.2021}.
+		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.\par\medskip
+		%
+		Da auf der getrieben Seite die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden muss ist es wünschenswert, dass sich durch die Bauart der Rollen bereits eine einfache Installation anbietet.
+		Verwendet werden hier \qty{80}{\milli\metre} \textit{Kegel} des Herstellers \textit{Orangatang}.
+		Sie besitzen einen Kern aus hartem Kunststoff mit 10 radial um ihre Hauptachse angeordneten Bohrungen von \qty{5,8}{\milli\metre} Durchmesser (vgl. \cref{fig:kegels}).
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
-			\caption{HTD-5M Zahnscheibe}
+			\includesvg[width=.4\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
+			\caption[Rückansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rückansicht der \textit{Kegel} des Herstellers \textit{Orangatang}.}
+			\label{fig:kegels}
+		\end{figure}
+
+		Aus Kostengründen und einfachem Zugang zu den Betriebsmitteln wurde sich entschieden, die getriebeseitige Zahnscheibe im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} aus ABS selbst herzustellen.
+		Es ist zwar zu erwarten, dass die Zahnscheiben gegenüber aus Aluminium gefrästen Komponenten deutlich schneller verschleißen, durch das gewählte Fertigungsverfahren lassen sich aber schnell, unkompliziert und günstig Ersatzteile herstellen.\par\medskip
+		%
+		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnscheibe modelliert werden kann.
+		Das Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{Hier SolidWorks.} nachzubilden.
+		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte Zahnscheibe mit 36 Zähnen.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.9\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
+			\caption[Zeichnung der modellierten Zahnscheibe]{Zeichnung der modellierten Zahnscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}
 			\label{fig:htd 5m driven}
 		\end{figure}
+		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
+		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.\par
+		Wie in \cref{fig:HTD profiles comparison} zu sehen ist die Passform des Zahnungsprofils im direkten Vergleich zu einem Kaufteil (hier mit 44 Zähnen) hinreichend genau.
+		Das Herstellungsverfahren lässt zwar etwas höhere Präzision zu, da aber im Betrieb ohnehin von abrasiven Effekten entlang der Zahnung ausgegangen wird, wurde im Sinne einer zügigeren Fertigung darauf verzichtet.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
-			\caption{Konterscheibe.}
+			\begin{subfigure}{.49\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{Assets/Machined-HTD_tooth_fit.jpg}
+				\caption{CNC-gefrästes HTD-Profil auf Riemen.}
+				\label{subfig:machined HTD}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}{.49\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{Assets/Printed-HTD_tooth_fit.jpg}
+				\caption{3D-gedrucktes HTD-Profil auf Riemen.}
+				\label{subfig:printed HTD}
+			\end{subfigure}
+			\caption{Vergleich der Passform einer gekauften Zahnscheibe (44T) aus Aluminium und des 3D-gedruckten Modells (36T) mit einem Riemen.}
+			\label{fig:HTD profiles comparison}
+		\end{figure}\par\medskip
+		%
+		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnscheibe gegenüberliegende Seite der Rollen ebenfalls ein konkaves Profil aufweist wurde ein komplementäres Gegenstück -- zu sehen in \cref{fig:orangatang kegel flat face} -- modelliert.
+		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll möglichst exakt dem inneren Profil der Rollen anliegen.
+		Da die Konterscheibe durch die Verschraubung gegen das Rollenprofil verspannt wird, ist eine gute Passgenauigkeit hier insbesondere wichtig um die Last über die gesamte Fläche zu verteilen und so die Gefahr frühzeitigen und/oder plötzlichen Materialversagens vorzubeugen.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.6\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
+			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}
 			\label{fig:orangatang kegel flat face}
 		\end{figure}
+		
+		% \begin{figure}[h]
+		% 	\centering
+		% 	\includesvg[width=.7\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Wheels assembly}
+		% 	\caption{Caption}
+		% 	\label{fig:wheel assembly}
+		% \end{figure}
