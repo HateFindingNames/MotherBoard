@@ -1,7 +1,32 @@
 % LTeX: language=de-DE
 \chapter{Theorie}
 	Die mechanische Gesamtleistung, die vom System auf den Boden übertragen werden muss ist die Summe unterschiedlicher Einzelfaktoren.
-	Neben der erforderlichen Leistung, um die träge Masse von Maschine und Pilot aus dem Stand auf eine gewünschte Geschwindigkeit zu beschleunigen müssen zusätzliche Reserven zur Verfügung stehen, um mechanische Verluste wie Rollwiderstand zum Untergrund, bei höheren Geschwindigkeiten zunehmend aerodynamische Effekte oder Hangabtriebskräfte während des Befahrens von Steigungen überwinden zu können.\par
+	Neben der erforderlichen Leistung, um die träge Masse von Maschine und Pilot aus dem Stand auf eine gewünschte Geschwindigkeit zu beschleunigen müssen zusätzliche Reserven zur Verfügung stehen, um mechanische Verluste wie Rollwiderstand zum Untergrund, bei höheren Geschwindigkeiten zunehmend aerodynamische Effekte oder Hangabtriebskräfte während des Befahrens von Steigungen überwinden zu können.\par\medskip
+	%
+	Die Hangabtriebskraft mit dem Neigungswinkel \(\theta\)\nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}} ist gegeben durch:
+	\begin{align}
+		F_{Hang} = m \cdot g \cdot sin\left(\theta\right)
+		\label{eq:downhill force}
+	\end{align}
+	\nomenclature[L]{\(F_{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
+	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\left(\frac{\angle}{100}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
+	\begin{equation}
+		F_{Hang} = m \cdot g \cdot sin\left(\arctan\left(\frac{\angle}{100}\right)\right)
+		\label{eq:downhill force incline to radian}
+	\end{equation}
+	% Im Straßenverkehr übliche Angaben in \unit{\percent} lassen sich durch den Zusammenhang \(\tan^{-1}\left(\frac{\angle}{100}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} in \unit{\radian} umrechnen.
+	Mit dem Radius der Rolle ergibt sich für das wirkende Drehmoment unmittelbar
+	\begin{equation}
+		T_{Hang} = F_{Hang} \cdot r
+		\label{eq:incline torque}
+	\end{equation}
+	\begin{figure}[h]
+		\centering
+		\includesvg[width=.6\textwidth, inkscapelatex=true]{Footage/AwesomeBoard Transmission CAD/Drawings/Calc/torque_incline}
+		\caption[Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts]{Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts.}
+		\label{fig:sketch torque incline}
+	\end{figure}
+	
 	Der Rollwiderstand wird beschrieben durch:
 	\begin{align}
 		F_{Roll} = m \cdot g \cdot c_{Roll}
@@ -12,13 +37,7 @@
 	\nomenclature[L]{\(g\)}{Erdbeschleunigung\nomunit{\metre\per\square\second}}%
 	\nomenclature[L]{\(c_{Roll}\)}{Rollwiderstandkoeffizient\nomunit{1}}%
 	mit dem dimensionslosen Rollwiderstandskoeffizienten \(c_{Roll}\) der wiederum das Verhältnis aus Rollreibungskoeffizienten \(\mu_{Roll}\)\nomenclature[G]{\(\mu_{Roll}\)}{Rollreibungskoeffizient\nomunit{\metre}} und dem Radius der Rollen nach \(\frac{\mu_{Roll}}{r}\) beschreibt.\par\medskip
-	%
-	Die Hangabtriebskraft mit dem Neigungswinkel \(\theta\)\nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}} ist gegeben durch:
-	\begin{align}
-		F_{Hang} = m \cdot g \cdot sin\left(\theta\right)
-		\label{eq:downhill force}
-	\end{align}
-	\nomenclature[L]{\(F_{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
+	
 	Die durch Reibung in Luft verursachte Kraft errechnet sich aus:
 	\begin{align}
 		F_{Ström} = \frac{1}{2} \cdot c_{Ström} \cdot \rho \cdot A \cdot v^2
@@ -36,7 +55,8 @@
 	Die Drehmomentkonstante \(K_T\)\nomenclature[L]{\(K_T\)}{Drehmomentkonstante\nomunit{\newton\metre\per\ampere}} eines BLDC berechnet sich aus der reziproken Drehzahlkonstante \(K_V\)\nomenclature[L]{\(K_V\)}{Drehzahlkonstante\nomunit{\per\minute\per\volt}} korrigiert um den Umrechnungsfaktor \(\frac{60}{2\pi}\) und trägt die Einheit \unit{\newton\metre\per\ampere}.
 	Der Umrechnungsfaktor trägt der Tatsache Rechnung, dass die Drehzahlkonstante üblicherweise in \unit{\per\minute} und nicht in \unit{\radian\per\second} angegeben wird\cite{DalY.Ohm.2000}.
 	\begin{align}
-		K_T = \frac{60}{2\pi} \cdot \frac{3}{2} \cdot \frac{1}{\sqrt{3}} \cdot \frac{1}{K_V}
+		K_T	&= \frac{60}{2\pi} \cdot \frac{3}{2} \cdot \frac{1}{\sqrt{3}} \cdot \frac{1}{K_V} \nonumber \\
+			&\approx 8,27 \cdot \frac{1}{K_V}
 		\label{eq:kv to kt}
 	\end{align}
 	Die mechanische Untersetzung sei:
@@ -50,7 +70,7 @@
 	Das vom System erzeugte, verlustfreie Drehmoment errechnet sich mit:
 	\begin{align}
 		T	&= K_T \cdot I_{Motor} \cdot \zeta
-		\label{eq:frictionless acceleration}
+		\label{eq:frictionless torque}
 	\end{align}
 	\nomenclature[L]{\(T\)}{Drehmoment\nomunit{\newton\metre}}%
 	\nomenclature[L]{\(I_{Motor}\)}{Phasenstrom\nomunit{\ampere}}%

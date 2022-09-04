@@ -34,48 +34,38 @@
 		\label{fig:motor}
 	\end{figure}
 	%
-	\section{Motorbefestigung}\label{sec:motorbefestigung}
-		Mit obigen Überlegungen fällt die Lösungswahl auf parallel zur Rollachse angeordnete Outrunnermotoren.
-		Die Verbindung zwischen Motor und Hangar wird in zwei Teilen hergestellt: eine Scheibe, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert.
-		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Scheibe mit allen relevanten Dimensionen.
-		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hanger mit senkrechter Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
-		\begin{figure}[h]
-			\centering
-			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
-			\caption[Scheibe zur Montage der Motorhalterung am Hanger]{Scheibe zur Montage der Motorhalterung am Hanger.}
-			\label{fig:hanger clamp drawing}
-		\end{figure}
-		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen um flach anliegend die Motorscheibe anbringen zu können.
-		Die drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Scheibenpaaren anbringen zu können.
-		Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheiben, andererseits wirken sie als Käfig zum Schutz der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.\par\medskip
-		Die komplementäre Komponente ist eine Platte, die, flach an die Hangerscheibe angeschraubt, eine steife Verbindung zwischen Hanger und Motor bildet.
-		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Hangerscheibe.
-		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
-		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
-		Rechts befinden sich vier weitere Langlöcher von \qty{6}{\milli\metre} Länge zur Befestigung des Motors.
-		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.\par
-		Vier Bohrungen innerhalb der Höcker außen um den Motor sollen es später ermöglichen bei Bedarf einen Riemenschutz anbringen zu können.
-		Die Höcker selbst sollen den Zweck eines Puffermaterial im Falle eines Bodenkontaktes erfüllen.
-
-		\begin{figure}[h]
-			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
-			\caption[Verbindungsplatte zwischen Motor und Hangerscheibe]{Verbindungsplatte zwischen Motor und Hangerscheibe. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse der Platte ausgerichtete Langlöcher zur Justage der Riemenspannung.}
-			\label{fig:motor piece drawing}
-		\end{figure}
-		%
 	\section{Transmission}\label{sec:transmission}
 		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
 		Seine vergleichsweise breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz \cite{gates.catalogue.2021}.
 		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.\par\medskip
 		%
+		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline torque} gebildet werden.
+		Wünschens ist hier ein Wert \(\geqq 1\), mindestens aber \(= 1\).
+		Einsetzen der bekannten Parameter, Randbedingungen aus \cref{sec:constructive limitations} und \(\zeta = 1\) (keinerlei Untersetzung) ergibt
+		\begin{align}
+			\frac{T}{T_{Hang}}	&= \frac{8,27 \cdot I_{Motor} \cdot \zeta}{K_V \cdot m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{100}\right)\right) \cdot \qty{0,04}{\metre}} \nonumber \\
+								&= \frac{8,27 \cdot \qty{30}{\ampere} \cdot 1}{\qty{190}{\per\volt\per\minute} \cdot \qty{100}{\kilo\gram} \cdot \qty{9,81}{\meter\per\second\squared} \cdot \sin\left(\arctan\left(\frac{\qty{5}{\percent}}{\qty{100}{\percent}}\right)\right) \cdot \qty{0,04}{\metre}} \nonumber \\
+								&\approx 0,67
+			\label{eq:transmissionless torque ratio}
+		\end{align}
+		und ist damit deutlich zu niedrig.
+		In \cref{fig:torque ratio and vmax vs zetas} sind Drehmomentquotient und erwartete Maximalgeschwindigkeit gegen Werte für \(\zeta\) zwischen 1 und 3 aufgetragen.
+		Zu sehen ist, dass mindestens \(\zeta \approx 1,5\) erreicht werden muss um die Vorgaben erfüllen zu können.
+		Da die Maximalgeschwindigkeit hier aber mit nahe \qty{70}{\kilo\metre} für die Anwendung deutlich zu hoch liegt, wird \(\zeta \approx 2,5\) gewählt.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.9\textwidth]{Calc/T_v_vs_zetas}
+			\caption{Plot}
+			\label{fig:torque ratio and vmax vs zetas}
+		\end{figure}
+		
 		Da auf der getrieben Seite die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden muss ist es wünschenswert, dass sich durch die Bauart der Rollen bereits eine einfache Installation anbietet.
 		Verwendet werden hier \qty{80}{\milli\metre} \textit{Kegel} des Herstellers \textit{Orangatang}.
 		Sie besitzen einen Kern aus hartem Kunststoff mit 10 radial um ihre Hauptachse angeordneten Bohrungen von \qty{5,8}{\milli\metre} Durchmesser (vgl. \cref{fig:kegels}).
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.4\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
-			\caption[Rückansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rückansicht der \textit{Kegel} des Herstellers \textit{Orangatang}.}
+			\includesvg[width=.8\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
+			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnscheibe wird rückseitig auf der Rolle montiert.}
 			\label{fig:kegels}
 		\end{figure}
 
@@ -119,14 +109,44 @@
 		Da die Konterscheibe durch die Verschraubung gegen das Rollenprofil verspannt wird, ist eine gute Passgenauigkeit hier insbesondere wichtig um die Last über die gesamte Fläche zu verteilen und so die Gefahr frühzeitigen und/oder plötzlichen Materialversagens vorzubeugen.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.6\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
+			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
 			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}
 			\label{fig:orangatang kegel flat face}
 		\end{figure}
 		
-		% \begin{figure}[h]
-		% 	\centering
-		% 	\includesvg[width=.7\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Wheels assembly}
-		% 	\caption{Caption}
-		% 	\label{fig:wheel assembly}
-		% \end{figure}
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.8\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Timing Belt assembly}
+			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben bei einem Zahnriemen mit 55 Zähnen.}
+			\label{fig:timing belt length}
+		\end{figure}
+	\section{Motorbefestigung}\label{sec:motorbefestigung}
+		Mit obigen Überlegungen fällt die Lösungswahl auf parallel zur Rollachse angeordnete Outrunnermotoren.
+		Die Verbindung zwischen Motor und Hanger wird in zwei Teilen hergestellt: eine Scheibe, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert.
+		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Scheibe mit allen relevanten Dimensionen.
+		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hanger mit senkrechter Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
+			\caption[Scheibe zur Montage der Motorhalterung am Hanger]{Scheibe zur Montage der Motorhalterung am Hanger.}
+			\label{fig:hanger clamp drawing}
+		\end{figure}
+		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen um flach anliegend die Motorscheibe anbringen zu können.
+		Die drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Scheibenpaaren anbringen zu können.
+		Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheiben, andererseits wirken sie als Käfig zum Schutz der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.\par\medskip
+		Die komplementäre Komponente ist eine Platte, die, flach an die Hangerscheibe angeschraubt, eine steife Verbindung zwischen Hanger und Motor bildet.
+		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Hangerscheibe.
+		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
+		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
+		Rechts befinden sich vier weitere Langlöcher von \qty{6}{\milli\metre} Länge zur Befestigung des Motors.
+		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.\par
+		Vier Bohrungen innerhalb der Höcker außen um den Motor sollen es später ermöglichen bei Bedarf einen Riemenschutz anbringen zu können.
+		Die Höcker selbst sollen den Zweck eines Puffermaterial im Falle eines Bodenkontaktes erfüllen.
+
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
+			\caption[Verbindungsplatte zwischen Motor und Hangerscheibe]{Verbindungsplatte zwischen Motor und Hangerscheibe. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse der Platte ausgerichtete Langlöcher zur Justage der Riemenspannung.}
+			\label{fig:motor piece drawing}
+		\end{figure}
+		%
