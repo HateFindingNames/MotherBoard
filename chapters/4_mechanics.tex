@@ -30,7 +30,7 @@
 	\begin{figure}[h]
 		\centering
 		\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Motor}
-		\caption{Relevante Dimensionen des Motors \textit{TorqueBoards 6355 190KV}.}
+		\caption{Relevante Dimensionen des Motors \textit{TorqueBoards 6355 190KV}.}%
 		\label{fig:motor}
 	\end{figure}
 	%
@@ -39,50 +39,54 @@
 		Seine vergleichsweise breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz \cite{gates.catalogue.2021}.
 		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.\par\medskip
 		%
-		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline torque} gebildet werden.
-		Wünschens ist hier ein Wert \(\geqq 1\), mindestens aber \(= 1\).
-		Einsetzen der bekannten Parameter, Randbedingungen aus \cref{sec:constructive limitations} und \(\zeta = 1\) (keinerlei Untersetzung) ergibt
-		\begin{align}
-			\frac{T}{T_{Hang}}	&= \frac{8,27 \cdot I_{Motor} \cdot \zeta}{K_V \cdot m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{100}\right)\right) \cdot \qty{0,04}{\metre}} \nonumber \\
-								&= \frac{8,27 \cdot \qty{30}{\ampere} \cdot 1}{\qty{190}{\per\volt\per\minute} \cdot \qty{100}{\kilo\gram} \cdot \qty{9,81}{\meter\per\second\squared} \cdot \sin\left(\arctan\left(\frac{\qty{5}{\percent}}{\qty{100}{\percent}}\right)\right) \cdot \qty{0,04}{\metre}} \nonumber \\
-								&\approx 0,67
-			\label{eq:transmissionless torque ratio}
-		\end{align}
-		und ist damit deutlich zu niedrig.
-		In \cref{fig:torque ratio and vmax vs zetas} sind Drehmomentquotient und erwartete Maximalgeschwindigkeit gegen Werte für \(\zeta\) zwischen 1 und 3 aufgetragen.
+		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen, kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline torque} als Funktion von \(\zeta\) aufgetragen werden.
+		Erwünscht ist hier ein Wert \(\gg 1\), mindestens aber \(= 1\).
+		\begin{equation}
+			\frac{T}{T_{Hang}} = \frac{8,27 \cdot I_{Motor} \cdot \zeta}{K_V \cdot m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right)}
+			\label{eq:torque ratio}
+		\end{equation}
+		Daneben soll auch die erwartete Maximalgeschwindigkeit nach \cref{eq:max speed km h} abgeschätzt werden.
+		Einsetzen der bekannten Parameter und Randbedingungen aus \cref{sec:constructive limitations} in \crefrange{eq:torque ratio}{eq:max speed km h} im Intervall \(1 \leq \zeta \leq 3\) ist in \cref{fig:torque ratio and vmax vs zetas} dargestellt.
 		Zu sehen ist, dass mindestens \(\zeta \approx 1,5\) erreicht werden muss um die Vorgaben erfüllen zu können.
 		Da die Maximalgeschwindigkeit hier aber mit nahe \qty{70}{\kilo\metre} für die Anwendung deutlich zu hoch liegt, wird \(\zeta \approx 2,5\) gewählt.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.9\textwidth]{Calc/T_v_vs_zetas}
+			\includesvg[width=.85\textwidth]{Calc/T_v_vs_zetas}
 			\caption{Plot}
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}
 		
-		Da auf der getrieben Seite die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden muss ist es wünschenswert, dass sich durch die Bauart der Rollen bereits eine einfache Installation anbietet.
+		Da im Falle der HTD 5M Zahnung gilt, dass zu jedem Zeitpunkt zumindest sechs Zähne greifen müssen~\cite{MAEDLERGmbH.2021} und mit obigen Überlegungen die antriebsseitige Zahnscheibe kleiner gegenüber der getriebeseitigen sein muss, ergibt sich eine antriebsseitige Mindestzahnung.
+		Da mit dem gewählten Untersetzungsverhältnis sich die Zahnung auch auf die der Antriebsseite und damit den äußeren Durchmesser auswirkt
+		Dieser darf den Durchmesser der Rolle abzüglich des zusätzlichen Auftrags des Riemens von \qty{1,7}{\milli\metre}\cite{gates.catalogue.2021} nicht übersteigen, um im Betrieb Bodenkontakt des Riemens zu vermeiden.
+		Während käuflich Zahnungen von 12 an aufwärts gelistet sind, bot sich aus Kostengründen eine Variante mit 15 Zähnen an.
+		Gerundet auf \(\zeta=2,4\) ergibt sich so eine Zahnung von 36 für die Getriebeseite.
+		
+		Da auf der getriebenen Seite die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden muss ist es wünschenswert, dass sich durch die Bauart der Rollen bereits eine einfache Installation anbietet.
 		Verwendet werden hier \qty{80}{\milli\metre} \textit{Kegel} des Herstellers \textit{Orangatang}.
 		Sie besitzen einen Kern aus hartem Kunststoff mit 10 radial um ihre Hauptachse angeordneten Bohrungen von \qty{5,8}{\milli\metre} Durchmesser (vgl. \cref{fig:kegels}).
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
+			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
 			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnscheibe wird rückseitig auf der Rolle montiert.}
 			\label{fig:kegels}
 		\end{figure}
 
 		Aus Kostengründen und einfachem Zugang zu den Betriebsmitteln wurde sich entschieden, die getriebeseitige Zahnscheibe im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} aus ABS selbst herzustellen.
-		Es ist zwar zu erwarten, dass die Zahnscheiben gegenüber aus Aluminium gefrästen Komponenten deutlich schneller verschleißen, durch das gewählte Fertigungsverfahren lassen sich aber schnell, unkompliziert und günstig Ersatzteile herstellen.\par\medskip
-		%
-		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnscheibe modelliert werden kann.
-		Das Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{Hier SolidWorks.} nachzubilden.
-		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte Zahnscheibe mit 36 Zähnen.
+		Es ist zwar zu erwarten, dass die Zahnscheiben gegenüber aus Aluminium gefrästen Komponenten deutlich schneller verschleißen, durch das gewählte Fertigungsverfahren lassen sich aber schnell, unkompliziert und günstig Ersatzteile herstellen.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
 			\caption[Zeichnung der modellierten Zahnscheibe]{Zeichnung der modellierten Zahnscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}
 			\label{fig:htd 5m driven}
 		\end{figure}
+
+		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnscheibe modelliert werden kann.
+		Das Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{Hier SolidWorks.} nachzubilden.
+		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte Zahnscheibe mit 36 Zähnen.
 		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
-		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.\par
+		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.
+		
 		Wie in \cref{fig:HTD profiles comparison} zu sehen ist die Passform des Zahnungsprofils im direkten Vergleich zu einem Kaufteil (hier mit 44 Zähnen) hinreichend genau.
 		Das Herstellungsverfahren lässt zwar etwas höhere Präzision zu, da aber im Betrieb ohnehin von abrasiven Effekten entlang der Zahnung ausgegangen wird, wurde im Sinne einer zügigeren Fertigung darauf verzichtet.
 		\begin{figure}[h]
@@ -105,18 +109,22 @@
 		\end{figure}\par\medskip
 		%
 		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnscheibe gegenüberliegende Seite der Rollen ebenfalls ein konkaves Profil aufweist wurde ein komplementäres Gegenstück -- zu sehen in \cref{fig:orangatang kegel flat face} -- modelliert.
-		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll möglichst exakt dem inneren Profil der Rollen anliegen.
-		Da die Konterscheibe durch die Verschraubung gegen das Rollenprofil verspannt wird, ist eine gute Passgenauigkeit hier insbesondere wichtig um die Last über die gesamte Fläche zu verteilen und so die Gefahr frühzeitigen und/oder plötzlichen Materialversagens vorzubeugen.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
 			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}
 			\label{fig:orangatang kegel flat face}
 		\end{figure}
-		
+		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll möglichst exakt dem inneren Profil der Rollen anliegen.
+		Da die Konterscheibe durch die Verschraubung gegen das Rollenprofil verspannt wird, ist eine gute Passgenauigkeit hier insbesondere wichtig um die Last über die gesamte Fläche zu verteilen und so die Gefahr frühzeitigen und/oder plötzlichen Materialversagens vorzubeugen.
+
+		Ein vergrößerter Mittelpunktabstand beider Zahnscheiben erhöht grundsätzlich die Anzahl greifender Zähne, allerdings fällt dieser Effekt mit zunehmendem Abstand schnell ab.
+		Es wurde ein Abstand so gewählt, dass zu jeder Zeit ein Zahn mehr als gefordert greift.
+		Mit Zahnungen von 36T für die Antriebsseite, 15T getriebeseitig und dieser Vorgabe wurde eine Riemenlänge von 275T gewählt.
+		\Cref{fig:timing belt length} zeigt schematisch das System beider Zahnscheiben und Riemen.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Timing Belt assembly}
+			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Timing Belt assembly}
 			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben bei einem Zahnriemen mit 55 Zähnen.}
 			\label{fig:timing belt length}
 		\end{figure}
@@ -145,7 +153,7 @@
 
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
+			\includesvg[width=.9\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
 			\caption[Verbindungsplatte zwischen Motor und Hangerscheibe]{Verbindungsplatte zwischen Motor und Hangerscheibe. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse der Platte ausgerichtete Langlöcher zur Justage der Riemenspannung.}
 			\label{fig:motor piece drawing}
 		\end{figure}

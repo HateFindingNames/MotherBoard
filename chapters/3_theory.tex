@@ -5,13 +5,13 @@
 	%
 	Die Hangabtriebskraft mit dem Neigungswinkel \(\theta\)\nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}} ist gegeben durch:
 	\begin{align}
-		F_{Hang} = m \cdot g \cdot sin\left(\theta\right)
+		F_{Hang} = m \cdot g \cdot \sin\left(\theta\right)
 		\label{eq:downhill force}
 	\end{align}
 	\nomenclature[L]{\(F_{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
 	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\left(\frac{\angle}{100}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
 	\begin{equation}
-		F_{Hang} = m \cdot g \cdot sin\left(\arctan\left(\frac{\angle}{100}\right)\right)
+		F_{Hang} = m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{100}\right)\right)
 		\label{eq:downhill force incline to radian}
 	\end{equation}
 	% Im Straßenverkehr übliche Angaben in \unit{\percent} lassen sich durch den Zusammenhang \(\tan^{-1}\left(\frac{\angle}{100}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} in \unit{\radian} umrechnen.
@@ -22,7 +22,7 @@
 	\end{equation}
 	\begin{figure}[h]
 		\centering
-		\includesvg[width=.6\textwidth, inkscapelatex=true]{Footage/AwesomeBoard Transmission CAD/Drawings/Calc/torque_incline}
+		\includesvg[width=.6\textwidth, inkscapelatex=true]{Calc/torque_incline}
 		\caption[Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts]{Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts.}
 		\label{fig:sketch torque incline}
 	\end{figure}
@@ -76,9 +76,10 @@
 	\nomenclature[L]{\(I_{Motor}\)}{Phasenstrom\nomunit{\ampere}}%
 	Die theoretische Maximalgeschwindigkeit unter Vernachlässigung von elektrischen und thermischen Verlusten ergibt sich zu:
 	\begin{align}
-		v	&= K_V \cdot U_{Bat} \cdot \frac{2\pi}{\zeta 60} \cdot r_{Rolle}
-		\label{eq:kv rating}
+		v_{max} = K_V \cdot U_{Bat} \cdot 2\pi r_{Rolle} \cdot \frac{0,06}{\zeta}
+		\label{eq:max speed km h}
 	\end{align}
+	\nomenclature[L]{\(v_{max}\)}{Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}}
 	\nomenclature[L]{\(U_{Bat}\)}{Batteriespannung\nomunit{\volt}}%
 	\nomenclature[L]{\(r_{Rolle}\)}{Radius der Rollen\nomunit{\metre}}%
 	%
