@@ -16,9 +16,9 @@
 		\newcommand{\nameB}{\thefirstnameB\space\thelastnameB}
 		\newcommand{\nameC}{\thefirstnameC\space\thelastnameC}
 	}{%
-		\newcommand{\nameA}{\thelastnameA\,\space\thefirstnameA}
-		\newcommand{\nameB}{\thelastnameB\,\space\thefirstnameB}
-		\newcommand{\nameC}{\thelastnameC\,\space\thefirstnameC}
+		\newcommand{\nameA}{\thelastnameA,\space\thefirstnameA}
+		\newcommand{\nameB}{\thelastnameB,\space\thefirstnameB}
+		\newcommand{\nameC}{\thelastnameC,\space\thefirstnameC}
 	}
 
 	%------------------------------------------------
@@ -36,8 +36,8 @@
 	\rule{\textwidth}{0.4pt} % Thin horizontal rule
 	\vspace{0.75\baselineskip} % Whitespace above the title
 
-	{\huge\bfseries \subtitleA}\par\vspace{0.4cm} % Title of Document
-	{\huge\bfseries \subtitleB}\par\vspace{0.4cm} % Titel des Dokuments
+	{\huge \textbf{\subtitleA}}\par\vspace{0.4cm} % Title of Document
+	{\huge \textbf{\subtitleB}}\par\vspace{0.4cm} % Titel des Dokuments
 
 	\vspace{0.75\baselineskip} % Whitespace below the title
 	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
@@ -59,16 +59,16 @@
 		\underline{Author}\par\vspace{0.5cm}
 	}
 	\vspace{0.5\baselineskip} % Whitespace above the editors
-	{\scshape\LARGE \nameA \\} % Editor list
+	{\scshape\LARGE \nameA} % Editor list
 	\vspace{0.5\baselineskip} % Whitespace below the editor list
 
 	%------------------------------------------------
 	%	Publisher
 	%------------------------------------------------
 	\ifbool{deutsch}{%
-		\textit{Hochschule RheinMain \\ Fachbereich Ingenieurwissenschaften \\ Studienbereich Angewandte Physik \& Medizintechnik}
+		Hochschule RheinMain \\ Fachbereich Ingenieurwissenschaften \\ Studienbereich Angewandte Physik \& Medizintechnik
 	}{%
-		\textit{Hochschule RheinMain \\ Department of Engineering \\ Applied Physics \& Medical Technology}
+		Hochschule RheinMain \\ Department of Engineering \\ Applied Physics \& Medical Technology
 	}
 	\vfill % Whitespace between editor names and publisher logo
 
