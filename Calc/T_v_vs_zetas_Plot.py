@@ -16,10 +16,10 @@ ax2.plot(zetas, ((rpm/zetas)*np.pi*0.08*(60/1000)), color="black", ls="--", labe
 ax.grid()
 
 
-ax.set_title("Drehmomentenquotient und Maximalgeschwindigkeit gegen $\\zeta$", fontsize=mfontsize)
+ax.set_title("Drehmomentenquotient und Maximalgeschwindigkeit\ngegen $\\zeta$", fontsize=mfontsize+2)
 ax.set_xlabel("$\\zeta$ / 1", fontsize=mfontsize-2)
 ax.set_ylabel("$\\frac{T}{T_{Hang}}$ / $N \\cdot m$", fontsize=mfontsize-2)
-ax2.set_ylabel("$v$ / $km \\cdot h^{-1}$", fontsize=mfontsize-2)
+ax2.set_ylabel("$v_{max}$ / $km \\cdot h^{-1}$", fontsize=mfontsize-2)
 
 ax2.set_ylim(30,100)
 ax.set_ylim(0.6,2.0)
