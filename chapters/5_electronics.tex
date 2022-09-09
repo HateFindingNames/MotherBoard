@@ -1,2 +1,20 @@
 % LTeX: language=de-DE
 \chapter{Elektronik}
+	Die verwendeten ESC sind in der Lage die rückwirkende elektromotirische Kraft (rEMK\nomenclature[A]{rEMK}{Rückwirkende elektromotorische Kraft}) --~eine während des Betriebes in den Wicklungen des Motors erzeugte und seiner Drehrichtung entgegenwirkenden Spannung -- zu Messen und zur Positionsbestimmung des Rotors zu nutzen.
+	Gegenüber eines trapezoidalen Phasenstromes können die Motorwicklungen so sinusoidal bestromt werden was wiederum geringere elektrische Verluste und ein gleichmäßigeres Drehmomentprofil während eines Umlaufes und damit einen sanfteren und geräuschärmeren Motorlauf verspricht.
+	Prinzipbedingt steigt die Amplitude der rEMK mit der Drehzahl des Motors was wiederum die Messung und damit die Positionsbestimmung im niedrigen Drehzahlbereich erschwert während sie im Stillstand unmöglich wird.
+	Um ein exaktes Feedback der Rotorposition an die Steuerelektronik unabhängig der rEMK zu ermöglichen, verfügen die ausgewählten Motoren über integrierte Hall-Effekt-Sensoren.
+	Im höheren Drehzahlbereich verschwinden ihre Vorteile zwar zunehmend, liefern jedoch die Möglichkeit eines äußerst sanften Anlaufes aus dem Stillstand heraus.\par\medskip
+	%
+	\begin{wrapfigure}{r}{.5\textwidth}
+		\centering
+		\includegraphics[angle=90, width=.5\textwidth]{Footage/Pictures/Hall sensor connector.jpg}
+		\caption[Hall-Sensoren Konnektoren]{Links ein 3x2-Pin Molex Micro-Fit 3.0 Konnektor, rechts ein 6-Pin JST-PH zur Verbindung mit dem ESC.}
+		\label{fig:hall sensor connectors}
+	\end{wrapfigure}
+	Die ab Werk unterminierten Sensorenleitungen wurden im Sinne einer Staub- und Spritzwassergeschützen Durchführung in das GFK-Gehäuse über eine Kabelbrücke mit den ESC verbunden.
+	Die Kabelbrücke wurde aus 30AWG\nomenclature[A]{AWG}{American Wire Gauge}\footnote{Entspricht etwa \qty{0,25}{\milli\metre\squared}.} flexibler Silikonleitung mit einem 6-Pin JST-PH Konnektor ESC-seitig und einem 3x2 Molex Micro-Fit 3.0 Konnektor motorseitig gefertigt (vgl. \cref{fig:hall sensor connectors}).
+	Für den motorseitigen Anschluss wurde eine entsprechende Öffnung in das Gehäuse geschnitten und der Konnektor mit Epoxidharz dauerhaft und dicht verbunden.
+	Die Anordnung der Sensoren spielt an dieser Stelle eine untergeordnete Rolle, da sie vor Inbetriebnahme softwareseitig konfiguriert werden können.
+	Es wird lediglich darauf geachtet, dass die Anordnung beider Motoren identisch bleibt.
+	Zur Durchführung der Phasenleitungen werden je Motor drei Löcher in das Gehäuse gebohrt und mit Gummiösen versehen.
