@@ -26,55 +26,57 @@
 	%------------------------------------------------
 	\centering
 	\vspace*{\baselineskip} % White space at the top of the page
-	\scshape % Use small caps for all text on the title page
+	{
+		\scshape % Use small caps for all text on the title page
 
-	%------------------------------------------------
-	%	Title
-	%------------------------------------------------
-	\vspace*{\baselineskip} % White space at the top of the page
-	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
-	\rule{\textwidth}{0.4pt} % Thin horizontal rule
-	\vspace{0.75\baselineskip} % Whitespace above the title
+		%------------------------------------------------
+		%	Title
+		%------------------------------------------------
+		\vspace*{\baselineskip} % White space at the top of the page
+		\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
+		\rule{\textwidth}{0.4pt} % Thin horizontal rule
+		\vspace{0.75\baselineskip} % Whitespace above the title
 
-	{\huge \textbf{\subtitleA}}\par\vspace{0.4cm} % Title of Document
-	{\huge \textbf{\subtitleB}}\par\vspace{0.4cm} % Titel des Dokuments
+		{\huge \textbf{\subtitleA}}\par\vspace{0.4cm} % Title of Document
+		{\huge \textbf{\subtitleB}}\par\vspace{0.4cm} % Titel des Dokuments
 
-	\vspace{0.75\baselineskip} % Whitespace below the title
-	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
-	\rule{\textwidth}{1.6pt} % Thick horizontal rule
-	\vspace{2\baselineskip} % Whitespace after the title block
+		\vspace{0.75\baselineskip} % Whitespace below the title
+		\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
+		\rule{\textwidth}{1.6pt} % Thick horizontal rule
+		\vspace{2\baselineskip} % Whitespace after the title block
 
-	%------------------------------------------------
-	%	Subtitle
-	%------------------------------------------------
-	\textsc{\Large \titleLV}\vspace{0.5cm}%
-	\vspace*{3\baselineskip} % Whitespace under the subtitle
+		%------------------------------------------------
+		%	Subtitle
+		%------------------------------------------------
+		\textsc{\Large \titleLV}\vspace{0.5cm}%
+		\vspace*{3\baselineskip} % Whitespace under the subtitle
 
-	%------------------------------------------------
-	%	Authors
-	%------------------------------------------------
-	\ifbool{deutsch}{%
-		\underline{Autor}\par\vspace{0.5cm}
-	}{%
-		\underline{Author}\par\vspace{0.5cm}
+		%------------------------------------------------
+		%	Authors
+		%------------------------------------------------
+		\ifbool{deutsch}{%
+			\underline{Autor}\par\vspace{0.5cm}
+		}{%
+			\underline{Author}\par\vspace{0.5cm}
+		}
+		\vspace{0.5\baselineskip} % Whitespace above the editors
+		{\scshape\LARGE \nameA} % Editor list
+		\vspace{0.5\baselineskip} % Whitespace below the editor list
+
+		%------------------------------------------------
+		%	Publisher
+		%------------------------------------------------
+		\ifbool{deutsch}{%
+			Hochschule RheinMain \\ Fachbereich Ingenieurwissenschaften \\ Studienbereich Angewandte Physik \& Medizintechnik
+		}{%
+			Hochschule RheinMain \\ Department of Engineering \\ Applied Physics \& Medical Technology
+		}
+		\vfill % Whitespace between editor names and publisher logo
+
+		\begin{center}
+			\includegraphics[width=0.15\textwidth]{logo-hsrm.jpg} % Logo
+		\end{center}
+		\vspace{0.3\baselineskip} % Whitespace under the logo
+		\today % Publication year
 	}
-	\vspace{0.5\baselineskip} % Whitespace above the editors
-	{\scshape\LARGE \nameA} % Editor list
-	\vspace{0.5\baselineskip} % Whitespace below the editor list
-
-	%------------------------------------------------
-	%	Publisher
-	%------------------------------------------------
-	\ifbool{deutsch}{%
-		Hochschule RheinMain \\ Fachbereich Ingenieurwissenschaften \\ Studienbereich Angewandte Physik \& Medizintechnik
-	}{%
-		Hochschule RheinMain \\ Department of Engineering \\ Applied Physics \& Medical Technology
-	}
-	\vfill % Whitespace between editor names and publisher logo
-
-	\begin{center}
-		\includegraphics[width=0.15\textwidth]{logo-hsrm.jpg} % Logo
-	\end{center}
-	\vspace{0.3\baselineskip} % Whitespace under the logo
-	\today % Publication year
 \end{titlepage}
