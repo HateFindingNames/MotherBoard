@@ -1,7 +1,7 @@
 % LTeX: language=de-DE
 \chapter{Theorie}
-	Die mechanische Gesamtleistung, die vom System auf den Boden übertragen werden muss ist die Summe unterschiedlicher Einzelfaktoren.
-	Neben der erforderlichen Leistung, um die träge Masse von Maschine und Pilot aus dem Stand auf eine gewünschte Geschwindigkeit zu beschleunigen müssen zusätzliche Reserven zur Verfügung stehen, um mechanische Verluste wie Rollwiderstand zum Untergrund, bei höheren Geschwindigkeiten zunehmend aerodynamische Effekte oder Hangabtriebskräfte während des Befahrens von Steigungen überwinden zu können.\par\medskip
+	Die mechanische Gesamtleistung, die vom System auf den Boden übertragen werden, muss ist die Summe unterschiedlicher Einzelfaktoren.
+	Neben der erforderlichen Leistung, um die träge Masse von Maschine und Pilot aus dem Stand auf eine gewünschte Geschwindigkeit zu beschleunigen, müssen zusätzliche Reserven zur Verfügung stehen, um mechanische Verluste wie Rollwiderstand zum Untergrund, bei höheren Geschwindigkeiten zunehmend aerodynamische Effekte oder Hangabtriebskräfte während des Befahrens von Steigungen überwinden zu können.\par\medskip
 	%
 	Die Hangabtriebskraft mit dem Neigungswinkel \(\theta\)\nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}} ist gegeben durch:
 	\begin{align}
@@ -26,7 +26,6 @@
 		\caption[Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts]{Skizze aller wirkenden Kräfte bei einer Fahrt Hangaufwärts.}
 		\label{fig:sketch torque incline}
 	\end{figure}
-	
 	Der Rollwiderstand wird beschrieben durch:
 	\begin{align}
 		F_{Roll} = m \cdot g \cdot c_{Roll}
@@ -52,7 +51,7 @@
 	Darüber hinaus sind elektrische Verluste etwa im Serienwiderstand der Batterie, bei der Kommutation und bei der Ummagnetisierung der Phasenwicklungen zu berücksichtigen.
 	Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\), der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
 	%
-	Die Drehmomentkonstante \(K_T\)\nomenclature[L]{\(K_T\)}{Drehmomentkonstante\nomunit{\newton\metre\per\ampere}} eines BLDC berechnet sich aus der reziproken Drehzahlkonstante \(K_V\)\nomenclature[L]{\(K_V\)}{Drehzahlkonstante\nomunit{\per\minute\per\volt}} korrigiert um den Umrechnungsfaktor \(\frac{60}{2\pi}\) und trägt die Einheit \unit{\newton\metre\per\ampere}.
+	Die Drehmomentkonstante \(K_T\)\nomenclature[L]{\(K_T\)}{Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}} eines BLDC berechnet sich aus der reziproken Drehzahlkonstante \(K_V\)\nomenclature[L]{\(K_V\)}{Drehzahlkonstante\nomunit{\per\minute\per\volt}} korrigiert um den Umrechnungsfaktor \(\frac{60}{2\pi}\) und trägt die Einheit \unit{\newtonmetre\per\ampere}.
 	Der Umrechnungsfaktor trägt der Tatsache Rechnung, dass die Drehzahlkonstante üblicherweise in \unit{\per\minute} und nicht in \unit{\radian\per\second} angegeben wird\cite{DalY.Ohm.2000}.
 	\begin{align}
 		K_T	&= \frac{60}{2\pi} \cdot \frac{3}{2} \cdot \frac{1}{\sqrt{3}} \cdot \frac{1}{K_V} \nonumber \\
@@ -72,9 +71,15 @@
 		T	&= K_T \cdot I_{Motor} \cdot \zeta
 		\label{eq:frictionless torque}
 	\end{align}
-	\nomenclature[L]{\(T\)}{Drehmoment\nomunit{\newton\metre}}%
+	\nomenclature[L]{\(T\)}{Drehmoment\nomunit{\newtonmetre}}%
 	\nomenclature[L]{\(I_{Motor}\)}{Phasenstrom\nomunit{\ampere}}%
-	Die theoretische Maximalgeschwindigkeit unter Vernachlässigung von elektrischen und thermischen Verlusten ergibt sich zu:
+	Die theoretische Maximaldrehzahl und, mit bekanntem Umfang der Rollen, Maximalgeschwindigkeit unter Vernachlässigung von elektrischen und thermischen Verlusten ergeben sich zu:
+	\begin{align}
+		\omega_{max} = K_V \cdot U_{Bat}
+		\label{eq:max rpm}
+	\end{align}
+	\nomenclature[G]{\(\omega_{max}\)}{Maximaldrehzahl\nomunit{\per\minute}}%
+	und
 	\begin{align}
 		v_{max} = K_V \cdot U_{Bat} \cdot 2\pi r_{Rolle} \cdot \frac{0,06}{\zeta}
 		\label{eq:max speed km h}

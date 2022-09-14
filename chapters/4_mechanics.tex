@@ -1,6 +1,6 @@
 % LTeX: language=de-DE
 \chapter{Mechanik}
-	Wie in \cref{sec:constructive limitations} besprochen beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren die wiederum auf dem Markt als \textit{Inrunner} und \textit{Outrunner} erhältlich sind.
+	Wie in \cref{sec:constructive limitations} besprochen, beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren, die wiederum auf dem Markt als \textit{Inrunner} und \textit{Outrunner} erhältlich sind.
 	In ersteren sind die Statorwicklungen an der Außenseite angeordnet, zweitere ordnen sie an der Innenseite an.
 	\begin{figure}[h]
 		\centering
@@ -10,7 +10,7 @@
 	\end{figure}
 	Das Funktionsprinzip bleibt so zwar unverändert, durch den vergrößerten Radius des Angriffspunktes der magnetischen Kopplung kann bei gleicher Baugröße und gleichem Phasenstrom allerdings ein höheres Drehmoment erzeugt werden.
 	Sind größere Drehzahlen gefordert, so ist die Bauweise des Inrunners durch den reduzierten Durchmesser des Rotors vorteilhaft.
-	Da hohe Drehzahlen gegenüber einem zu erzeugenden Drehmoment für das zu konstruierende Antriebssystem von untergeordneter Priorität sind und sich oberhalb eines Schwellwertes sogar kontraproduktiv auswirken können fällt hier die Wahl auf das Outrunnerprinzip.\par\medskip
+	Da hohe Drehzahlen gegenüber einem zu erzeugenden Drehmoment für das zu konstruierende Antriebssystem von untergeordneter Priorität sind und sich oberhalb eines Schwellwertes sogar kontraproduktiv auswirken können, fällt hier die Wahl auf das Outrunnerprinzip.\par\medskip
 	%
 	Auch während Lenkmanövern muss eine Übertragung des Drehmomentes auf die Rollen der Trucks sichergestellt sein.
 	Praktikabel und mit einfachen Mitteln denkbar sind hier eine koaxiale Positionierung des Motors zur angetrieben Rolle.
@@ -23,7 +23,7 @@
 	So ist zwar die Kraftübertragung von Welle zu Rolle aufwändiger herzustellen, es werden aber die geringsten Anforderungen an die Motoren bezüglich ihrer Bauform gestellt, wodurch sie besonders günstig und in großer Vielfalt am Markt verfügbar sind. So wird sich auf diese Variante festgelegt.\par\medskip
 	%
 	% Gegenüber BLDC-Motoren, die etwa im Bau von Drohnen für besonders hohe Drehzahlen optimiert sind, steht in der vorliegenden Anwendung das erreichbare Drehmoment im Vordergrund.
-	Um Zuverlässigkeit des Systems auch an heißen Sommertagen sicherzustellen ist es notwendig, thermisches Versagen der Motoren aufgrund von elektrischen Verlusten innerhalb der Motoren und physikalischer Nähe zum erhitzten Asphalt in Betracht zu ziehen.
+	Um Zuverlässigkeit des Systems auch an heißen Sommertagen sicherzustellen, ist es notwendig, thermisches Versagen der Motoren aufgrund von elektrischen Verlusten innerhalb der Motoren und physikalischer Nähe zum erhitzten Asphalt in Betracht zu ziehen.
 	Mit Blick auf vergleichsweise marginale Kostensteigerungen größerer Motoren wird von einer aktiven Motorkühlung und ihrer einhergehenden Erhöhung der Komplexität des Gesamtsystems abgesehen.
 	Als praktikabel hat sich der Motor mit Handelsnamen \textit{TorqueBoards} und der Typenbezeichnung \textit{6355 190KV} gezeigt.
 	Elektrische Parameter sind in \cref{tab:TB 6355 190KV electrical specs} tabelliert.
@@ -54,7 +54,7 @@
 	\end{figure}
 	%
 	\section{Transmission}\label{sec:transmission}
-		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
+		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen, wurde ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M gewählt. 
 		Seine vergleichsweise breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz \cite{gates.catalogue.2021}.
 		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.\par\medskip
 		%
@@ -77,8 +77,8 @@
 		
 		Da im Falle der HTD 5M Zahnung gilt, dass zu jedem Zeitpunkt zumindest sechs Zähne greifen müssen~\cite{MAEDLERGmbH.2021} und mit obigen Überlegungen die antriebsseitige Zahnscheibe kleiner gegenüber der getriebeseitigen sein muss, ergibt sich eine antriebsseitige Mindestzahnung, die wiederum Einfluss auf den Außendurchmesser des getriebeseitigen Zahnrades hat.
 		Dieser darf den Durchmesser der Rolle abzüglich des zusätzlichen Auftrags des Riemens von \qty{1,7}{\milli\metre}\cite{gates.catalogue.2021} nicht übersteigen, um im Betrieb Bodenkontakt des Riemens zu vermeiden.
-		Während käuflich Zahnungen von 12 an aufwärts gelistet sind, bot sich aus Kostengründen eine Variante mit 15 Zähnen an.
-		Gerundet auf \(\zeta=2,4\) ergibt sich so eine Zahnung von 36 für die Getriebeseite.
+		Während käuflich Zahnungen von 12T an aufwärts gelistet sind, bot sich aus Kostengründen eine Variante mit 15 Zähnen an.
+		Gerundet auf \(\zeta=2,4\) ergibt sich so eine Zahnung von 36T für die Getriebeseite mit einem theoretischen Stillstanddrehmoment an den Rollen von \qty{3,13}{\newtonmetre}.
 		
 		Auf der getriebenen Seite muss die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden.
 		So ist es wünschenswert, dass sich bereits durch die Bauart der Rollen eine einfache Installation anbietet.
@@ -103,7 +103,7 @@
 		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
 		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.
 		
-		Wie in \cref{fig:HTD profiles comparison} zu sehen ist die Passform des Zahnungsprofils im direkten Vergleich zu einem Kaufteil (hier mit 44 Zähnen) hinreichend genau.
+		Wie in \cref{fig:HTD profiles comparison} zu sehen, ist die Passform des Zahnungsprofils im direkten Vergleich zu einem Kaufteil (hier mit 44 Zähnen) hinreichend genau.
 		Das Herstellungsverfahren lässt zwar etwas höhere Präzision zu, da aber im Betrieb ohnehin von abrasiven Effekten entlang der Zahnung ausgegangen wird, wurde im Sinne einer zügigeren Fertigung darauf verzichtet.
 		\begin{figure}[h]
 			\centering
@@ -124,7 +124,7 @@
 			\label{fig:HTD profiles comparison}
 		\end{figure}\par\medskip
 		%
-		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnscheibe gegenüberliegende Seite der Rollen ebenfalls ein konkaves Profil aufweist wurde ein komplementäres Gegenstück -- zu sehen in \cref{fig:orangatang kegel flat face} -- im oben beschriebenen Prozess modelliert.
+		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnscheibe gegenüberliegende Seite der Rollen ebenfalls ein konkaves Profil aufweist, wurde ein komplementäres Gegenstück -- zu sehen in \cref{fig:orangatang kegel flat face} -- im oben beschriebenen Prozess modelliert.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
@@ -133,14 +133,14 @@
 		\end{figure}
 		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll möglichst exakt dem inneren Profil der Rollen anliegen.
 		
-		Aus Kostengründen und einfachem Zugang zu den Betriebsmitteln wurde sich entschieden, die funktionalen Versionen der getriebeseitige Zahnscheibe und Konterscheibe ebenfalls im 3D-Druck-Verfahren aus ABS selbst herzustellen.
+		Aus Kostengründen und einfachem Zugang zu den Betriebsmitteln wurde entschieden, die funktionalen Versionen der getriebeseitigen Zahn- und Konterscheibe ebenfalls im 3D-Druck-Verfahren aus ABS selbst herzustellen.
 		Es ist zwar zu erwarten, dass die Zahnscheiben gegenüber aus Aluminium gefrästen Komponenten bezüglich Verschleiß und Festigkeit deutlich unterliegen, durch das gewählte Fertigungsverfahren lassen sich allerdings schnell, unkompliziert und günstig Ersatzteile herstellen.
 		Darüber hinaus ist an dieser Stelle nicht mit einem plötzlichen Totalversagen der Materialintegrität zu rechnen.\par\medskip
 		%
 		Zur Auswahl des Riemens ist schließlich neben der Breite die Zahnung zu beachten.
 		Ein vergrößerter Mittelpunktabstand beider Zahnscheiben erhöht grundsätzlich die Anzahl greifender Zähne, allerdings fällt dieser Effekt mit zunehmendem Abstand schnell ab.
 		Es wurde ein Abstand so gewählt, dass zu jeder Zeit ein Zahn mehr als gefordert greift.
-		Mit Zahnungen von 36T für die Antriebsseite, 15T getriebeseitig und dieser Vorgabe wurde eine Riemenzahnung von 275T gewählt.
+		Mit Zahnungen von 36T für die Antriebsseite, 15T getriebeseitig und dieser Vorgabe wurde eine Riemenzahnung von 55T gewählt.
 		Die Riemenbreite wurde arbiträr auf \qty{12}{\milli\metre} und damit das breiteste käuflich erhältliche Maß festgelegt, dass konstruktiv umsetzbar ist.
 		\Cref{fig:timing belt length} zeigt schematisch das System beider Zahnscheiben und Riemen.
 		\begin{figure}[h]
@@ -150,32 +150,38 @@
 			\label{fig:timing belt length}
 		\end{figure}
 	\section{Motorbefestigung}\label{sec:motorbefestigung}
-		% Mit obigen Überlegungen fällt die Lösungswahl auf parallel zur Rollachse angeordnete Outrunnermotoren.
-		Die Verbindung zwischen Motor und Hanger wird in zwei Teilen hergestellt: eine Scheibe, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert.
-		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Scheibe mit allen relevanten Dimensionen.
-		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hanger mit senkrechter Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		Die Verbindung zwischen Motor und Hanger wird in zwei Teilen hergestellt: eine Zange, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert und ein Arm, der die Verbindung zwischen Zange und Motor herstellt.
+		Kostenfreie Verfügbarkeit des Materials lässt die Werkstoffauswahl beider Komponenten auf Walzbleche der Aluminiumlegierung AlMgSi0,5 bzw. EN AW 6060 fallen.
+		Ihre Fertigung findet im CNC-Fräsverfahren statt.
+
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
-			\caption[Scheibe zur Montage der Motorhalterung am Hanger]{Scheibe zur Montage der Motorhalterung am Hanger.}
+			\includesvg[width=.6\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
+			\caption[Zange zur Montage der Motorhalterung am Hanger]{Zange zur Montage der Motorhalterung am Hanger.}
 			\label{fig:hanger clamp drawing}
 		\end{figure}
-		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen um flach anliegend die Motorscheibe anbringen zu können.
-		Die drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Scheibenpaaren anbringen zu können.
-		Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheiben, andererseits wirken sie als Käfig zum Schutz der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.
+		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Zange mit allen relevanten Dimensionen.
+		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hangers mit Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen, um flach anliegend den Motorarm anbringen zu können.
+		Drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Armpaaren anbringen zu können.
+		Sollte die Einspannung des Hangers in der Zange ein Driften entlang der bzw. Kippen gegen die Hangerachse nicht zuverlässig verhindern können, so sollen später an den drei Aussparungen entlang des äußeren Bogens Querverbindungen zwischen zwei gegenüberliegenden Zangen hergestellt werden können.
+		% Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheibe-Arm-Gruppen, andererseits wirken sie als Käfig zum Schutze der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.
+
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.9\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
-			\caption[Verbindungsplatte zwischen Motor und Hangerscheibe]{Verbindungsplatte zwischen Motor und Hangerscheibe. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse der Platte ausgerichtete Langlöcher zur Justage der Riemenspannung.}
+			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
+			\caption[Verbindungsarm zwischen Motor und Hangerzange]{Verbindungsarm zwischen Motor und Hangerzange. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse des Armes ausgerichtete Langlöcher zur Justage der Riemenspannung.}
 			\label{fig:motor piece drawing}
 		\end{figure}
-
-		Die komplementäre Komponente ist eine Platte, die, flach an die Hangerscheibe angeschraubt, eine steife Verbindung zwischen Hanger und Motor bildet.
-		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Hangerscheibe.
-		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
-		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
+		\newpage
+		Der Arm als komplementäre Komponente stellt, flach an die Zange angeschraubt, eine steife Verbindung zwischen Hanger und Motor her.
+		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Zange.
+		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig bezüglich der Motoren ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
+		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel des Armes innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
 		Rechts befinden sich vier weitere Langlöcher von \qty{6}{\milli\metre} Länge zur Befestigung des Motors.
-		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.\par
+		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.
+		Nach \cref{fig:timing belt length} ist mit der in \cref{sec:transmission} beschriebenen Konfiguration ein theoretischer Mittelpunktabstand von \(\approx \qty{74,34}{\milli\metre}\) zu erwarten.
+		Der Mittelpunktabstand der Hangerachse und des Kreismittelpunktes der Langlöcher zur Motorbefestigung wurde mit \qty{73,5}{\milli\metre} so gewählt, dass bei einer Länge der Langlöcher von \qty{6}{\milli\metre} sowohl Ein- und Ausbau des Riemens, als auch adäquate Riemenspannung sichergestellt ist.
+
 		Vier Bohrungen durch die äußeren Erhebungen um die Motorachse herum sollen es später ermöglichen bei Bedarf einen Riemenschutz anbringen zu können.
 		Die Erhebungen selbst sollen den Zweck eines Puffermaterial im Falle eines Bodenkontaktes erfüllen.
-		%
