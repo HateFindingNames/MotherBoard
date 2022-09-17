@@ -1,15 +1,25 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-I = 30
-KV = 190
-U = 36
-m = 100
-incline = 5
-r = 0.04
+I = 30						# Motor current, A
+KV = 190					# Motor Speed constant, 1/(min*V)
+U = 36						# battery voltage, V
+incline = 5					# slope incline, %
+r = 0.04					# wheel dia, m
+m = 100						# mass, kg
+rho = 1.204					# density of medium, kg/m³
+g = 9.81					# gravity, m/s²
+A = 0.293					# surface area of body, m²
+c_drag = 0.872				# coefficient of drag, 1
+c_roll = 0.022				# coefficient of rolling resistance, 1
+v = 10						# velocity, km/h
+
+F_incl = m * g * (np.sin(np.arctan(5/100)))
+F_drag = .5 * A * rho * c_drag * (v/3.6)**2
+F_roll = m * g * c_roll
 
 T = 8.27 * I / KV
-Th = m * 9.81 * np.sin(np.arctan(5/100)) * r
+Th = (F_incl + F_drag + F_roll) * r
 rpm = KV * U
 
 zetas = np.arange(1,3,.1)
@@ -26,13 +36,15 @@ vmax.set_ylabel("$v_{max}$ / $km \\cdot h^{-1}$", fontsize=mfontsize-2)
 TTh.set_title("Drehmomentenquotient und Maximalgeschwindigkeit\ngegen $\\zeta$", fontsize=mfontsize+2)
 TTh.grid()
 
+vmax.set_xlim(1.0,3.0)
 vmax.set_ylim(30,100)
-TTh.set_ylim(0.6,2.0)
+TTh.set_xlim(1.0,3.0)
+TTh.set_ylim(0.6,1.3)
 
 lines, labels = TTh.get_legend_handles_labels()
 lines2, labels2 = vmax.get_legend_handles_labels()
 vmax.legend(lines + lines2, labels + labels2, loc=7, fontsize=mfontsize-4)
 
 plt.tight_layout()
-plt.savefig("Calc\\T_v_vs_zetas.svg", transparent=True)
-# plt.show()
+# plt.savefig("Calc\\T_v_vs_zetas.svg", transparent=True)
+plt.show()
