@@ -5,7 +5,7 @@
 	\begin{figure}[h]
 		\centering
 		\includesvg[width=.8\textwidth]{Assets/Inrunner_Outrunner}
-		\caption[Gegenüberstellung von Inrunner und Outrunner]{Schematische Gegenüberstellung von BLDC-Motoren als Inrunner (links) bzw. Outrunner (rechts) ausgeführt~\cite{inrunner.outrunner.2022}.}
+		\caption[Gegenüberstellung von Inrunner und Outrunner]{Schematische Gegenüberstellung von BLDC-Motoren als Inrunner (links) bzw. Outrunner (rechts) ausgeführt~\cite{inrunner.outrunner.2022}.}%
 		\label{fig:inrunner outrunner}
 	\end{figure}
 	Das Funktionsprinzip bleibt so zwar unverändert, durch den vergrößerten Radius des Angriffspunktes der magnetischen Kopplung kann bei gleicher Baugröße und gleichem Phasenstrom allerdings ein höheres Drehmoment erzeugt werden.
@@ -28,19 +28,20 @@
 	Als praktikabel hat sich der Motor mit Handelsnamen \textit{TorqueBoards} und der Typenbezeichnung \textit{6355 190KV} gezeigt.
 	Elektrische Parameter sind in \cref{tab:TB 6355 190KV electrical specs} tabelliert.
 	\begin{table}[h]
-		\caption[Motorspezifikationen \textit{TorqueBoards 6355 190KV}]{Motorspezifikationen \textit{TorqueBoards 6355 190KV}.}\label{tab:TB 6355 190KV electrical specs}
 		\centering
-		\begin{tabular}{@{}ll@{}}
+		\caption[Motorspezifikationen \textit{TorqueBoards 6355 190KV}]{Motorspezifikationen \textit{TorqueBoards 6355 190KV}.}%
+		\label{tab:TB 6355 190KV electrical specs}
+		\begin{tabular}{p{.4\textwidth}l}
 			\toprule
-			Charakteristik			& Spezifikationen\\ \midrule
-			Maximale Leistung		& \qty{2500}{\kilo\watt} \\
-			Maximaler Phasenstrom	& \qty{80}{\ampere} \\
-			Maximale Spannung		& \qty{43,2}{\volt} \\
-			\(K_V\)					& \qty{190}{\per\minute\per\volt} \\ \bottomrule
+			Charakteristik					& Spezifikationen\\ \midrule
+			Maximale Leistung				& \qty{2500}{\kilo\watt}\\
+			Maximaler Phasenstrom			& \qty{80}{\ampere}\\
+			Maximale Spannung				& \qty{43,2}{\volt}\\
+			\(K_\text{V}\)					& \qty{190}{\per\minute\per\volt}\\ \bottomrule
 		\end{tabular}
 	\end{table}
 	% Die elektrische Verlustleistung skaliert proportional mit dem Quadrat des Motorstromes.
-	Die äußeren Dimensionen können \cref{fig:motor} entnommen werden\footnote{Eigene Zeichnung mangels technischer Zeichnungen seitens des Herstellers.
+	Die äußeren Dimensionen können \cref{fig:motor} entnommen werden\footnote{\hspace{1mm} Eigene Zeichnung mangels technischer Zeichnungen seitens des Herstellers.
 	Alle Dimensionen wurden der Produktbeschreibung entnommen oder wo fehlend messtechnisch ergänzt.}.
 	
 	Während eines Lenkmanövers kann es zu Traktionsverlust der antreibenden Rolle kommen, wenn sie auf der Kurvenaußenseite liegt.
@@ -58,12 +59,60 @@
 		Seine vergleichsweise breite Zahnung bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz \cite{gates.catalogue.2021}.
 		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.\par\medskip
 		%
+		Im Kontext dieser Arbeit sind zwei Situationen von Interesse: Fahrt auf flacher Strecke mit geringerer Anforderung an Drehmoment, jedoch erhöhtem Interesse an der Maximalgeschwindigkeit und Fahrt hangaufwärts mit reduzierter Geschwindigkeit und entsprechend höheren Anforderungen an das abrufbare Drehmoment.
+		Aufgrund des quadratischen Zusammenhangs des Strömungswiderstands mit der Geschwindigkeit nach \cref{eq:air drag} ist der \(F_\text{Ström}\) zuzuordnende Anteil im zweiten Fall zu vernachlässigen.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
+			\caption[Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit]{Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit. Erst ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} dominiert der Strömungswiderstand. Bei niedrigen Geschwindigkeiten ist er gegenüber dem Rollwiderstand zu vernachlässigen.}%
+			\label{fig:Froll vs Fdrag}
+		\end{figure}
+
+		Um abschätzen zu können, bei welcher Geschwindigkeit der Strömungswiderstand gegenüber dem Rollwiderstand relevant wird, ist in \cref{fig:Froll vs Fdrag} das Verhältnis beider Kräfte über der Geschwindigkeit in \unit{\kilo\metre\per\hour} aufgetragen.
+		Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} beginnt der Strömungswiderstand zu dominieren.
+		Weiter ist zu erkennen, dass bei \qty{10}{\kilo\metre\per\hour}, was etwa doppelter Schrittgeschwindigkeit\footnote{\hspace{1mm} ``Schrittgeschwindigkeit'' ist kein wohl definierter Begriff. Onlinerecherchen liefern Werte im Bereich \qtyrange{5}{7}{\kilo\metre\per\hour}.} entspricht, der Beitrag des Strömungswiderstandes nahezu verschwindet.
+		Die im obigen Plot verwendeten Werte sind in \cref{tab:drag roll values} tabelliert \cites{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
+		\begin{table}[h]
+			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes.}%
+			\label{tab:drag roll values}
+			\centering
+			\begin{threeparttable}
+				\begin{tabular}{ll}
+					\toprule
+					Größe\hspace{1cm}						& Wert\\ \midrule
+					\(A\)\tnote{a}\hspace{1cm}				& \qty{0,293}{\metre\squared}\\
+					\(c_\text{Roll}\)\hspace{1cm}			& \num{0,022}\\
+					\(c_\text{Ström}\)\tnote{a}\hspace{1cm}	& \num{0,872}\\
+					\(\rho\)\hspace{1cm}					& \qty{1,204}{\kilo\gram\per\metre\cubed}\\ \bottomrule
+				\end{tabular}
+				\begin{tablenotes}\footnotesize
+					\item[a]	Arithmetisches Mittel aus Tabelle 1 in \cite{air.drag.human.body.VANINGENSCHENAU1982}
+				\end{tablenotes}
+			\end{threeparttable}
+		\end{table}
+
+		Darüber hinaus sind elektrische Verluste etwa im Serienwiderstand der Batterie, in der Leistungselektronik und bei der Ummagnetisierung der Phasenwicklungen im Motor zu berücksichtigen.
+		Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\)\nomenclature[G]{\(\eta\)}{Wirkungsgrad\nomunit{1}}, der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
+		%
 		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen, kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline torque} als Funktion von \(\zeta\) aufgetragen werden.
 		Erwünscht ist hier ein Wert \(\gg 1\), mindestens aber \(= 1\).
-		\begin{equation}
-			\frac{T}{T_{Hang}} = \frac{8,27 \cdot I_{Motor} \cdot \zeta}{K_V \cdot m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right)}
+		% \begin{equation}
+		% 	\frac{T}{T_\text{Hang}} = \frac{8,27 \cdot I_\text{Motor} \cdot \zeta}{K_V \cdot m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right) \cdot r}
+		% 	\label{eq:torque ratio}
+		% \end{equation}
+		\begin{align}
+			\frac{T}{T_\text{Hang}} &= \frac{\num{8,27} \cdot I_\text{Motor} \cdot \zeta}{K_\text{V}
+			\left[ m \cdot g
+				\left(\sin
+					\left(\arctan
+						\left(
+							\frac{\angle}{100}
+						\right)
+					\right) + c_\text{Roll}
+				\right) + \frac{1}{2} \cdot \rho \cdot A \cdot c_\text{Ström} \cdot v^2
+			\right] \cdot r}%
 			\label{eq:torque ratio}
-		\end{equation}
+		\end{align}
 		Daneben soll auch die erwartete Maximalgeschwindigkeit nach \cref{eq:max speed km h} abgeschätzt werden.
 		Einsetzen der bekannten Parameter und Randbedingungen aus \cref{sec:constructive limitations} in \cref{eq:max speed km h} und \cref{eq:torque ratio} im Intervall \(1 \leq \zeta \leq 3\) ist in \cref{fig:torque ratio and vmax vs zetas} dargestellt.
 		Zu sehen ist, dass mindestens \(\zeta \approx 1,5\) erreicht werden muss um die Vorgaben erfüllen zu können.
@@ -71,7 +120,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.85\textwidth]{Calc/T_v_vs_zetas}
-			\caption{Plot}
+			\caption[Am Hang wirkende Momente und Maximalgeschwindigkeit als Funkton von \(\zeta\)]{Am Hang wirkende Momente und Maximalgeschwindigkeit als Funkton von \(\zeta\).}%
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}
 		
@@ -87,18 +136,18 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
-			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnscheibe wird rückseitig auf der Rolle montiert.}
+			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnscheibe wird rückseitig auf der Rolle montiert.}%
 			\label{fig:kegels}
 		\end{figure}
 		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} 3D-gedruckte Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnscheibe modelliert werden kann.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
-			\caption[Zeichnung der modellierten Zahnscheibe]{Zeichnung der modellierten Zahnscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}
+			\caption[Zeichnung der modellierten Zahnscheibe]{Zeichnung der modellierten Zahnscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}%
 			\label{fig:htd 5m driven}
 		\end{figure}
 
-		Das Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{Hier SolidWorks.} nachzubilden.
+		Das Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{\hspace{1mm} Hier SolidWorks.} nachzubilden.
 		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte Zahnscheibe mit 36 Zähnen.
 		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
 		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.
@@ -110,17 +159,17 @@
 			\begin{subfigure}{.49\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{Footage/Pictures/Machined-HTD_tooth_fit.jpg}
-				\caption{CNC-gefrästes HTD-Profil auf Riemen.}
+				\caption{CNC-gefrästes HTD-Profil auf Riemen.}%
 				\label{subfig:machined HTD}
 			\end{subfigure}
 			\hfill
 			\begin{subfigure}{.49\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{Footage/Pictures/Printed-HTD_tooth_fit.jpg}
-				\caption{3D-gedrucktes HTD-Profil auf Riemen.}
+				\caption{3D-gedrucktes HTD-Profil auf Riemen.}%
 				\label{subfig:printed HTD}
 			\end{subfigure}
-			\caption{Vergleich der Passform einer gekauften Zahnscheibe (44T) aus Aluminium und des 3D-gedruckten Modells (36T) mit einem Riemen.}
+			\caption{Vergleich der Passform einer gekauften Zahnscheibe (44T) aus Aluminium und des 3D-gedruckten Modells (36T) mit einem Riemen.}%
 			\label{fig:HTD profiles comparison}
 		\end{figure}\par\medskip
 		%
@@ -128,7 +177,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
-			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}
+			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}%
 			\label{fig:orangatang kegel flat face}
 		\end{figure}
 		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll möglichst exakt dem inneren Profil der Rollen anliegen.
@@ -146,7 +195,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Timing Belt assembly}
-			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben bei einem Zahnriemen mit 55 Zähnen.}
+			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben bei einem Zahnriemen mit 55 Zähnen.}%
 			\label{fig:timing belt length}
 		\end{figure}
 	\section{Motorbefestigung}\label{sec:motorbefestigung}
@@ -157,7 +206,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.6\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Hanger Clamp}
-			\caption[Zange zur Montage der Motorhalterung am Hanger]{Zange zur Montage der Motorhalterung am Hanger.}
+			\caption[Zange zur Montage der Motorhalterung am Hanger]{Zange zur Montage der Motorhalterung am Hanger.}%
 			\label{fig:hanger clamp drawing}
 		\end{figure}
 		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Zange mit allen relevanten Dimensionen.
@@ -170,7 +219,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.7\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Mount - Motor Piece}
-			\caption[Verbindungsarm zwischen Motor und Hangerzange]{Verbindungsarm zwischen Motor und Hangerzange. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse des Armes ausgerichtete Langlöcher zur Justage der Riemenspannung.}
+			\caption[Verbindungsarm zwischen Motor und Hangerzange]{Verbindungsarm zwischen Motor und Hangerzange. Wichtigste Merkmale: links radial um die Rollachse angeordnete Langlöcher zur Feinjustage des Montagewinkels. Rechts entlang der Längsachse des Armes ausgerichtete Langlöcher zur Justage der Riemenspannung.}%
 			\label{fig:motor piece drawing}
 		\end{figure}
 		\newpage
