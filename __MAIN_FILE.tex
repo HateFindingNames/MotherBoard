@@ -24,11 +24,11 @@
 \begin{document}
 %-----------------------------------------------------------------
 \input{chapters/0_top}
-\pagenumbering{Roman}
+\clearpage\pagenumbering{Roman}
 \tableofcontents
-\newpage
+\listoffigures
+\listoftables
 \printnomenclature[5cm]
-% \input{chapters/nomenclature}
 %-----------------------------------------------------------------
 \clearpage\pagenumbering{arabic}
 \include{chapters/1_intro}
@@ -40,8 +40,6 @@
 \include{chapters/7_conclusion}
 %-----------------------------------------------------------------
 \newpage
-\listoffigures
-\listoftables
 \include{chapters/appendix}
 \printbibliography%
 %=================================================================
