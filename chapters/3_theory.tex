@@ -9,9 +9,9 @@
 		\label{eq:downhill force}
 	\end{align}
 	\nomenclature[L]{\(F_\text{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
-	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\left(\frac{\angle}{100}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
+	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
 	\begin{equation}
-		F_\text{Hang} = m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{100}\right)\right)
+		F_\text{Hang} = m \cdot g \cdot \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right)
 		\label{eq:downhill force incline to radian}
 	\end{equation}
 	\begin{figure}[h]
@@ -47,13 +47,14 @@
 	Nun lässt sich mit bekanntem Radius der Rolle und unter Berücksichtigung von \crefrange{eq:downhill force incline to radian}{eq:air drag} für das rückwirkende Drehmoment schreiben:
 	\begin{align}
 		T_\text{Hang}	&= \left(F_\text{Hang} + F_\text{Roll} + F_\text{Ström}\right) \cdot r \nonumber \\
-						&= \left[ m \cdot g \left( \sin\left(\arctan\left(\frac{\angle}{100}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} \cdot \rho \cdot A \cdot c_\text{Ström} \cdot v^2 \right] \cdot r%
+						&= \left[ m \cdot g \left( \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} \cdot \rho \cdot A \cdot c_\text{Ström} \cdot v^2 \right] \cdot r%
 		\label{eq:incline plus roll plus drag torque}
 	\end{align}
 
 	\section{BLDC}
 		Die Drehmomentkonstante \(K_\text{T}\)\nomenclature[L]{\(K_\text{T}\)}{Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}} eines BLDC berechnet sich aus der reziproken Drehzahlkonstante \(K_\text{V}\)\nomenclature[L]{\(K_\text{V}\)}{Drehzahlkonstante\nomunit{\per\minute\per\volt}} korrigiert um den Umrechnungsfaktor \(\frac{60}{2\pi}\) und trägt die Einheit \unit{\newtonmetre\per\ampere}.
-		Der Umrechnungsfaktor trägt der Tatsache Rechnung, dass die Drehzahlkonstante üblicherweise in \unit{\per\minute} und nicht in \unit{\radian\per\second} angegeben wird\cite{DalY.Ohm.2000}.
+		Der Tatsache Rechnung getragen, dass die Drehzahlkonstante üblicherweise in \unit{\per\minute} angegeben wird, überführt der Faktor \(\frac{60}{2\pi}\) in \unit{\radian\per\second}.
+		Der Faktor \(\frac{3}{2}\) entspricht \(\left| 3\cos(\qty{120}{\degree}) \right|\)  \cites{DalY.Ohm.2000}{APPNOTE.yedamale2003brushless}.
 		\begin{align}
 			K_\text{T}	&= \frac{60}{2\pi} \cdot \frac{3}{2} \cdot \frac{1}{\sqrt{3}} \cdot \frac{1}{K_\text{V}} \nonumber \\
 				&\approx 8,27 \cdot \frac{1}{K_\text{V}}
