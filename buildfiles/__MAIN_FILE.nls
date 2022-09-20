@@ -15,10 +15,12 @@
   \item [{RS}]\begingroup Road Side\nomeqref {2.0}\nompageref{4}
 \nomgroup{G}
   \item [{\(\mu_\text{Roll}\)}]\begingroup Rollreibungskoeffizient\nomunit{\metre}\nomeqref {3.3}\nompageref{8}
-  \item [{\(\omega_\text{max}\)}]\begingroup Maximaldrehzahl\nomunit{\per\minute}\nomeqref {3.9}\nompageref{9}
+  \item [{\(\omega\)}]\begingroup Mechanische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{18}
+  \item [{\(\omega_\text{e}\)}]\begingroup Elektrische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{18}
+  \item [{\(\omega_\text{max}\)}]\begingroup Mechanische Maximaldrehzahl\nomunit{\per\minute}\nomeqref {3.6}\nompageref{9}
   \item [{\(\rho\)}]\begingroup Gasdichte\nomunit{\kilo\gram\per\cubic\metre}\nomeqref {3.4}\nompageref{8}
   \item [{\(\theta\)}]\begingroup Hangneigungswinkel\nomunit{rad}\nomeqref {3.0}\nompageref{8}
-  \item [{\(\zeta\)}]\begingroup Untersetzungsverhältnis\nomunit{1}\nomeqref {3.7}\nompageref{9}
+  \item [{\(\zeta\)}]\begingroup Untersetzungsverhältnis\nomunit{1}\nomeqref {3.9}\nompageref{9}
 \nomgroup{L}
   \item [{\(A\)}]\begingroup Fläche\nomunit{\square\metre}\nomeqref {3.4}\nompageref{8}
   \item [{\(c_\text{Luft}\)}]\begingroup Strömungswiderstandkoeffizient\nomunit{1}\nomeqref {3.4}\nompageref{8}
@@ -27,18 +29,18 @@
   \item [{\(F_\text{Roll}\)}]\begingroup Rollwiderstand\nomunit{\newton}\nomeqref {3.3}\nompageref{8}
   \item [{\(F_\text{Ström}\)}]\begingroup Strömungswiderstand\nomunit{\newton}\nomeqref {3.4}\nompageref{8}
   \item [{\(g\)}]\begingroup Erdbeschleunigung\nomunit{\metre\per\square\second}\nomeqref {3.3}\nompageref{8}
-  \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.8}\nompageref{9}
-  \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.5}\nompageref{9}
+  \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.10}\nompageref{9}
+  \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.7}\nompageref{9}
   \item [{\(K_\text{V}\)}]\begingroup Drehzahlkonstante\nomunit{\per\minute\per\volt}\nomeqref {3.5}\nompageref{9}
   \item [{\(m\)}]\begingroup Masse\nomunit{\kilo\gram}\nomeqref {3.3}\nompageref{8}
-  \item [{\(N_\text{Motor}\)}]\begingroup Zähneanzahl antriebseitig\nomunit{1}\nomeqref {3.7}\nompageref{9}
+  \item [{\(N_\text{Motor}\)}]\begingroup Zähneanzahl antriebseitig\nomunit{1}\nomeqref {3.9}\nompageref{9}
   \item [{\(n_\text{p}\)}]\begingroup Anzahl der Polpaare\nomunit{1}\nomeqref {5.0}\nompageref{18}
-  \item [{\(N_\text{Rolle}\)}]\begingroup Zähneanzahl getriebeseitig\nomunit{1}\nomeqref {3.7}\nompageref{9}
-  \item [{\(r_\text{Rolle}\)}]\begingroup Radius der Rollen\nomunit{\metre}\nomeqref {3.10}\nompageref{9}
-  \item [{\(T\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.8}\nompageref{9}
-  \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.10}\nompageref{9}
+  \item [{\(N_\text{Rolle}\)}]\begingroup Zähneanzahl getriebeseitig\nomunit{1}\nomeqref {3.9}\nompageref{9}
+  \item [{\(r_\text{Rolle}\)}]\begingroup Radius der Rollen\nomunit{\metre}\nomeqref {3.7}\nompageref{9}
+  \item [{\(T\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.10}\nompageref{9}
+  \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.7}\nompageref{9}
   \item [{\(v\)}]\begingroup Laterale Geschwindigkeit\nomunit{\metre\per\second}\nomeqref {3.4}\nompageref{8}
-  \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.10}\nompageref{9}
+  \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.7}\nompageref{9}
 \nomgroup{S}
   \item [{\(\angle\)}]\begingroup Hangneigung\nomunit{\percent}\nomeqref {3.1}\nompageref{8}
 
