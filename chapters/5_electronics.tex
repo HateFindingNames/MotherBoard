@@ -21,18 +21,21 @@
 	Zur Durchführung der Phasenleitungen werden je Motor drei Löcher in das Gehäuse gebohrt und mit Gummiösen versehen.\par\medskip
 	%
 	Die hardwareseitige Leistungsendstufe ist als Doppel-H-Brücke implementiert und in \cref{fig:power mosfets} gezeigt.
-	Um den Rotor um einen Winkel \qty{360}{\degree} dividiert durch die Anzahl der Polpaare \(n_\text{p}\)\nomenclature[L]{\(n_\text{p}\)}{Anzahl der Polpaare\nomunit{1}} zu drehen, muss ein voller Kommutationszyklus durchgeführt werden, was im Folgenden einer elektrischen Umdrehung entsprechen soll.
+	Um den Rotor um \qty{360}{\degree} dividiert durch die Anzahl der Polpaare \(n_\text{p}\)\nomenclature[L]{\(n_\text{p}\)}{Anzahl der Polpaare\nomunit{1}} zu drehen, muss ein voller Kommutationszyklus durchgeführt werden, was im Folgenden einer elektrischen Umdrehung entsprechen soll.
 	Die Anzahl elektrischer Umdrehungen je Minute bei gegebener mechanischer Drehzahl des Rotors sei somit gegeben durch:
 	\begin{align}
-		ERPM = \omega \cdot n_\text{p}
+		\omega_\text{e} = \omega n_\text{p}
 		\label{eq:ERPM and RPM}
 	\end{align}
-	Die Maximalgeschwindigkeit skaliert somit direkt proportional mit \(ERPM\) nach
+	\nomenclature[G]{\(\omega_\text{e}\)}{Elektrische Drehzahl\nomunit{\per\minute}}
+	\nomenclature[G]{\(\omega\)}{Mechanische Drehzahl\nomunit{\per\minute}}
+	%
+	Die Maximalgeschwindigkeit skaliert somit direkt proportional mit \(\omega_\text{e}\) nach
 	\begin{align}
-		v_\text{max} = \frac{ERPM \cdot 2\pi \cdot r}{n_\text{p} \cdot \zeta}
+		v_\text{max} = \omega_\text{e} \frac{2\pi r}{n_\text{p} \zeta}
 		\label{eq:max speed by ERPM}
 	\end{align}
-	Die Konfigurationssoftware der ESC lässt zu, dass ein oberer Grenzwert für \(ERPM\) und damit unmittelbar für die Maximalgeschwindigkeit definiert werden kann.
+	Die Konfigurationssoftware der ESC lässt zu, dass ein oberer Grenzwert für \(\omega_\text{e}\) und damit unmittelbar für die Maximalgeschwindigkeit definiert werden kann.
 
 	% Die technische Dokumentation der ESC empfiehlt, \(ERPM\) unterhalb eines Wertes von \num{60000} zu halten.
 

@@ -74,24 +74,24 @@
 		% Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\)\nomenclature[G]{\(\eta\)}{Wirkungsgrad\nomunit{1}}, der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
 		%
 		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen, kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline plus roll plus drag torque} als Funktion von \(\zeta\) aufgetragen werden.
-		Erwünscht ist hier ein Wert \(\gg 1\), mindestens aber \(= 1\).
+		Erwünscht ist hier ein Wert~\(\gg 1\), mindestens aber~\(= 1\).
 		\begin{align}
-			\frac{T}{T_\text{Hang}} &= \frac{\num{8,27} \cdot I_\text{Motor} \cdot \zeta}{K_\text{V}
-			\left[ m \cdot g
+			\frac{T}{T_\text{Hang}} &= \frac{\num{8,27} I_\text{Motor} \zeta}{K_\text{V}
+			\left[ m g
 				\left(\sin
 					\left(\arctan
 						\left(
 							\frac{\angle}{100}
 						\right)
 					\right) + c_\text{Roll}
-				\right) + \frac{1}{2} \cdot \rho \cdot A \cdot c_\text{Ström} \cdot v^2
-			\right] \cdot r}%
+				\right) + \frac{1}{2} c_\text{Ström} \rho A v^2
+			\right] r}%
 			\label{eq:torque ratio}
 		\end{align}
 		Daneben soll auch die erwartete Maximalgeschwindigkeit nach \cref{eq:max speed km h} abgeschätzt werden.
 		Einsetzen der bekannten Parameter und Randbedingungen aus \cref{sec:constructive limitations} in \cref{eq:max speed km h} und \cref{eq:torque ratio} im Intervall \(1 \leq \zeta \leq 3\) ist in \cref{fig:torque ratio and vmax vs zetas} dargestellt.
 		Zu sehen ist, dass mindestens \(\zeta \approx \num{2,2}\) erreicht werden muss um die Vorgaben erfüllen zu können.
-		Um Reserve zu schaffen wird arbiträr \(\zeta = 2,4\) gewählt.
+		Im Sinne einer Reserve wurde arbiträr \(\zeta = 2,4\) gewählt.
 		\begin{table}[h]
 			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes.}%
 			\label{tab:drag roll values}
@@ -124,8 +124,8 @@
 		Da im Falle der HTD 5M Zahnung gilt, dass zu jedem Zeitpunkt zumindest sechs Zähne greifen müssen~\cite{MAEDLERGmbH.2021} und mit obigen Überlegungen die antriebsseitige Zahnscheibe kleiner gegenüber der getriebeseitigen sein muss, ergibt sich eine antriebsseitige Mindestzahnung, die wiederum Einfluss auf den Außendurchmesser des getriebeseitigen Zahnrades hat.
 		Dieser darf den Durchmesser der Rolle abzüglich des zusätzlichen Auftrags des Riemens von \qty{1,7}{\milli\metre}\cite{gates.catalogue.2021} nicht übersteigen, um im Betrieb Bodenkontakt des Riemens zu vermeiden.
 		Während käuflich Zahnungen von 12T an aufwärts gelistet sind, bot sich aus Kostengründen eine Variante mit 15 Zähnen an.
-		Mit \(\zeta=2,4\) ergibt sich so eine Zahnung von 36T für die Getriebeseite mit einem theoretischen Stillstanddrehmoment an den Rollen von \qty{3,13}{\newtonmetre}.
-		
+		Mit \(\zeta=2,4\) ergibt sich so eine Zahnung von 36T für die Getriebeseite mit einem theoretischen Maximaldrehmoment an den Rollen von \qty{3,13}{\newtonmetre}.\par\medskip
+		%
 		Auf der getriebenen Seite muss die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden.
 		So ist es wünschenswert, dass sich bereits durch die Bauart der Rollen eine einfache Installation anbietet.
 		Verwendet werden hier \qty{80}{\milli\metre} \textit{Kegel} des Herstellers \textit{Orangatang}.
@@ -150,7 +150,7 @@
 		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer einfacheren Montage.
 		
 		Wie in \cref{fig:HTD profiles comparison} zu sehen, ist die Passform des Zahnungsprofils im direkten Vergleich zu einem Kaufteil (hier mit 44 Zähnen) hinreichend genau.
-		Das Herstellungsverfahren lässt zwar etwas höhere Präzision zu, da aber im Betrieb ohnehin von abrasiven Effekten entlang der Zahnung ausgegangen wird, wurde im Sinne einer zügigeren Fertigung darauf verzichtet.
+		Das Herstellungsverfahren lässt zwar etwas höhere Präzision zu, da aber im Betrieb ohnehin von abrasiven Effekten entlang der Zahnung ausgegangen werden kann, wurde im Sinne einer zügigeren Fertigung darauf verzichtet.
 		\begin{figure}[h]
 			\centering
 			\begin{subfigure}{.49\textwidth}
@@ -196,9 +196,9 @@
 			\label{fig:timing belt length}
 		\end{figure}
 	\section{Motorbefestigung}\label{sec:motorbefestigung}
-		Die Verbindung zwischen Motor und Hanger wird in zwei Teilen hergestellt: eine Zange, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert und ein Arm, der die Verbindung zwischen Zange und Motor herstellt.
-		Kostenfreie Verfügbarkeit des Materials lässt die Werkstoffauswahl beider Komponenten auf Walzbleche der Aluminiumlegierung AlMgSi0,5 bzw. EN AW 6060 fallen.
-		Ihre Fertigung findet im CNC-Fräsverfahren statt.
+		Die Verbindung zwischen Motor und Hanger wurde in zwei Teilen hergestellt: eine Zange, die formschlüssig Verdrehen um die Hangerachse und durch Verspannen reibschlüssig Verschieben entlang der Hangerachse verhindert und ein Arm, der die Verbindung zwischen Zange und Motor herstellt.
+		Kostenfreie Verfügbarkeit des Materials lässt die Werkstoffauswahl beider Komponenten auf Walzbleche der Aluminiumlegierung AlMgSi0,5 (EN AW 6060) fallen.
+		Die Fertigung findet im CNC-Fräsverfahren statt.
 
 		\begin{figure}[h]
 			\centering
@@ -208,9 +208,10 @@
 		\end{figure}
 		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Zange mit allen relevanten Dimensionen.
 		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hangers mit Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		Um hier die Kontaktfläche zu maximieren wurde als Halbzeug ein Blech größtmöglicher, zur Verfügung stehender Materialstärke gewählt.
 		Kreisförmig um die Rollachse des Hanger befinden sich sechs M4-Durchgangsbohrungen, um flach anliegend den Motorarm anbringen zu können.
 		Drei Aussparungen entlang des äußeren Bogens sollen später Platz bieten, um Querverbindungen zwischen Armpaaren anbringen zu können.
-		Sollte die Einspannung des Hangers in der Zange ein Driften entlang der bzw. Kippen gegen die Hangerachse nicht zuverlässig verhindern können, so sollen später an den drei Aussparungen entlang des äußeren Bogens Querverbindungen zwischen zwei gegenüberliegenden Zangen hergestellt werden können.
+		Sollte die Einspannung des Hangers in der Zange ein Driften entlang der bzw. Kippen gegen die Hangerachse nicht zuverlässig verhindern können, so sollen später an den drei Aussparungen entlang des äußeren Bogens Querverbindungen zwischen zwei gegenüberliegenden Zangen möglich sein.
 		% Diese wiederum erfüllen einerseits den Zweck einer mechanischen Kopplung und damit einer Lastverteilung zwischen den Scheibe-Arm-Gruppen, andererseits wirken sie als Käfig zum Schutze der Motoren vor groben Schäden während der Fahrt wie etwa durch umherfliegendes Geröll oder Kontakt mit Bodenunebenheiten.
 
 		\begin{figure}[h]
@@ -220,7 +221,7 @@
 			\label{fig:motor piece drawing}
 		\end{figure}
 		\newpage
-		Der Arm als komplementäre Komponente stellt, flach an die Zange angeschraubt, eine steife Verbindung zwischen Hanger und Motor her.
+		Ebenfalls aus AlMgSi0,5 und mit einer Materialstärke von \qty{4}{\milli\metre} stellt der Arm als komplementäre Komponente, flach an die Zange angeschraubt, eine steife Verbindung zwischen Hanger und Motor her.
 		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Zange.
 		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig bezüglich der Motoren ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
 		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel des Armes innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.

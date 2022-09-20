@@ -4,6 +4,9 @@
 	Im Vorfeld wurden mehrere Testfahrten auf urbanem Untergrund und entlang verschiedener Steigungen durchgeführt.
 	Insgesamt wurde die verbaute Batterie hierbei dreimal von \qty{42}{\volt} (voll geladen) herunter auf \qty{31}{\volt} (\qty{10}{\percent} Restkapazität) entladen.
 	Zurückgelegte Distanz und mittlere, sowie maximale Geschwindigkeit wurden mittels Navigationssoftware und GPS gemessen.
+	Zusätzlich wurden Logginginformationen der ESC selbst zur Evaluation herangezogen.
+	\Cref{fig:ESC plot} zeigt den Verlauf der Geschwindigkeit in \unit{\kilo\metre\per\hour} zusammen mit Motor- und Batteriestrom in \unit{\percent} der jeweiligen Maximalwerte.
+	Die verwendeten Parameter für Tests auf der Werkbank und im Feld können \cref{fig:ESC motor params} entnommen werden.
 	% Da aus Sicherheitsgründen einige Testläufe auf der Werkbank durchgeführt wurden und Messungen per GPS jedoch eine tatsächliche Bewegung im freien zwingend erforderlich machen, wurden zusätzlich Logginginformationen der ESC ausgelesen, um aus Umdrehungen pro Minute und Anzahl der Umdrehungen Werte zur Geschwindigkeit rechnerisch ermitteln zu können.\par\medskip
 	%
 	\begin{figure}[h]
@@ -23,11 +26,19 @@
 
 	\section{Performanz}
 		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa \qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von \qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
-		Während das System aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit moderater Anfangsgeschwindigkeit die Steigung zu überwinden.\par\medskip
+		Während das System aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.8\textwidth, inkscapelatex=false]{Calc/ESC_plot}
+			\caption[ESC plot]{ESC plot.}%
+			\label{fig:ESC plot}
+		\end{figure}
 		%
 		Die Geschwindigkeitstests wurden entlang einer frisch asphaltierten, ebenen Strecke durchgeführt.
 		Die theoretische Maximalgeschwindigkeit konnte hier aus Sicherheitsgründen nicht erreicht werden.
-		Ab etwa \qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren.
+		Ab etwa \qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren was auch unter dem Begriff der \textit{Speed Wobbles} bekannt ist.
+		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde aber zu einem vergrößerten Kurvenradius führen.
+		Aus diesem Grund wurde hiervon abgesehen.
 		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf \qty{25}{\kilo\metre\per\hour} begrenzt, welche im Rahmen der durchgeführten Tests problemlos erreicht werden konnte.
 		\begin{figure}[h]
 			\centering
