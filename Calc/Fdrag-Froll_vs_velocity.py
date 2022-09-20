@@ -17,8 +17,8 @@ fig, ratio = plt.subplots(nrows=1, ncols=1, figsize=(plotsize * 16, plotsize * 9
 
 F_roll = m * g * c_roll
 quot = F_drag / F_roll
-ratio.plot(v, (quot * (v/3.6)**2), color="black", label="$$\\frac{F_{Ström}}{F_{Roll}}$")
-ratio.set_xlabel("$v$ / $m \cdot s^{-1}$", fontsize=mfontsize-2)
+ratio.plot(v, (quot * (v/3.6)**2), color="black", label="$\\frac{F_{Ström}}{F_{Roll}}$")
+ratio.set_xlabel("$v$ / $m \\, s^{-1}$", fontsize=mfontsize-2)
 ratio.set_ylabel("$\\frac{F_{Ström}}{F_{Roll}}$ / 1", fontsize=mfontsize-2)
 ratio.set_title("Quotient aus Strömungs- und Rollwiderstand\ngegen Geschwindigkeit", fontsize=mfontsize+2)
 ratio.grid()

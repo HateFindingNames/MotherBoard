@@ -31,8 +31,8 @@ TTh.plot(zetas, ((T*zetas)/Th), color="black", ls=":", label="$\\frac{T}{T_{Hang
 vmax = TTh.twinx()
 vmax.plot(zetas, ((rpm/zetas)*np.pi*2*r*(60/1000)), color="black", ls="--", label="$v_{max}$")
 TTh.set_xlabel("$\\zeta$ / 1", fontsize=mfontsize-2)
-TTh.set_ylabel("$\\frac{T}{T_{Hang}}$ / $N \\cdot m$", fontsize=mfontsize-2)
-vmax.set_ylabel("$v_{max}$ / $km \\cdot h^{-1}$", fontsize=mfontsize-2)
+TTh.set_ylabel("$\\frac{T}{T_{Hang}}$ / $N \\, m$", fontsize=mfontsize-2)
+vmax.set_ylabel("$v_{max}$ / $km \\, h^{-1}$", fontsize=mfontsize-2)
 TTh.set_title("Drehmomentenquotient und Maximalgeschwindigkeit\ngegen $\\zeta$", fontsize=mfontsize+2)
 TTh.grid()
 
@@ -46,5 +46,5 @@ lines2, labels2 = vmax.get_legend_handles_labels()
 vmax.legend(lines + lines2, labels + labels2, loc=7, fontsize=mfontsize-4)
 
 plt.tight_layout()
-# plt.savefig("Calc\\T_v_vs_zetas.svg", transparent=True)
-plt.show()
+plt.savefig("Calc\\T_v_vs_zetas.svg", transparent=True)
+# plt.show()
