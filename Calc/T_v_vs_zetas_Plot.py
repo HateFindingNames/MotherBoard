@@ -26,15 +26,15 @@ zetas = np.arange(1,3,.1)
 
 mfontsize = 14
 plotsize = .5
-fig, TTh = plt.subplots(nrows=1, ncols=1, figsize=(plotsize * 16, plotsize * 9))
-TTh.plot(zetas, ((T*zetas)/Th), color="black", ls=":", label="$\\frac{T}{T_{Hang}}$")
+fig, TTh = plt.subplots(nrows=1, ncols=1, figsize=(plotsize * 18, plotsize * 9))
+TTh.plot(zetas, ((T*zetas)/Th), color="black", ls="solid", linewidth=.5, label="$\\frac{T}{T_{Hang}}$")
 vmax = TTh.twinx()
-vmax.plot(zetas, ((rpm/zetas)*np.pi*2*r*(60/1000)), color="black", ls="--", label="$v_{max}$")
+vmax.plot(zetas, ((rpm/zetas)*np.pi*2*r*(60/1000)), color="black", ls="--", linewidth=.5, label="$v_{max}$")
 TTh.set_xlabel("$\\zeta$ / 1", fontsize=mfontsize-2)
 TTh.set_ylabel("$\\frac{T}{T_{Hang}}$ / $N \\, m$", fontsize=mfontsize-2)
 vmax.set_ylabel("$v_{max}$ / $km \\, h^{-1}$", fontsize=mfontsize-2)
-TTh.set_title("Drehmomentenquotient und Maximalgeschwindigkeit\ngegen $\\zeta$", fontsize=mfontsize+2)
-TTh.grid()
+TTh.set_title("Drehmomentenquotient und Maximalgeschwindigkeit gegen $\\zeta$", fontsize=mfontsize+2)
+# TTh.grid()
 
 vmax.set_xlim(1.0,3.0)
 vmax.set_ylim(30,100)
