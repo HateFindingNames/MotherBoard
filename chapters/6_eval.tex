@@ -2,34 +2,36 @@
 \chapter{Evaluation}
 	Im Folgenden sollen die mechanische Integrität und Performanz des Systems mit Respekt auf die in \cref{sec:constructive limitations} formulierten Rahmenbedingungen diskutiert werden.
 	Im Vorfeld wurden mehrere Testfahrten auf urbanem Untergrund und entlang verschiedener Steigungen durchgeführt.
-	Insgesamt wurde die verbaute Batterie hierbei dreimal von \qty{42}{\volt} (voll geladen) herunter auf \qty{31}{\volt} (\qty{10}{\percent} Restkapazität) entladen.
+	Insgesamt wurde die verbaute Batterie hierbei dreimal von \qty{42}{\volt} (voll geladen) herunter auf \qty{31}{\volt} entladen.
 	Zurückgelegte Distanz und mittlere, sowie maximale Geschwindigkeit wurden mittels Navigationssoftware und GPS gemessen.
 	Zusätzlich wurden Logginginformationen der ESC selbst zur Evaluation herangezogen.
-	\Cref{fig:ESC plot} zeigt den Verlauf der Geschwindigkeit in \unit{\kilo\metre\per\hour} zusammen mit Motor- und Batteriestrom in \unit{\percent} der jeweiligen Maximalwerte.
-	Die verwendeten Parameter für Tests auf der Werkbank und im Feld können \cref{fig:ESC motor params} entnommen werden.
+	% \Cref{fig:ESC plot} zeigt den Verlauf der Geschwindigkeit in \unit{\kilo\metre\per\hour} zusammen mit Motor- und Batteriestrom in \unit{\percent} der jeweiligen Maximalwerte.
+	Die verwendeten Parameter für Tests auf der Werkbank und im Feld können \cref{fig:ESC motor params} und \cref{fig:ESC erpm setting} entnommen werden.
 	% Da aus Sicherheitsgründen einige Testläufe auf der Werkbank durchgeführt wurden und Messungen per GPS jedoch eine tatsächliche Bewegung im freien zwingend erforderlich machen, wurden zusätzlich Logginginformationen der ESC ausgelesen, um aus Umdrehungen pro Minute und Anzahl der Umdrehungen Werte zur Geschwindigkeit rechnerisch ermitteln zu können.\par\medskip
 	%
+
 	\begin{figure}[h]
 		\centering
-		\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain inclined}
+		\includesvg[width=.75\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain inclined}
 		\caption[Zeichnung des Gesamtaufbaus]{Zeichnung des Gesamtaufbaus montiert als Hinterachse.}
 		\label{fig:drivetrain inclined}
 	\end{figure}
-	\Cref{fig:drivetrain inclined} zeigt eine Zeichnung des Gesamtaufbaus des Systems mit zwei Motoren, den Unterbaugruppen der Motorhalterungen, den Rollen und den Truck montiert an der Heckseite des Decks in geneigter Position.
-	Zum Vergleich ist der reale Aufbau in \cref{fig:real world assembly} zu sehen.
+
+	\Cref{fig:drivetrain inclined} zeigt eine Zeichnung des Gesamtaufbaus des Systems mit zwei Motoren, den Unterbaugruppen der Motorhalterungen, den Rollen und den Truck montiert an der Heckseite des Decks in eingelenkter Position.
+	Zum Vergleich in \cref{fig:real world assembly} der reale Aufbau.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[angle=180, width=.5\textwidth]{Footage/Pictures/Drivetrain close up v2.jpg}
 		\caption[Fertiger Aufbau des Antriebssystems]{Fertiger Aufbau des Antriebssystems nach etwa \qty{100}{\kilo\metre} Testfahrt durch urbanes Terrain.}
 		\label{fig:real world assembly}
 	\end{figure}
-
+	%
 	\section{Performanz}
 		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa \qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von \qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
 		Während das System aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.8\textwidth, inkscapelatex=false]{Calc/ESC_plot}
+			\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/ESC_plot}
 			\caption[ESC plot]{ESC plot.}%
 			\label{fig:ESC plot}
 		\end{figure}

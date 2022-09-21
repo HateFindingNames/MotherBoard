@@ -59,8 +59,8 @@
 		Aufgrund des quadratischen Zusammenhangs des Strömungswiderstands mit der Geschwindigkeit nach \cref{eq:air drag} ist der \(F_\text{Ström}\) zuzuordnende Anteil im zweiten Fall zu vernachlässigen.
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
-			\caption[Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit]{Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit. Erst ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} dominiert der Strömungswiderstand. Bei niedrigen Geschwindigkeiten ist er gegenüber dem Rollwiderstand zu vernachlässigen.}%
+			\includesvg[width=.9\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
+			\caption[Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit]{Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit. Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} dominiert der Strömungswiderstand. Bei niedrigen Geschwindigkeiten ist er gegenüber dem Rollwiderstand zu vernachlässigen.}%
 			\label{fig:Froll vs Fdrag}
 		\end{figure}
 
@@ -68,7 +68,7 @@
 		Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} beginnt der Strömungswiderstand zu dominieren.
 		Des Weiteren wird die Annahme getroffen, dass bei \qty{10}{\kilo\metre\per\hour}, was etwa doppelter Schrittgeschwindigkeit\footnote{\hspace{1mm} ``Schrittgeschwindigkeit'' ist kein wohl definierter Begriff. Onlinerecherchen lieferten Werte im Bereich \qtyrange{5}{7}{\kilo\metre\per\hour}.} entspricht, der Beitrag des Strömungswiderstandes nahezu verschwindet.
 		% Für \(m\) und \(\angle\) wurden die in \cref{sec:conception} Rahmenbedingungen, \(K_\text{V}\) nach \cref{tab:TB 6355 190KV electrical specs} \(= \qty{190}{\per\volt\per\minute}\), \(g = \qty{9,81}{\metre\per\second\squared}\) Es wurden die in \cref{sec:conception} festgelegten
-		Die verwendeten Werte sind \cref{tab:drag roll values} zu entnehmen \cites{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
+		Die verwendeten Werte sind \cref{tab:drag roll values} zu entnehmen \cites{GESTIS.Luft}{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
 
 		% Darüber hinaus sind elektrische Verluste etwa im Serienwiderstand der Batterie, in der Leistungselektronik und bei der Ummagnetisierung der Phasenwicklungen im Motor zu berücksichtigen.
 		% Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\)\nomenclature[G]{\(\eta\)}{Wirkungsgrad\nomunit{1}}, der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
@@ -93,26 +93,27 @@
 		Zu sehen ist, dass mindestens \(\zeta \approx \num{2,2}\) erreicht werden muss um die Vorgaben erfüllen zu können.
 		Im Sinne einer Reserve wurde arbiträr \(\zeta = 2,4\) gewählt.
 		\begin{table}[h]
-			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes.}%
+			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes \cites{GESTIS.Luft}{material.advances.skateboarding.WATERMAN1978}{air.drag.human.body.VANINGENSCHENAU1982}.}%
 			\label{tab:drag roll values}
 			\centering
 			\begin{threeparttable}
 				\begin{tabular}{ll}
 					\toprule
-					Größe\hspace{1cm}						& Wert\\ \midrule
-					\(A\)\tnote{a}\hspace{1cm}				& \qty{0,293}{\metre\squared}\\
-					\(c_\text{Roll}\)\hspace{1cm}			& \num{0,022}\\
-					\(c_\text{Ström}\)\tnote{a}\hspace{1cm}	& \num{0,872}\\
-					\(\rho\)\hspace{1cm}					& \qty{1,204}{\kilo\gram\per\metre\cubed}\\ \bottomrule
+					Größe\hspace{1cm}								& Wert\\ \midrule
+					\(A\)\tnote{a}\hspace{1cm}						& \qty{0,293}{\metre\squared}\\
+					\(c_\text{Roll}\)\hspace{1cm}					& \num{0,022}\\
+					\(c_\text{Ström}\)\tnote{a}\hspace{1cm}			& \num{0,872}\\
+					\(\rho\)\tnote{b}\hspace{1cm}					& \qty{1,293}{\kilo\gram\per\metre\cubed}\\ \bottomrule
 				\end{tabular}
 				\begin{tablenotes}\footnotesize
-					\item[a]	Arithmetisches Mittel aus Tabelle 1 in \cite{air.drag.human.body.VANINGENSCHENAU1982}
+					\item[a]	Arithmetisches Mittel aus Tabelle 1 in \cite{air.drag.human.body.VANINGENSCHENAU1982}.
+					\item[b]	Unter Normalbedingungen \cite{GESTIS.Luft}.
 				\end{tablenotes}
 			\end{threeparttable}
 		\end{table}
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.85\textwidth]{Calc/T_v_vs_zetas}
+			\includesvg[width=.9\textwidth]{Calc/T_v_vs_zetas}
 			\caption[Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\)]{Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\).}%
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}\par\medskip
