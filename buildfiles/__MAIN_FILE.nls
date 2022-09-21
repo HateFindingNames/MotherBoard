@@ -15,9 +15,9 @@
   \item [{RS}]\begingroup Road Side\nomeqref {2.0}\nompageref{4}
 \nomgroup{G}
   \item [{\(\mu_\text{Roll}\)}]\begingroup Rollreibungskoeffizient\nomunit{\metre}\nomeqref {3.3}\nompageref{8}
-  \item [{\(\omega\)}]\begingroup Mechanische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{18}
+  \item [{\(\omega\)}]\begingroup Momentane mechanische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{18}
   \item [{\(\omega_\text{e}\)}]\begingroup Elektrische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{18}
-  \item [{\(\omega_\text{max}\)}]\begingroup Mechanische Maximaldrehzahl\nomunit{\per\minute}\nomeqref {3.6}\nompageref{9}
+  \item [{\(\omega_\text{max}\)}]\begingroup Maximale mechanische Drehzahl\nomunit{\per\minute}\nomeqref {3.6}\nompageref{9}
   \item [{\(\rho\)}]\begingroup Gasdichte\nomunit{\kilo\gram\per\cubic\metre}\nomeqref {3.4}\nompageref{8}
   \item [{\(\theta\)}]\begingroup Hangneigungswinkel\nomunit{rad}\nomeqref {3.0}\nompageref{8}
   \item [{\(\zeta\)}]\begingroup Untersetzungsverhältnis\nomunit{1}\nomeqref {3.9}\nompageref{9}
