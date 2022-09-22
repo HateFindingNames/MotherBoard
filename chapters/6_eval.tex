@@ -28,20 +28,25 @@
 	%
 	\section{Performanz}
 		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa \qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von \qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
-		Während das System aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
+		Während das System am Hang und aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit bereits moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
+		% \begin{figure}[h]
+		% 	\centering
+		% 	\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/ESC_plot}
+		% 	\caption[ESC plot]{ESC plot.}%
+		% 	\label{fig:ESC plot}
+		% \end{figure}
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/ESC_plot}
-			\caption[ESC plot]{ESC plot.}%
-			\label{fig:ESC plot}
+			\includesvg[width=\textwidth]{Calc/ESC_testdrive_plot}
+			\caption[]{To be captured.}%
+			\label{fig:esc testdrive plot}
 		\end{figure}
 		%
 		Die Geschwindigkeitstests wurden entlang einer frisch asphaltierten, ebenen Strecke durchgeführt.
-		Die theoretische Maximalgeschwindigkeit konnte hier aus Sicherheitsgründen nicht erreicht werden.
-		Ab etwa \qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren was auch unter dem Begriff der \textit{Speed Wobbles} bekannt ist.
-		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde aber zu einem vergrößerten Kurvenradius führen.
-		Aus diesem Grund wurde hiervon abgesehen.
-		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf \qty{25}{\kilo\metre\per\hour} begrenzt, welche im Rahmen der durchgeführten Tests problemlos erreicht werden konnte.
+		Ab etwa \qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren --~auch bekannt unter dem Begriff der \textit{Speed Wobbles} -- was Tests bei höheren Geschwindigkeiten zunehmend gefährlich macht.
+		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde allerdings zu einem vergrößerten Kurvenradius führen.
+		Von Feldtests bei Geschwindigkeiten höher als \qty{25}{\kilo\metre\per\hour} ohne erweiterte Sicherheitsausrüstung wurde aus oben genannten Gründen abgesehen.
+		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf \qty{25}{\kilo\metre\per\hour} begrenzt (vgl. \cref{fig:ESC erpm setting}).
 		\begin{figure}[h]
 			\centering
 			\subcaptionbox{Ungenutzte Druckteile.\label{subfig:freshly printed pulleys}}[.49\textwidth][l]{

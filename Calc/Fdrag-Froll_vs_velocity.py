@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 import numpy as np
 
 m = 100						# mass, kg
@@ -21,7 +22,10 @@ ratio.plot(v, (quot * (v/3.6)**2), color="black", linewidth=.5, label="$\\frac{F
 ratio.set_xlabel("$v$ / $m \\, s^{-1}$", fontsize=mfontsize-2)
 ratio.set_ylabel("$\\frac{F_{Ström}}{F_{Roll}}$ / 1", fontsize=mfontsize-2)
 ratio.set_title("Quotient aus Strömungs- und Rollwiderstand gegen Geschwindigkeit", fontsize=mfontsize+2)
-# ratio.grid()
+
+ratio.xaxis.set_major_locator(MultipleLocator(5))
+ratio.xaxis.set_minor_locator(MultipleLocator(2.5))
+ratio.yaxis.set_minor_locator(MultipleLocator(.1))
 
 plt.tight_layout()
 plt.savefig("Calc\\Fdrag-Froll_vs_velocity.svg", transparent=True)

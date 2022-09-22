@@ -57,12 +57,6 @@
 	\section{Transmission}\label{sec:transmission}
 		Im Kontext dieser Arbeit sind zwei Situationen von Interesse: Fahrt auf flacher Strecke mit geringerer Anforderung an Drehmoment, jedoch erhöhtem Interesse an der Maximalgeschwindigkeit und Fahrt hangaufwärts mit reduzierter Geschwindigkeit und entsprechend höheren Anforderungen an das abrufbare Drehmoment.
 		Aufgrund des quadratischen Zusammenhangs des Strömungswiderstands mit der Geschwindigkeit nach \cref{eq:air drag} ist der \(F_\text{Ström}\) zuzuordnende Anteil im zweiten Fall zu vernachlässigen.
-		\begin{figure}[h]
-			\centering
-			\includesvg[width=.9\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
-			\caption[Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit]{Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit. Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} dominiert der Strömungswiderstand. Bei niedrigen Geschwindigkeiten ist er gegenüber dem Rollwiderstand zu vernachlässigen.}%
-			\label{fig:Froll vs Fdrag}
-		\end{figure}
 
 		Um abschätzen zu können, bei welcher Geschwindigkeit der Strömungswiderstand gegenüber dem Rollwiderstand relevant wird, ist in \cref{fig:Froll vs Fdrag} das Verhältnis beider Kräfte über der Geschwindigkeit in \unit{\kilo\metre\per\hour} aufgetragen.
 		Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} beginnt der Strömungswiderstand zu dominieren.
@@ -73,7 +67,14 @@
 		% Darüber hinaus sind elektrische Verluste etwa im Serienwiderstand der Batterie, in der Leistungselektronik und bei der Ummagnetisierung der Phasenwicklungen im Motor zu berücksichtigen.
 		% Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\)\nomenclature[G]{\(\eta\)}{Wirkungsgrad\nomunit{1}}, der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
 		%
-		Um eine gegebenenfalls notwendige Untersetzung abzuschätzen, kann der Quotient aus \cref{eq:frictionless torque} und \cref{eq:incline plus roll plus drag torque} als Funktion von \(\zeta\) aufgetragen werden.
+		\newpage
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
+			\caption[Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit]{Quotient aus Strömungs- und Rollwiderstand als Funktion der Geschwindigkeit. Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} dominiert der Strömungswiderstand. Bei niedrigen Geschwindigkeiten ist er gegenüber dem Rollwiderstand zu vernachlässigen.}%
+			\label{fig:Froll vs Fdrag}
+		\end{figure}
+		Der Grad einer gegebenenfalls notwendigen Untersetzung wurde durch Bilden des Quotienten aus \cref{eq:frictionless torque} und \cref{eq:incline plus roll plus drag torque} und anschließendem Auftragen als Funktion von \(\zeta\) gefunden.
 		Erwünscht ist hier ein Wert~\(\gg 1\), mindestens aber~\(= 1\).
 		\begin{align}
 			\frac{T}{T_\text{Hang}} &= \frac{\num{8,27} I_\text{Motor} \zeta}{K_\text{V}
@@ -113,7 +114,7 @@
 		\end{table}
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=.9\textwidth]{Calc/T_v_vs_zetas}
+			\includesvg[width=\textwidth, inkscapelatex=false]{Calc/T_v_vs_zetas}
 			\caption[Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\)]{Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\).}%
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}\par\medskip

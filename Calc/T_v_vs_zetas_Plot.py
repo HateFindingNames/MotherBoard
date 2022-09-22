@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 import numpy as np
 
 I = 30						# Motor current, A
@@ -34,12 +35,10 @@ TTh.set_xlabel("$\\zeta$ / 1", fontsize=mfontsize-2)
 TTh.set_ylabel("$\\frac{T}{T_{Hang}}$ / $N \\, m$", fontsize=mfontsize-2)
 vmax.set_ylabel("$v_{max}$ / $km \\, h^{-1}$", fontsize=mfontsize-2)
 TTh.set_title("Drehmomentenquotient und Maximalgeschwindigkeit gegen $\\zeta$", fontsize=mfontsize+2)
-# TTh.grid()
 
-vmax.set_xlim(1.0,3.0)
-vmax.set_ylim(30,100)
-TTh.set_xlim(1.0,3.0)
-TTh.set_ylim(0.6,1.3)
+TTh.xaxis.set_minor_locator(MultipleLocator(.125))
+TTh.yaxis.set_minor_locator(MultipleLocator(.1))
+vmax.yaxis.set_minor_locator(MultipleLocator(5))
 
 lines, labels = TTh.get_legend_handles_labels()
 lines2, labels2 = vmax.get_legend_handles_labels()
