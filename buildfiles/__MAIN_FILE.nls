@@ -32,12 +32,13 @@
   \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.10}\nompageref{9}
   \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.7}\nompageref{9}
   \item [{\(K_\text{V}\)}]\begingroup Drehzahlkonstante\nomunit{\per\minute\per\volt}\nomeqref {3.5}\nompageref{9}
+  \item [{\(M\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.10}\nompageref{9}
   \item [{\(m\)}]\begingroup Masse\nomunit{\kilo\gram}\nomeqref {3.3}\nompageref{8}
+  \item [{\(M_\text{Hang}\)}]\begingroup Drehmoment entlang eines Hanges\nomunit{\newtonmetre}\nomeqref {3.5}\nompageref{9}
   \item [{\(N_\text{Motor}\)}]\begingroup Zähneanzahl antriebseitig\nomunit{1}\nomeqref {3.9}\nompageref{9}
   \item [{\(n_\text{p}\)}]\begingroup Anzahl der magnetischen Rotorpole\nomunit{1}\nomeqref {5.0}\nompageref{18}
   \item [{\(N_\text{Rolle}\)}]\begingroup Zähneanzahl getriebeseitig\nomunit{1}\nomeqref {3.9}\nompageref{9}
   \item [{\(r_\text{Rolle}\)}]\begingroup Radius der Rollen\nomunit{\metre}\nomeqref {3.7}\nompageref{9}
-  \item [{\(T\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.10}\nompageref{9}
   \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.7}\nompageref{9}
   \item [{\(v\)}]\begingroup Laterale Geschwindigkeit\nomunit{\metre\per\second}\nomeqref {3.4}\nompageref{8}
   \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.7}\nompageref{9}

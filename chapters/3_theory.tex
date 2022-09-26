@@ -1,19 +1,19 @@
 % LTeX: language=de-DE
-\chapter{Theorie}
+\chapter{Theorie}\label{sec:theory}
 	Die mechanische Gesamtleistung, die vom System auf den Boden übertragen werden muss, ist die Summe unterschiedlicher Einzelfaktoren.
 	Neben der erforderlichen Leistung, um die träge Masse von Maschine und Pilot aus dem Stand auf eine gewünschte Geschwindigkeit zu beschleunigen, müssen zusätzliche Reserven zur Verfügung stehen, um mechanische Verluste wie Rollwiderstand zum Untergrund, bei höheren Geschwindigkeiten zunehmend aerodynamische Effekte oder Hangabtriebskräfte während des Befahrens von Steigungen überwinden zu können.\par\medskip
 	%
 	Die Hangabtriebskraft mit dem Neigungswinkel \(\theta\)\nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}} ist gegeben durch:
 	\begin{align}
-		F_\text{Hang} = m g \sin\left(\theta\right)
+		F_\text{Hang} = m \; g \; \sin\!\left(\theta\right)
 		\label{eq:downhill force}
 	\end{align}
 	\nomenclature[L]{\(F_\text{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
-	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
+	Mit der Umrechnung der im Straßenverkehr üblichen Angaben in \unit{\percent} zu \unit{\radian} durch \(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\)\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}} wird obige Gleichung zu
 	\begin{equation}
-		F_\text{Hang} = m g \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right)
+		F_\text{Hang} = m \; g \; \sin\!\left(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\right)
 		\label{eq:downhill force incline to radian}
-	\end{equation}
+	\end{equation}s
 	\begin{figure}[h]
 		\centering
 		\includesvg[width=.6\textwidth, inkscapelatex=true]{Calc/torque_incline}
@@ -23,7 +23,7 @@
 
 	Der Rollwiderstand wird beschrieben durch:
 	\begin{align}
-		F_\text{Roll} = m g c_\text{Roll}
+		F_\text{Roll} = m \, g \, c_\text{Roll}
 		\label{eq:rolling resistance}
 	\end{align}
 	\nomenclature[L]{\(F_\text{Roll}\)}{Rollwiderstand\nomunit{\newton}}%
@@ -34,7 +34,7 @@
 	%
 	Die durch Reibung bei Durchgang eines Körpers durch ein fluides Medium (hier Luft) verursachte, der Bewegung entgegen gerichtete Kraft errechnet sich aus:
 	\begin{align}
-		F_\text{Ström} = \frac{1}{2} c_\text{Ström} \rho A v^2
+		F_\text{Ström} = \frac{1}{2} \, c_\text{Ström} \, \rho \, A \, v^2
 		\label{eq:air drag}
 	\end{align}
 	\nomenclature[L]{\(F_\text{Ström}\)}{Strömungswiderstand\nomunit{\newton}}%
@@ -46,35 +46,36 @@
 
 	Nun lässt sich mit bekanntem Radius der Rolle und unter Berücksichtigung von \crefrange{eq:downhill force incline to radian}{eq:air drag} für das rückwirkende Drehmoment schreiben:
 	\begin{align}
-		T_\text{Hang}	&= \left(F_\text{Hang} + F_\text{Roll} + F_\text{Ström}\right) r \nonumber \\
-						&= \left[ m g \left( \sin\left(\arctan\left(\frac{\angle}{\qty{100}{\percent}}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} c_\text{Ström} \rho A v^2 \right] r%
+		M_\text{Hang}	&= \left(F_\text{Hang} + F_\text{Roll} + F_\text{Ström}\right) r \nonumber \\
+						&= \left[ m \; g \left( \sin\!\left(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} \, c_\text{Ström} \, \rho \, A \, v^2 \right] r%
 		\label{eq:incline plus roll plus drag torque}
 	\end{align}
-
-	\section{BLDC}
+	\nomenclature[L]{\(M_\text{Hang}\)}{Drehmoment entlang eines Hanges\nomunit{\newtonmetre}}
+	\section{Elektromotorische Zusammenhänge}
 		In technischen Dokumentationen zu BLDC-Motoren findet sich häufig die Angabe der Drehzahlkonstante \(K_\text{V}\)\nomenclature[L]{\(K_\text{V}\)}{Drehzahlkonstante\nomunit{\per\minute\per\volt}}, die über die Anzahl der Umdrehungen des Rotors je Minute und Volt Phasenspannung Auskunft gibt.
 		Die theoretische Maximaldrehzahl des Rotors und, mit bekanntem Umfang der Rollen und Berücksichtigung der Untersetzung, Maximalgeschwindigkeit unter Vernachlässigung von elektrischen und thermischen Verlusten ergeben sich hiermit zu:
 		\begin{align}
-			\omega_\text{max} = K_\text{V} U_\text{Bat}
+			\omega_\text{max} = K_\text{V} \; U_\text{Bat}
 			\label{eq:max rpm}
 		\end{align}
 		\nomenclature[G]{\(\omega_\text{max}\)}{Maximale mechanische Drehzahl\nomunit{\per\minute}}%
 		und
 		\begin{align}
-			v_\text{max} = K_\text{V} U_\text{Bat} 2\pi r_\text{Rolle} \frac{0,06}{\zeta}
+			v_\text{max} = K_\text{V} \; U_\text{Bat} \; 2\pi \; r_\text{Rolle} \; \frac{0,06}{\zeta}
 			\label{eq:max speed km h}
 		\end{align}
 		\nomenclature[L]{\(v_\text{max}\)}{Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}}
 		\nomenclature[L]{\(U_\text{Bat}\)}{Batteriespannung\nomunit{\volt}}%
 		\nomenclature[L]{\(r_\text{Rolle}\)}{Radius der Rollen\nomunit{\metre}}%
-		
+		nach Überführen in \unit{\kilo\metre\per\hour} mit dem Faktor \num{0,06}.\par\medskip
+		%
 		Fundamental sind Drehzahlkonstante \(K_\text{V}\) und Drehmomentkonstante \(K_\text{T}\)\nomenclature[L]{\(K_\text{T}\)}{Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}} gleich und lassen sich über folgenden Zusammenhang ineinander überführen \cites{mevey2009sensorless}{DalY.Ohm.2000}{AN885.BLDC.fundamentals}:
 		\begin{align}
-			K_\text{T}	&= \frac{60}{2\pi} \frac{3}{2} \frac{1}{\sqrt{3}} \frac{1}{K_\text{V}} \nonumber \\
-				&\approx 8,27 \frac{1}{K_\text{V}}
+			K_\text{T}	&= \frac{60}{2\pi} \; \frac{3}{2} \; \frac{1}{\sqrt{3}} \; \frac{1}{K_\text{V}} \nonumber \\
+				&\approx 8,27 \; \frac{1}{K_\text{V}}
 			\label{eq:kv to kt}
 		\end{align}
-		Der Faktor \(\frac{3}{2}\) korrigiert für den Fall einen sinusoidalen Spannungsverlaufs der Kommutation\footnote{\hspace{1mm}Faktor 2 bei trapezoidalem Spannungsverlauf und -- interessant genug -- damit ein höheres Drehmoment.}, die Phase-zu-Phase-Spannung ist im Falle eines 3-Phasen Motors um \(\sqrt{3}\) größer, was sich im Faktor \(\frac{1}{\sqrt{3}}\) widerspiegelt.
+		Der Faktor \(\frac{3}{2}\) korrigiert für den Fall einen sinusoidalen Spannungsverlaufs der Kommutation\footnote{\hspace{1mm}Faktor 2 bei trapezoidalem Spannungsverlauf und --~interessant genug --~damit ein höheres Drehmoment.}\cites{DalY.Ohm.2000}{mevey2009sensorless}, die Phase-zu-Phase-Spannung ist im Falle eines 3-Phasen Motors um \(\sqrt{3}\) größer, was sich im Faktor \(\frac{1}{\sqrt{3}}\) widerspiegelt.
 		Letztlich wird mit \(\frac{60}{2\pi}\) in die Einheit \unit{\newtonmetre\per\ampere} überführt.\par\medskip
 		%
 		Die mechanische Untersetzung sei:
@@ -87,10 +88,10 @@
 		\nomenclature[L]{\(N_\text{Motor}\)}{Zähneanzahl antriebseitig\nomunit{1}}%
 		Das vom System erzeugte, verlustfreie Drehmoment errechnet sich aus obigem zu:
 		\begin{align}
-			T	&= K_\text{T} I_\text{Motor} \zeta
+			M	&= K_\text{T} \; I_\text{Motor} \; \zeta
 			\label{eq:frictionless torque}
 		\end{align}
-		\nomenclature[L]{\(T\)}{Drehmoment\nomunit{\newtonmetre}}%
+		\nomenclature[L]{\(M\)}{Drehmoment\nomunit{\newtonmetre}}%
 		\nomenclature[L]{\(I_\text{Motor}\)}{Phasenstrom\nomunit{\ampere}}%
 		
 		\nocite{Meschede.2015}\nocite{Demtroder.2018}
