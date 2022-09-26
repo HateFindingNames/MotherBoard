@@ -2,10 +2,10 @@
 \chapter{Evaluation}
 	Im Folgenden sollen die mechanische Integrität und Performanz des Systems mit Respekt auf die in \cref{sec:constructive limitations} formulierten Rahmenbedingungen diskutiert werden.
 	Im Vorfeld wurden mehrere Testfahrten auf urbanem Untergrund und entlang verschiedener Steigungen durchgeführt.
-	Insgesamt wurde die verbaute Batterie hierbei dreimal von \qty{42}{\volt} (voll geladen) herunter auf \qty{31}{\volt} entladen.
+	Insgesamt wurde die verbaute Batterie hierbei dreimal von~\qty{42}{\volt} (voll geladen) herunter auf~\qty{31}{\volt} entladen.
 	Zurückgelegte Distanz und mittlere, sowie maximale Geschwindigkeit wurden mittels Navigationssoftware und GPS gemessen.
 	Zusätzlich wurden Logginginformationen der ESC selbst zur Evaluation herangezogen.
-	% \Cref{fig:ESC plot} zeigt den Verlauf der Geschwindigkeit in \unit{\kilo\metre\per\hour} zusammen mit Motor- und Batteriestrom in \unit{\percent} der jeweiligen Maximalwerte.
+	% \Cref{fig:ESC plot} zeigt den Verlauf der Geschwindigkeit in~\unit{\kilo\metre\per\hour} zusammen mit Motor- und Batteriestrom in~\unit{\percent} der jeweiligen Maximalwerte.
 	Die verwendeten Parameter für Tests auf der Werkbank und im Feld können \cref{fig:ESC motor params} und \cref{fig:ESC erpm setting} entnommen werden.
 	% Da aus Sicherheitsgründen einige Testläufe auf der Werkbank durchgeführt wurden und Messungen per GPS jedoch eine tatsächliche Bewegung im freien zwingend erforderlich machen, wurden zusätzlich Logginginformationen der ESC ausgelesen, um aus Umdrehungen pro Minute und Anzahl der Umdrehungen Werte zur Geschwindigkeit rechnerisch ermitteln zu können.\par\medskip
 	%
@@ -22,12 +22,12 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[angle=180, width=.5\textwidth]{Footage/Pictures/Drivetrain close up v2.jpg}
-		\caption[Fertiger Aufbau des Antriebssystems]{Fertiger Aufbau des Antriebssystems nach etwa \qty{100}{\kilo\metre} Testfahrt durch urbanes Terrain.}
+		\caption[Fertiger Aufbau des Antriebssystems]{Fertiger Aufbau des Antriebssystems nach etwa~\qty{100}{\kilo\metre} Testfahrt durch urbanes Terrain.}
 		\label{fig:real world assembly}
 	\end{figure}
 	%
 	\section{Performanz}
-		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa \qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von \qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
+		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa~\qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von~\qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
 		Während das System am Hang und aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit bereits moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
 		% \begin{figure}[h]
 		% 	\centering
@@ -38,15 +38,16 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=\textwidth]{Calc/ESC_testdrive_plot}
-			\caption[Aufgetragene Logging-Informationen einer Testfahrt]{Aufgetragene Logging-Informationen einer Testfahrt von etwa \qty{2,8}{\kilo\metre}. Oben: die gesamte Fahrt. Bei etwa \qty{350}{\metre} gibt es eine kurze Spitze des Motorstromes bedingt durch eine kurze aber vergleichsweise steile Steigung. Unten: Zoom auf den Bereich zwischen \qtyrange{1300}{1800}{\metre}. Hier wurde auf gerader Strecke auf Maximalgeschwindigkeit beschleunigt mit einem Spitzenwert von \qty{23,7}{\kilo\metre\per\hour}.}%
+			\caption[Aufgetragene Logging-Informationen einer Testfahrt]{Aufgetragene Logging-Informationen einer Testfahrt von etwa~\qty{2,8}{\kilo\metre}. Oben: die gesamte Fahrt. Bei etwa~\qty{350}{\metre} gibt es eine kurze Spitze des Motorstromes bedingt durch eine kurze aber vergleichsweise steile Steigung. Unten: Zoom auf den Bereich zwischen \qtyrange{1300}{1800}{\metre}. Hier wurde auf gerader Strecke auf Maximalgeschwindigkeit beschleunigt mit einem Spitzenwert von~\qty{23,7}{\kilo\metre\per\hour}.}%
 			\label{fig:esc testdrive plot}
 		\end{figure}
+		\nomenclature[L]{\(s\)}{Zurückgelegte Strecke\nomunit{\metre}}%
 		%
 		Die Geschwindigkeitstests wurden entlang einer frisch asphaltierten, ebenen Strecke durchgeführt.
-		Ab etwa \qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren --~auch bekannt unter dem Begriff der \textit{Speed Wobbles} -- was Tests bei höheren Geschwindigkeiten zunehmend gefährlich macht.
+		Ab etwa~\qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren --~auch bekannt unter dem Begriff der \textit{Speed Wobbles} -- was Tests bei höheren Geschwindigkeiten zunehmend gefährlich macht.
 		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde allerdings zu einem vergrößerten Kurvenradius führen.
-		Von Feldtests bei Geschwindigkeiten höher als \qty{25}{\kilo\metre\per\hour} ohne erweiterte Sicherheitsausrüstung wurde aus oben genannten Gründen abgesehen.
-		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf \qty{25}{\kilo\metre\per\hour} begrenzt (vgl. \cref{fig:ESC erpm setting}).
+		Von Feldtests bei Geschwindigkeiten höher als~\qty{25}{\kilo\metre\per\hour} ohne erweiterte Sicherheitsausrüstung wurde aus oben genannten Gründen abgesehen.
+		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf~\qty{25}{\kilo\metre\per\hour} begrenzt (vgl. \cref{fig:ESC erpm setting}).
 		\begin{figure}[h]
 			\centering
 			\subcaptionbox{Ungenutzte Druckteile.\label{subfig:freshly printed pulleys}}[.49\textwidth][l]{
@@ -55,6 +56,6 @@
 			\subcaptionbox{Zustand der Druckteile nach einigen Testfahrten.\label{subfig:printed pulleys after test driving}}[.49\textwidth][r]{
 				\includegraphics[width=.49\textwidth]{Footage/Pictures/Wheel pulley v1.jpg}
 			}
-			\caption[Vergleich der gedruckten Zahn- und Konterscheiben vor und nach mehreren Testfahrten]{(a) Die finale und zum Zeitpunkt des Verfassens dieses Dokumentes noch verbaute Version. (b) Der Zustand des ersten funktionalen Prototypes nach etwa \qty{100}{\kilo\metre} Testfahrt. Neben zu erwartender Verschmutzung sei insbesondere auf das Fehlen der Führungsstifte zu achten. Das Zahnprofil und die Komponenten als ganze weisen darüber hinaus jedoch keinerlei Anzeichen von Materialversagen auf.}
+			\caption[Vergleich der gedruckten Zahn- und Konterscheiben vor und nach mehreren Testfahrten]{(a) Die finale und zum Zeitpunkt des Verfassens dieses Dokumentes noch verbaute Version. (b) Der Zustand des ersten funktionalen Prototypes nach etwa~\qty{100}{\kilo\metre} Testfahrt. Neben zu erwartender Verschmutzung sei insbesondere auf das Fehlen der Führungsstifte zu achten. Das Zahnprofil und die Komponenten als ganze weisen darüber hinaus jedoch keinerlei Anzeichen von Materialversagen auf.}
 			\label{fig:comparison printed parts used unused}
 		\end{figure}

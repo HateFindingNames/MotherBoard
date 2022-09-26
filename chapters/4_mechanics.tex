@@ -1,16 +1,16 @@
 % LTeX: language=de-DE
 \chapter{Mechanik}
-	Wie in \cref{sec:constructive limitations} besprochen, beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren, die wiederum auf dem Markt als Inrunner und Outrunner erhältlich sind.
+	Wie in \cref{sec:constructive limitations} besprochen, beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren, die wiederum auf dem Markt als Innen- und Außenläufer erhältlich sind.
 	In ersteren sind die Statorwicklungen an der Außenseite angeordnet, zweitere ordnen sie an der Innenseite an.
 	\begin{figure}[h]
 		\centering
 		\includesvg[width=.8\textwidth]{Assets/Inrunner_Outrunner}
-		\caption[Gegenüberstellung von Inrunner und Outrunner]{Schematische Gegenüberstellung von BLDC-Motoren als Inrunner (links) bzw. Outrunner (rechts) ausgeführt~\cite{inrunner.outrunner.2022}.}%
+		\caption[Gegenüberstellung von Innenläufer und Außenläufer]{Schematische Gegenüberstellung von BLDC-Motoren als Innenläufer (links) bzw. Außenläufer (rechts) ausgeführt~\cite{inrunner.outrunner.2022}.}%
 		\label{fig:inrunner outrunner}
 	\end{figure}
-	Das grundlegende Funktionsprinzip bleibt so zwar unverändert, durch den vergrößerten Radius des Angriffspunktes der magnetischen Kopplung kann im Falle der Outrunner bei gleicher Baugröße und gleichem Phasenstrom allerdings ein höheres Drehmoment erzeugt werden.
-	Sind größere Drehzahlen gefordert, so ist die Bauweise des Inrunners durch den reduzierten Durchmesser des Rotors vorteilhaft.
-	Da hohe Drehzahlen gegenüber einem zu erzeugenden Drehmoment für das zu konstruierende Antriebssystem von untergeordneter Priorität sind und sich oberhalb eines Schwellwertes sogar kontraproduktiv auswirken können, fällt hier die Wahl auf das Outrunnerprinzip.\par\medskip
+	Das grundlegende Funktionsprinzip bleibt so zwar unverändert, durch den vergrößerten Radius des Angriffspunktes der magnetischen Kopplung kann im Falle der Außenläufer bei gleicher Baugröße und gleichem Phasenstrom allerdings ein höheres Drehmoment erzeugt werden.
+	Sind größere Drehzahlen gefordert, so ist die Bauweise des Innenläufers durch den reduzierten Durchmesser des Rotors vorteilhaft.
+	Da hohe Drehzahlen gegenüber einem zu erzeugenden Drehmoment für das zu konstruierende Antriebssystem von untergeordneter Priorität sind und sich oberhalb eines Schwellwertes sogar kontraproduktiv auswirken können, fällt hier die Wahl auf das Außenläuferprinzip.\par\medskip
 	%
 	Auch während Lenkmanövern muss eine Übertragung des Drehmomentes auf die Rollen der Trucks sichergestellt sein.
 	Praktikabel und mit einfachen Mitteln denkbar sind hier eine koaxiale Positionierung des Motors zur angetriebenen Rolle.
@@ -28,7 +28,7 @@
 	Um Zuverlässigkeit des Systems auch an warmen Sommertagen sicherzustellen, ist es notwendig, thermisches Versagen der Motoren aufgrund von resistiven Verlusten innerhalb der Motorwicklungen und physikalischer Nähe zum erhitzten Asphalt in Betracht zu ziehen.
 	Mit Blick auf vergleichsweise marginale Kostensteigerungen von Motoren größerer Bauform wird von einer aktiven Motorkühlung und ihrer einhergehenden Erhöhung der Komplexität des Gesamtsystems abgesehen.
 	Als praktikabel hat sich der Motor mit Handelsnamen \textit{TorqueBoards} und der Typenbezeichnung \textit{6355 190KV} gezeigt.
-	Elektrische Parameter sind in \cref{tab:TB 6355 190KV electrical specs} tabelliert.
+	Elektrische Parameter sind in \cref{tab:TB 6355 190KV electrical specs} gelistet.
 	\begin{table}[h]
 		\centering
 		\caption[Motorspezifikationen \textit{TorqueBoards 6355 190KV}]{Motorspezifikationen \textit{TorqueBoards 6355 190KV}.}%
@@ -60,7 +60,7 @@
 		Im Kontext dieser Arbeit sind zwei Situationen von Interesse: Fahrt auf flacher Strecke mit geringer Anforderung an Drehmoment, jedoch erhöhtem Interesse an der Maximalgeschwindigkeit und Fahrt hangaufwärts mit reduzierter Geschwindigkeit und entsprechend höheren Anforderungen an das abrufbare Drehmoment.
 		Aufgrund des quadratischen Zusammenhangs des Strömungswiderstands mit der Geschwindigkeit nach \cref{eq:air drag} ist der \(F_\text{Ström}\) zuzuordnende Anteil im zweiten Fall zu vernachlässigen.
 
-		Um abzuschätzen, bei welcher Geschwindigkeit der Strömungswiderstand gegenüber dem Rollwiderstand an Relevanz gewinnt, ist in \cref{fig:Froll vs Fdrag} das Verhältnis beider Kräfte über der Geschwindigkeit in \unit{\kilo\metre\per\hour} aufgetragen.
+		Um abzuschätzen, bei welcher Geschwindigkeit der Strömungswiderstand gegenüber dem Rollwiderstand an Relevanz gewinnt, ist in \cref{fig:Froll vs Fdrag} das Verhältnis beider Kräfte über der Geschwindigkeit in~\unit{\kilo\metre\per\hour} aufgetragen.
 		Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} beginnt der Strömungswiderstand zu dominieren und es wird die Annahme getroffen, dass bei \qty{10}{\kilo\metre\per\hour}, was etwa doppelter Schrittgeschwindigkeit\footnote{\hspace{1mm} ``Schrittgeschwindigkeit'' ist kein wohl definierter Begriff. Onlinerecherchen lieferten Werte im Bereich \qtyrange{5}{7}{\kilo\metre\per\hour}.} entspricht, der Beitrag des Strömungswiderstandes nahezu verschwindet.
 		Die verwendeten Werte sind \cref{tab:drag roll values} zu entnehmen~\cites{GESTIS.Luft}{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
 
@@ -76,7 +76,7 @@
 		\end{figure}
 		Der Grad einer gegebenenfalls notwendigen Untersetzung wird durch Bilden des Quotienten aus \cref{eq:frictionless torque} und \cref{eq:incline plus roll plus drag torque} und anschließendem Auftragen als Funktion von \(\zeta\) gefunden --~erwünscht ist hier ein Wert~\(\gg 1\), mindestens aber~\(= 1\).
 		\begin{align}
-			\frac{T}{T_\text{Hang}} &= \frac{\num{8,27} I_\text{Motor} \zeta}{K_\text{V}
+			\frac{M}{M_\text{Hang}} &= \frac{\num{8,27} \cdot I_\text{Motor} \, \zeta}{K_\text{V}
 			\left[ m g
 				\left(\sin
 					\left(\arctan
@@ -84,7 +84,7 @@
 							\frac{\angle}{100}
 						\right)
 					\right) + c_\text{Roll}
-				\right) + \frac{1}{2} c_\text{Ström} \rho A v^2
+				\right) + \frac{1}{2} \, c_\text{Ström} \, \rho \, A \, v^2
 			\right] r}%
 			\label{eq:torque ratio}
 		\end{align}
@@ -93,7 +93,7 @@
 		Zu sehen ist, dass mindestens \(\zeta \approx \num{2,2}\) erreicht werden muss um die Vorgaben erfüllen zu können.
 		Im Sinne einer Reserve wird arbiträr \(\zeta = 2,4\) gewählt.
 		\begin{table}[h]
-			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes \cites{GESTIS.Luft}{material.advances.skateboarding.WATERMAN1978}{air.drag.human.body.VANINGENSCHENAU1982}.}%
+			\caption[Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes]{Tabelle der verwendeten Werte zur Abschätzung des Strömungs- und Rollwiderstandes~\cites{GESTIS.Luft}{material.advances.skateboarding.WATERMAN1978}{air.drag.human.body.VANINGENSCHENAU1982}.}%
 			\label{tab:drag roll values}
 			\centering
 			\begin{threeparttable}
@@ -106,47 +106,47 @@
 					\(\rho\)\tnote{b}\hspace{1cm}					& \qty{1,293}{\kilo\gram\per\metre\cubed}\\ \bottomrule
 				\end{tabular}
 				\begin{tablenotes}\footnotesize
-					\item[a]	Arithmetisches Mittel aus Tabelle 1 in \cite{air.drag.human.body.VANINGENSCHENAU1982}.
-					\item[b]	Unter Normalbedingungen \cite{GESTIS.Luft}.
+					\item[a]	Arithmetisches Mittel aus Tabelle 1 in~\cite{air.drag.human.body.VANINGENSCHENAU1982}.
+					\item[b]	Unter Normalbedingungen~\cite{GESTIS.Luft}.
 				\end{tablenotes}
 			\end{threeparttable}
 		\end{table}
 		\begin{figure}[h]
 			\centering
-			\includesvg[width=\textwidth, inkscapelatex=false]{Calc/T_v_vs_zetas}
+			\includesvg[width=\textwidth, inkscapelatex=false]{Calc/Mquot_vs_zetas}
 			\caption[Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\)]{Am Hang wirkende Momente und Maximalgeschwindigkeit als Funktion von \(\zeta\).}%
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}\par\medskip
 		%
 		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen, wird ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M (\qty{5}{mm} Abstand zwischen zwei Zähnen entlang der neutralen Faser) gewählt. 
 		Sein vergleichsweise breites Zahnungsprofil bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz~\cite{gates.catalogue.2021}.
-		Darüber hinaus sind entsprechende Riemen und Zahnscheiben günstig und gut erhältlich.
+		Darüber hinaus sind entsprechende Riemen und Zahnriemenscheiben günstig und gut erhältlich.
 		
-		Da im Falle des HTD 5M Zahnungsprofils gilt, dass zu jedem Zeitpunkt zumindest sechs Zähne greifen müssen~\cite{MAEDLERGmbH.2021} und mit obigen Überlegungen die antriebsseitige Zahnscheibe kleiner gegenüber der getriebeseitigen sein muss, ergibt sich eine antriebsseitige Mindestzahnung, die wiederum Einfluss auf den Außendurchmesser des getriebeseitigen Zahnrades hat.
-		Dieser darf den Durchmesser der Rolle abzüglich des zusätzlichen Auftrags des Riemens von \qty{1,7}{\milli\metre}\cite{gates.catalogue.2021} nicht übersteigen, um im Betrieb Bodenkontakt des Riemens zu vermeiden.
+		Da im Falle des HTD 5M Zahnungsprofils gilt, dass zu jedem Zeitpunkt zumindest sechs Zähne greifen müssen~\cite{MAEDLERGmbH.2021} und mit obigen Überlegungen die antriebsseitige Zahnriemenscheibe kleiner gegenüber der getriebeseitigen sein muss, ergibt sich eine antriebsseitige Mindestzahnung, die wiederum Einfluss auf den Außendurchmesser des getriebeseitigen Zahnrades hat.
+		Dieser darf den Durchmesser der Rolle abzüglich des zusätzlichen Auftrags des Riemens von \qty{1,7}{\milli\metre}~\cite{gates.catalogue.2021} nicht übersteigen, um im Betrieb Bodenkontakt des Riemens zu vermeiden.
 		Während käuflich Zahnungen von 12T --~im Folgenden verwendete Notation ``numerische Anzahl der Zähne'' gefolgt von großem T verwendet --~an aufwärts gelistet sind, bot sich aus Kostengründen und Sicherstellen der wie oben beschrieben Mindestanzahl zu jeder Zeit greifender Zähne eine Variante mit 15 Zähnen an.
 		Mit \(\zeta=2,4\) ergibt sich so eine Zahnung von 36T für die Getriebeseite mit einem theoretischen Maximaldrehmoment an den Rollen von \qty{3,13}{\newtonmetre}.\par\medskip
 		%
-		Auf der getriebenen Seite muss die Zahnscheibe kraftschlüssig mit der Rolle verbunden werden.
+		Auf der getriebenen Seite muss die Zahnriemenscheibe kraftschlüssig mit der Rolle verbunden werden.
 		So ist es wünschenswert, dass sich bereits durch die Bauart der Rollen eine einfache Installation anbietet.
 		Verwendet werden hier \qty{80}{\milli\metre} \textsc{Kegel} des Herstellers \textsc{Orangatang}.
 		Sie besitzen einen Kern aus hartem Kunststoff mit 10 radial um ihre Hauptachse angeordneten Bohrungen von \qty{5,8}{\milli\metre} Durchmesser (vgl. \cref{fig:kegels}).
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel 83mm Longboard Wheel}
-			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnscheibe wird rückseitig auf der Rolle montiert.}%
+			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnriemenscheibe wird rückseitig auf der Rolle montiert.}%
 			\label{fig:kegels}
 		\end{figure}
-		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnscheibe modelliert werden kann.
+		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnriemenscheibe modelliert werden kann.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
-			\caption[Zeichnung der modellierten Zahnscheibe]{Zeichnung der modellierten Zahnscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}%
+			\caption[Zeichnung der modellierten Zahnriemenscheibe]{Zeichnung der modellierten Zahnriemenscheibe. Zu erkennen sind alternierend fünf Bohrungen um jeweils M4 Schrauben aufnehmen zu können und fünf Führungsstifte für eine vereinfachte Montage.}%
 			\label{fig:htd 5m driven}
 		\end{figure}
 
 		Das HTD 5M Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben~\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{\hspace{1mm} Hier SolidWorks.} nachzubilden.
-		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte 36T Zahnscheibe zum Einsatz in der Hanger zugewandten Flanke der Rollen.
+		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte 36T Zahnriemenscheibe zum Einsatz in der Hanger zugewandten Flanke der Rollen.
 		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
 		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer geführten Montage.
 		
@@ -167,33 +167,33 @@
 				\caption{3D-gedrucktes HTD-Profil auf Riemen.}%
 				\label{subfig:printed HTD}
 			\end{subfigure}
-			\caption{Vergleich der Passform einer gekauften Zahnscheibe (44T) aus Aluminium und des 3D-gedruckten Modells (36T) mit einem Riemen.}%
+			\caption{Vergleich der Passform einer gekauften Zahnriemenscheibe (44T) aus Aluminium und des 3D-gedruckten Modells (36T) mit einem Riemen.}%
 			\label{fig:HTD profiles comparison}
 		\end{figure}\par\medskip
 		%
-		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnscheibe gegenüberliegende Flanke der Rollen ebenfalls ein konkaves Profil aufweist, wurde ein komplementäres Gegenstück --~zu sehen in \cref{fig:orangatang kegel flat face} --~im oben beschriebenen Prozess modelliert.
+		Da die Schrauben mit Muttern gekontert werden sollen und die der Zahnriemenscheibe gegenüberliegende Flanke der Rollen ebenfalls ein konkaves Profil aufweist, wurde ein komplementäres Gegenstück --~zu sehen in \cref{fig:orangatang kegel flat face} --~im oben beschriebenen Prozess modelliert.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.5\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Orangatang Kegel Flat Face}
-			\caption[Zeichnung des Gegenstücks der Zahnscheibe]{Zeichnung des Gegenstücks der Zahnscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}%
+			\caption[Zeichnung des Gegenstücks der Zahnriemenscheibe]{Zeichnung des Gegenstücks der Zahnriemenscheibe um eine ebene Fläche für die Muttern zur Verfügung zu stellen.}%
 			\label{fig:orangatang kegel flat face}
 		\end{figure}
-		Wie auch die Zahnscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll ebenfalls möglichst exakt dem inneren Profil der Rollen anliegen.
+		Wie auch die Zahnriemenscheibe enthält die Konterscheibe fünf Bohrungen und fünf Führungsstifte und soll ebenfalls möglichst exakt dem inneren Profil der Rollen anliegen.
 		
 		Aus Kostengründen und einfachem Zugang zu den Betriebsmitteln wurde entschieden, die funktionalen Versionen der getriebeseitigen Zahn- und Konterscheibe ebenfalls im 3D-Druck-Verfahren aus ABS selbst herzustellen.
-		Es ist zwar zu erwarten, dass die Zahnscheiben gegenüber aus Aluminium gefrästen Komponenten bezüglich Verschleiß und Festigkeit deutlich unterliegen, durch das gewählte Fertigungsverfahren lassen sich allerdings schnell, unkompliziert und günstig Ersatzteile herstellen.
+		Es ist zwar zu erwarten, dass die Zahnriemenscheiben gegenüber aus Aluminium gefrästen Komponenten bezüglich Verschleiß und Festigkeit deutlich unterliegen, durch das gewählte Fertigungsverfahren lassen sich allerdings schnell, unkompliziert und günstig Ersatzteile herstellen.
 		Darüber hinaus ist an dieser Stelle nicht mit einem plötzlichen Totalversagen der Materialintegrität und in Folge potenziell fataler Konsequenz zu rechnen.\par\medskip
 		%
 		Zur Auswahl des Riemens ist schließlich neben der Breite die Zahnung zu beachten.
-		Ein vergrößerter Mittelpunktabstand beider Zahnscheiben erhöht grundsätzlich die Anzahl greifender Zähne, allerdings fällt dieser Effekt mit zunehmendem Abstand schnell ab.
+		Ein vergrößerter Mittelpunktabstand beider Zahnriemenscheiben erhöht grundsätzlich die Anzahl greifender Zähne, allerdings fällt dieser Effekt mit zunehmendem Abstand schnell ab.
 		Es wurde ein Abstand so gewählt, dass zu jeder Zeit ein Zahn mehr als gefordert greift.
 		Mit Zahnungen von 36T für die Antriebsseite, 15T getriebeseitig und dieser Vorgabe wurde eine Riemenzahnung von 55T gewählt.
 		Die Riemenbreite wurde mit \qty{12}{\milli\metre} arbiträr auf das breiteste käuflich erhältliche Maß festgelegt, dass konstruktiv umsetzbar ist.
-		\Cref{fig:timing belt length} zeigt schematisch das System beider Zahnscheiben und Riemen.
+		\Cref{fig:timing belt length} zeigt schematisch das System beider Zahnriemenscheiben und Riemen.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Timing Belt assembly}
-			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnscheiben bei einem Zahnriemen mit 55 Zähnen.}%
+			\caption[Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnriemenscheiben]{Mittelpunktabstand zwischen antriebs- und getriebeseitigen Zahnriemenscheiben bei einem Zahnriemen mit 55 Zähnen.}%
 			\label{fig:timing belt length}
 		\end{figure}
 	\section{Motorbefestigung}\label{sec:motorbefestigung}

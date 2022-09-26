@@ -1,6 +1,6 @@
 % LTeX: language=de-DE
 \chapter{Elektronik}
-	Die verwendeten ESC sind in der Lage die rückwirkende elektromotirische Kraft (rEMK\nomenclature[A]{rEMK}{Rückwirkende elektromotorische Kraft}) --~eine während des Betriebes in den Wicklungen des Motors erzeugte und seiner Drehrichtung entgegenwirkenden Spannung -- zu Messen und zur Positionsbestimmung des Rotors zu nutzen.
+	Die verwendeten ESC sind in der Lage, die gegenwirkende elektromotorische Kraft (Gegen-EMK\nomenclature[A]{Gegen-EMK}{Gegenwirkende elektromotorische Kraft}) --~eine während des Betriebes in den Wicklungen des Motors induzierte und seiner Drehrichtung entgegenwirkenden Spannung --~zu Messen und zur Positionsbestimmung des Rotors zu nutzen.
 	Gegenüber eines trapezoidalen Phasenstromes können die Motorwicklungen so sinusoidal bestromt werden, was wiederum geringere elektrische Verluste und ein gleichmäßigeres Drehmomentprofil während eines Umlaufes und damit einen sanfteren und geräuschärmeren Motorlauf verspricht.
 	Prinzipbedingt steigt die Amplitude der rEMK mit der Drehzahl des Motors.
 	Konsequenterweise wird so die Messung und damit die Positionsbestimmung im niedrigen Drehzahlbereich erschwert während sie im Stillstand unmöglich wird.
@@ -10,29 +10,29 @@
 	\begin{wrapfigure}{r}{.5\textwidth}
 		\centering
 		\includegraphics[angle=90, width=.4\textwidth]{Footage/Pictures/Hall sensor connector.jpg}
-		\caption[Hall-Sensoren Konnektoren]{Links ein 3x2-Pin Molex Micro-Fit 3.0 Konnektor, rechts ein 6-Pin JST-PH zur Verbindung mit dem ESC.}
+		\caption[Hall-Sensoren Steckverbinder]{Links ein 3x2-Pin Molex Micro-Fit 3.0 Steckverbinder, rechts ein 6-Pin JST-PH \qty{2}{\milli\metre} zur Verbindung mit dem ESC.}
 		\label{fig:hall sensor connectors}
 	\end{wrapfigure}
-	Die ab Werk unterminierten Sensorenleitungen wurden im Sinne einer Staub- und Spritzwassergeschützen Durchführung in das GFK-Gehäuse über eine Kabelbrücke mit den ESC verbunden.
-	Die Kabelbrücke wurde aus 30AWG\nomenclature[A]{AWG}{American Wire Gauge}\footnote{Entspricht etwa \qty{0,25}{\milli\metre\squared}.} flexibler Silikonleitung mit einem 6-Pin JST-PH Konnektor ESC-seitig und einem 3x2 Molex Micro-Fit 3.0 Konnektor motorseitig gefertigt (vgl. \cref{fig:hall sensor connectors}).
-	Für den motorseitigen Anschluss wurde eine entsprechende Öffnung in das Gehäuse geschnitten und der Konnektor mit Epoxidharz dauerhaft und dicht verbunden.
+	Die ab Werk mit JST-PH \qty{2}{\milli\metre} Steckverbindern ausgestatteten Sensorenleitungen wurden im Sinne einer Staub- und Spritzwassergeschützen Durchführung in das GFK-Gehäuse über eine Kabelbrücke mit den ESC verbunden.
+	Die Kabelbrücke wurde aus 30AWG\nomenclature[A]{AWG}{American Wire Gauge}\footnote{Entspricht etwa \qty{0,25}{\milli\metre\squared}.} flexibler Silikonleitung mit einem 6-Pin JST-PH Steckverbinder ESC-seitig und einem 3x2 Molex Micro-Fit 3.0 Steckverbinder motorseitig gefertigt (vgl. \cref{fig:hall sensor connectors}).
+	Für den motorseitigen Anschluss wurde eine entsprechende Öffnung in das Gehäuse geschnitten und der Steckverbinder mit Epoxidharz dauerhaft und dicht verbunden.
 	Die Anordnung der Sensoren spielt an dieser Stelle eine untergeordnete Rolle, da sie vor Inbetriebnahme softwareseitig konfiguriert werden können.
 	Es wird lediglich darauf geachtet, dass die Anordnung beider Motoren identisch bleibt.
-	Zur Durchführung der Phasenleitungen werden je Motor drei Löcher in das Gehäuse gebohrt und mit Gummiösen versehen.\par\medskip
+	Zur Durchführung der Phasenleitungen werden je Motor drei Löcher in das Gehäuse gebohrt und mit Gummidurchführungen versehen.\par\medskip
 	%
-	Die hardwareseitige Leistungsendstufe ist als Doppel-H-Brücke implementiert und in \cref{fig:power mosfets} gezeigt.
+	Die Leistungsendstufe ist als Doppel-H-Brücke implementiert und in \cref{fig:power mosfets} gezeigt.
 	Um den Rotor um \qty{360}{\degree} dividiert durch die Anzahl der magnetischen Pole des Rotors \(n_\text{p}\)\nomenclature[L]{\(n_\text{p}\)}{Anzahl der magnetischen Rotorpole\nomunit{1}} zu drehen, muss ein voller Kommutationszyklus durchgeführt werden, was im Folgenden einer elektrischen Umdrehung entsprechen soll.
 	Die Anzahl elektrischer Umdrehungen je Minute bei gegebener mechanischer Drehzahl des Rotors sei gegeben durch:
 	\begin{align}
-		\omega_\text{e} = \omega n_\text{p}
+		\omega_\text{e} = \omega \, n_\text{p}
 		\label{eq:ERPM and RPM}
 	\end{align}
 	\nomenclature[G]{\(\omega_\text{e}\)}{Elektrische Drehzahl\nomunit{\per\minute}}%
 	\nomenclature[G]{\(\omega\)}{Momentane mechanische Drehzahl\nomunit{\per\minute}}%
 	%
-	Die Maximalgeschwindigkeit skaliert somit direkt proportional mit \(\omega_\text{e}\) und kann in \unit{\kilo\metre\per\hour} geschrieben werden als
+	Die Maximalgeschwindigkeit skaliert somit direkt proportional mit \(\omega_\text{e}\) und kann in~\unit{\kilo\metre\per\hour} geschrieben werden als
 	\begin{align}
-		v_\text{max} = \omega_\text{e} \frac{2\pi r}{n_\text{p} \zeta} \cdot 0,06
+		v_\text{max} = \omega_\text{e} \, \frac{2\pi \, r}{n_\text{p} \, \zeta} \cdot 0,06
 		\label{eq:max speed by ERPM}
 	\end{align}
 	Mit Unterstützung der Konfigurationssoftware der ESC obere Grenzwerte für \(\omega_\text{e}\) zu hinterlegen ist es möglich unmittelbar Werte für die Maximalgeschwindigkeit zu definieren (vgl. \cref{fig:ESC erpm setting}).
