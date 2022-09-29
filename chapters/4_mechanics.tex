@@ -61,13 +61,19 @@
 		Aufgrund des quadratischen Zusammenhangs des Strömungswiderstands mit der Geschwindigkeit nach \cref{eq:air drag} ist der \(F_\text{Ström}\) zuzuordnende Anteil im zweiten Fall zu vernachlässigen.
 
 		Um abzuschätzen, bei welcher Geschwindigkeit der Strömungswiderstand gegenüber dem Rollwiderstand an Relevanz gewinnt, ist in \cref{fig:Froll vs Fdrag} das Verhältnis beider Kräfte über der Geschwindigkeit in~\unit{\kilo\metre\per\hour} aufgetragen.
+		Der Kurvenverlauf folgt der Gleichung
+		\begin{align}
+			\frac{F_\text{Ström}}{F_\text{Roll}}(v) = \frac{c_\text{Ström} \; \rho \; A}{2m \; g \; c_\text{Roll}} v^2
+			\label{eq:F_drag F_roll ratio over speed}
+		\end{align}
+		mit verwendeten Werten wie aus \cref{tab:drag roll values} zu entnehmen~\cites{GESTIS.Luft}{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
+
 		Ab einer Geschwindigkeit von etwa \qty{42}{\kilo\metre\per\hour} beginnt der Strömungswiderstand zu dominieren und es wird die Annahme getroffen, dass bei \qty{10}{\kilo\metre\per\hour}, was etwa doppelter Schrittgeschwindigkeit\footnote{\hspace{1mm} ``Schrittgeschwindigkeit'' ist kein wohl definierter Begriff. Onlinerecherchen lieferten Werte im Bereich \qtyrange{5}{7}{\kilo\metre\per\hour}.} entspricht, der Beitrag des Strömungswiderstandes nahezu verschwindet.
-		Die verwendeten Werte sind \cref{tab:drag roll values} zu entnehmen~\cites{GESTIS.Luft}{air.drag.human.body.VANINGENSCHENAU1982}{material.advances.skateboarding.WATERMAN1978}.
 
 		% Darüber hinaus sind elektrische Verluste etwa im Serienwiderstand der Batterie, in der Leistungselektronik und bei der Ummagnetisierung der Phasenwicklungen im Motor zu berücksichtigen.
 		% Da diese im Einzelnen jedoch nur schwer quantifiziert werden können, sollen sie sich im Wirkungsgrad \(\eta\)\nomenclature[G]{\(\eta\)}{Wirkungsgrad\nomunit{1}}, der das Verhältnis aus abgerufener elektrischer Leistung zu umgesetzter mechanischer Leistung bildet, widerspiegeln.\par\medskip
 		%
-		\newpage
+		% \newpage
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=\textwidth, inkscapelatex=false]{Calc/Fdrag-Froll_vs_velocity}
@@ -101,8 +107,10 @@
 					\toprule
 					Größe\hspace{1cm}								& Wert\\ \midrule
 					\(A\)\tnote{a}\hspace{1cm}						& \qty{0,293}{\metre\squared}\\
+					\(g\)											& \qty{9,81}{\metre\per\second\squared}\\
 					\(c_\text{Roll}\)\hspace{1cm}					& \num{0,022}\\
 					\(c_\text{Ström}\)\tnote{a}\hspace{1cm}			& \num{0,872}\\
+					\(m\)											& \qty{100}{\kilo\gram}\\
 					\(\rho\)\tnote{b}\hspace{1cm}					& \qty{1,293}{\kilo\gram\per\metre\cubed}\\ \bottomrule
 				\end{tabular}
 				\begin{tablenotes}\footnotesize
