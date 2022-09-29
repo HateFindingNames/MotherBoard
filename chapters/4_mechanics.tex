@@ -83,9 +83,9 @@
 		Der Grad einer gegebenenfalls notwendigen Untersetzung wird durch Bilden des Quotienten aus \cref{eq:frictionless torque} und \cref{eq:incline plus roll plus drag torque} und anschließendem Auftragen als Funktion von \(\zeta\) gefunden --~erwünscht ist hier ein Wert~\(\gg 1\), mindestens aber~\(= 1\).
 		\begin{align}
 			\frac{M}{M_\text{Hang}} &= \frac{\num{8,27} \cdot I_\text{Motor} \, \zeta}{K_\text{V}
-			\left[ m g
-				\left(\sin
-					\left(\arctan
+			\left[ m \, g
+				\left(\sin\!
+					\left(\arctan\!
 						\left(
 							\frac{\angle}{100}
 						\right)
@@ -103,15 +103,15 @@
 			\label{tab:drag roll values}
 			\centering
 			\begin{threeparttable}
-				\begin{tabular}{ll}
+				\begin{tabular}{lp{2cm}l}
 					\toprule
-					Größe\hspace{1cm}								& Wert\\ \midrule
-					\(A\)\tnote{a}\hspace{1cm}						& \qty{0,293}{\metre\squared}\\
-					\(g\)											& \qty{9,81}{\metre\per\second\squared}\\
-					\(c_\text{Roll}\)\hspace{1cm}					& \num{0,022}\\
-					\(c_\text{Ström}\)\tnote{a}\hspace{1cm}			& \num{0,872}\\
-					\(m\)											& \qty{100}{\kilo\gram}\\
-					\(\rho\)\tnote{b}\hspace{1cm}					& \qty{1,293}{\kilo\gram\per\metre\cubed}\\ \bottomrule
+					Größe								&& Wert\\ \midrule
+					\(A\)\tnote{a}						&& \qty{0,293}{\metre\squared}\\
+					\(g\)								&& \qty{9,81}{\metre\per\second\squared}\\
+					\(c_\text{Roll}\)					&& \num{0,022}\\
+					\(c_\text{Ström}\)\tnote{a}			&& \num{0,872}\\
+					\(m\)								&& \qty{100}{\kilo\gram}\\
+					\(\rho\)\tnote{b}					&& \qty{1,293}{\kilo\gram\per\metre\cubed}\\ \bottomrule
 				\end{tabular}
 				\begin{tablenotes}\footnotesize
 					\item[a]	Arithmetisches Mittel aus Tabelle 1 in~\cite{air.drag.human.body.VANINGENSCHENAU1982}.
@@ -154,7 +154,7 @@
 		\end{figure}
 
 		Das HTD 5M Zahnungsprofil wurde aus einem OpenSCAD-Script\cite{thingiverse.tooth.profiles.2012} entnommen, um es unter Abgleich von Herstellerangaben~\cite{gates.catalogue.2021,GatesCorporation.drive.design.manual.2014} im verwendeten CAD-Programm\footnote{\hspace{1mm} Hier SolidWorks.} nachzubilden.
-		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte 36T Zahnriemenscheibe zum Einsatz in der Hanger zugewandten Flanke der Rollen.
+		Das Produkt ist die in \cref{fig:htd 5m driven} gezeigte 36T Zahnriemenscheibe zum Einsatz in der dem Hanger zugewandten Flanke der Rollen.
 		Korrespondierend mit den vorhandenen Bohrungen der Rollen umgibt das zentrale Loch fünf Bohrungen mit Senkung um DIN 912 M4 Schrauben aufnehmen zu können.
 		Die in den Zwischenräumen angeordneten Stifte dienen nicht der Kraftübertragung, sondern lediglich einer geführten Montage.
 		
