@@ -1,5 +1,11 @@
 % LTeX: language=de-DE
 \chapter{Mechanik}
+% ===============================================
+% Nomenclatures
+% ===============================================
+\nomenclature[A]{HTD}{High Torque Drive}%
+\nomenclature[A]{FDM}{Fused Deposition Modeling}%
+%
 	Wie in \cref{sec:constructive limitations} besprochen, beschränkt sich die Auswahl möglicher Antriebselemente praktischerweise auf BLDC-Motoren, die wiederum auf dem Markt als Innen- und Außenläufer erhältlich sind.
 	In ersteren sind die Statorwicklungen an der Außenseite angeordnet, zweitere ordnen sie an der Innenseite an.
 	\begin{figure}[h]
@@ -126,7 +132,7 @@
 			\label{fig:torque ratio and vmax vs zetas}
 		\end{figure}\par\medskip
 		%
-		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen, wird ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD\nomenclature[A]{HTD}{High Torque Drive}) in Zahnteilung 5M (\qty{5}{mm} Abstand zwischen zwei Zähnen entlang der neutralen Faser) gewählt. 
+		Um das Drehmoment von der Motorwelle auf die Rolle zu übertragen, wird ein Riemensystem mit \textit{High Torque Drive}-Profil (HTD) in Zahnteilung 5M (\qty{5}{mm} Abstand zwischen zwei Zähnen entlang der neutralen Faser) gewählt. 
 		Sein vergleichsweise breites Zahnungsprofil bietet einen guten Kompromiss aus Flexibilität, Kraftübertrag und Effizienz~\cite{gates.catalogue.2021}.
 		Darüber hinaus sind entsprechende Riemen und Zahnriemenscheiben günstig und gut erhältlich.
 		
@@ -145,7 +151,7 @@
 			\caption[Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}]{Rück- und Schnittansicht der \textit{Kegel} des Herstellers \textit{Orangatang}. Die Zahnriemenscheibe wird rückseitig auf der Rolle montiert.}%
 			\label{fig:kegels}
 		\end{figure}
-		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren\nomenclature[A]{FDM}{Fused Deposition Modeling} 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnriemenscheibe modelliert werden kann.
+		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnriemenscheibe modelliert werden kann.
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.8\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/HTD Parametric Pulley}
