@@ -1,49 +1,45 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{ABS}]\begingroup Acrylnitrilbutadienstyrol\nomeqref {2.0}\nompageref{3}
+  \item [{ABS}]\begingroup Acrylnitrilbutadienstyrol\nomeqref {2.0}\nompageref{2}
   \item [{AWG}]\begingroup American Wire Gauge\nomeqref {5.0}\nompageref{19}
-  \item [{BLDC}]\begingroup Brushless Direct Current\nomeqref {2.0}\nompageref{5}
-  \item [{BS}]\begingroup Board Side\nomeqref {2.0}\nompageref{4}
+  \item [{BLDC}]\begingroup Brushless Direct Current\nomeqref {2.0}\nompageref{2}
+  \item [{BS}]\begingroup Board Side\nomeqref {2.0}\nompageref{2}
   \item [{ePKW}]\begingroup Elektrische Personenkraftwagen\nomeqref {1.0}\nompageref{1}
-  \item [{ESC}]\begingroup Elektronischer Speed Controller\nomeqref {2.0}\nompageref{5}
-  \item [{FDM}]\begingroup Fused Deposition Modeling\nomeqref {4.2}\nompageref{13}
+  \item [{ESC}]\begingroup Elektronischer Speed Controller\nomeqref {2.0}\nompageref{2}
+  \item [{FDM}]\begingroup Fused Deposition Modeling\nomeqref {4.0}\nompageref{10}
   \item [{Gegen-EMK}]\begingroup Gegenwirkende elektromotorische Kraft\nomeqref {5.0}\nompageref{19}
-  \item [{HTD}]\begingroup High Torque Drive\nomeqref {4.2}\nompageref{12}
+  \item [{HTD}]\begingroup High Torque Drive\nomeqref {4.0}\nompageref{10}
   \item [{PEKV}]\begingroup Persönliche elektrische Kleinstvehikel\nomeqref {1.0}\nompageref{1}
   \item [{PEV}]\begingroup Persönliche elektrische Vehikel\nomeqref {1.0}\nompageref{1}
-  \item [{RS}]\begingroup Road Side\nomeqref {2.0}\nompageref{4}
+  \item [{RS}]\begingroup Road Side\nomeqref {2.0}\nompageref{2}
 \nomgroup{G}
-  \item [{\(\mu_\text{Roll}\)}]\begingroup Rollreibungskoeffizient\nomunit{\metre}\nomeqref {3.3}\nompageref{8}
+  \item [{\(\mu_\text{Roll}\)}]\begingroup Rollreibungskoeffizient\nomunit{\metre}\nomeqref {3.0}\nompageref{8}
   \item [{\(\omega\)}]\begingroup Momentane mechanische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{19}
   \item [{\(\omega_\text{e}\)}]\begingroup Elektrische Drehzahl\nomunit{\per\minute}\nomeqref {5.1}\nompageref{19}
-  \item [{\(\omega_\text{max}\)}]\begingroup Maximale mechanische Drehzahl\nomunit{\per\minute}\nomeqref {3.6}\nompageref{9}
-  \item [{\(\rho\)}]\begingroup Gasdichte\nomunit{\kilo\gram\per\cubic\metre}\nomeqref {3.4}\nompageref{8}
+  \item [{\(\omega_\text{max}\)}]\begingroup Maximale mechanische Drehzahl\nomunit{\per\minute}\nomeqref {3.0}\nompageref{8}
+  \item [{\(\rho\)}]\begingroup Gasdichte\nomunit{\kilo\gram\per\cubic\metre}\nomeqref {3.0}\nompageref{8}
   \item [{\(\theta\)}]\begingroup Hangneigungswinkel\nomunit{rad}\nomeqref {3.0}\nompageref{8}
-  \item [{\(\zeta\)}]\begingroup Untersetzungsverhältnis\nomunit{1}\nomeqref {3.7}\nompageref{9}
+  \item [{\(\zeta\)}]\begingroup Untersetzungsverhältnis\nomunit{1}\nomeqref {3.0}\nompageref{8}
 \nomgroup{L}
-  \item [{\(A\)}]\begingroup Fläche\nomunit{\square\metre}\nomeqref {3.4}\nompageref{8}
-  \item [{\(c_\text{Luft}\)}]\begingroup Strömungswiderstandkoeffizient\nomunit{1}\nomeqref {3.4}\nompageref{8}
-  \item [{\(c_\text{Roll}\)}]\begingroup Rollwiderstandkoeffizient\nomunit{1}\nomeqref {3.3}\nompageref{8}
-  \item [{\(F_\text{Hang}\)}]\begingroup Hangabtriebskraft\nomunit{\newton}\nomeqref {3.1}\nompageref{8}
-  \item [{\(F_\text{Roll}\)}]\begingroup Rollwiderstand\nomunit{\newton}\nomeqref {3.3}\nompageref{8}
-  \item [{\(F_\text{Ström}\)}]\begingroup Strömungswiderstand\nomunit{\newton}\nomeqref {3.4}\nompageref{8}
-  \item [{\(g\)}]\begingroup Erdbeschleunigung\nomunit{\metre\per\square\second}\nomeqref {3.3}\nompageref{8}
-  \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.10}\nompageref{9}
-  \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.8}\nompageref{9}
-  \item [{\(K_\text{V}\)}]\begingroup Drehzahlkonstante\nomunit{\per\minute\per\volt}\nomeqref {3.5}\nompageref{9}
-  \item [{\(M\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.10}\nompageref{9}
-  \item [{\(m\)}]\begingroup Masse\nomunit{\kilo\gram}\nomeqref {3.3}\nompageref{8}
-  \item [{\(M_\text{Hang}\)}]\begingroup Drehmoment entlang eines Hanges\nomunit{\newtonmetre}\nomeqref {3.5}\nompageref{9}
-  \item [{\(N_\text{Motor}\)}]\begingroup Zähneanzahl antriebseitig\nomunit{1}\nomeqref {3.7}\nompageref{9}
+  \item [{\(A\)}]\begingroup Fläche\nomunit{\square\metre}\nomeqref {3.0}\nompageref{8}
+  \item [{\(c_\text{Luft}\)}]\begingroup Strömungswiderstandkoeffizient\nomunit{1}\nomeqref {3.0}\nompageref{8}
+  \item [{\(F_\text{Hang}\)}]\begingroup Hangabtriebskraft\nomunit{\newton}\nomeqref {3.0}\nompageref{8}
+  \item [{\(F_\text{Ström}\)}]\begingroup Strömungswiderstand\nomunit{\newton}\nomeqref {3.0}\nompageref{8}
+  \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.0}\nompageref{8}
+  \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.0}\nompageref{8}
+  \item [{\(K_\text{V}\)}]\begingroup Drehzahlkonstante\nomunit{\per\minute\per\volt}\nomeqref {3.0}\nompageref{8}
+  \item [{\(M\)}]\begingroup Drehmoment\nomunit{\newtonmetre}\nomeqref {3.0}\nompageref{8}
+  \item [{\(M_\text{Hang}\)}]\begingroup Drehmoment entlang eines Hanges\nomunit{\newtonmetre}\nomeqref {3.0}\nompageref{8}
+  \item [{\(N_\text{Motor}\)}]\begingroup Zähneanzahl antriebseitig\nomunit{1}\nomeqref {3.0}\nompageref{8}
   \item [{\(n_\text{p}\)}]\begingroup Anzahl der magnetischen Rotorpole\nomunit{1}\nomeqref {5.0}\nompageref{19}
-  \item [{\(N_\text{Rolle}\)}]\begingroup Zähneanzahl getriebeseitig\nomunit{1}\nomeqref {3.7}\nompageref{9}
-  \item [{\(r_\text{Rolle}\)}]\begingroup Radius der Rollen\nomunit{\metre}\nomeqref {3.8}\nompageref{9}
+  \item [{\(N_\text{Rolle}\)}]\begingroup Zähneanzahl getriebeseitig\nomunit{1}\nomeqref {3.0}\nompageref{8}
+  \item [{\(r_\text{Rolle}\)}]\begingroup Radius der Rollen\nomunit{\metre}\nomeqref {3.0}\nompageref{8}
   \item [{\(s\)}]\begingroup Zurückgelegte Strecke\nomunit{\metre}\nomeqref {6.0}\nompageref{22}
-  \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.8}\nompageref{9}
-  \item [{\(v\)}]\begingroup Laterale Geschwindigkeit\nomunit{\metre\per\second}\nomeqref {3.4}\nompageref{8}
-  \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.8}\nompageref{9}
+  \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.0}\nompageref{8}
+  \item [{\(v\)}]\begingroup Laterale Geschwindigkeit\nomunit{\metre\per\second}\nomeqref {3.0}\nompageref{8}
+  \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.0}\nompageref{8}
 \nomgroup{S}
-  \item [{\(\angle\)}]\begingroup Hangneigung\nomunit{\percent}\nomeqref {3.1}\nompageref{8}
+  \item [{\(\angle\)}]\begingroup Hangneigung\nomunit{\percent}\nomeqref {3.0}\nompageref{8}
 
 \end{thenomenclature}

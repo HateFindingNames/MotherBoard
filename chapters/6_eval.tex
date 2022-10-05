@@ -48,6 +48,16 @@
 		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde allerdings zu einem vergrößerten Kurvenradius führen.
 		Von Feldtests bei Geschwindigkeiten höher als~\qty{25}{\kilo\metre\per\hour} ohne erweiterte Sicherheitsausrüstung wurde aus oben genannten Gründen abgesehen.
 		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf~\qty{25}{\kilo\metre\per\hour} begrenzt (vgl. \cref{fig:ESC erpm setting}).
+		
+		%
+	\section{Material}\label{sec:material}
+		Die Montage der Zangen am Hanger bedarf ein hohes Maß an Geschicklichkeit, um die Flanken der Zangen möglichst koplanar an den Flanken der Rollen auszurichten und zeitgleich ein Anzugsmoment anzuwenden, dass ein Verkippen oder Verschieben der Zangen im Betrieb sicher verhindert.
+		Nicht koplanar ausgerichtete Flanken würden zu einem seitlichen Drift der Riemen auf den Zahnriemenscheiben führen.
+		Einmal montiert hielten die Motorhalterungen sämtlichen Belastungen des Normalbetriebes und nicht-intendierte Spitzenbelastungen bei Kollisionen mit gehobener Geschwindigkeit (vgl. \cref{fig:real world assembly}) stand\footnote{\hspace{1mm}Die tatsächliche Geschwindigkeit konnte leider nicht festgestellt werden.}.\par\medskip
+		%
+		Die Zahnriemenscheiben zeigen, zu sehen in \cref{subfig:printed pulleys after test driving}, gut sichtbaren Abrieb entlang der Zahnung und es brachen sämtliche Führungsstifte was darauf hindeutet, dass auf sie unbeabsichtigt Moment übertragen wurde.
+		Während es hierzu im Rahmen der Testfahrten keine weiteren Auffälligkeiten bezüglich eines negativen Einflusses auf die Funktionalität des Systems gab, bietet sich hier für zukünftige Revisionen Nachbesserungspotential.
+		Die sonstige Integrität der Bauteile blieb vollständig erhalten, da weder das Profil selbst, noch die Bauteile als ganze Spuren von Materialermüdung wie Rissbildung oder gar Brüche zeigen.
 		\begin{figure}[h]
 			\centering
 			\subcaptionbox{Ungenutzte Druckteile.\label{subfig:freshly printed pulleys}}[.49\textwidth][l]{
@@ -59,27 +69,39 @@
 			\caption[Vergleich der gedruckten Zahn- und Konterscheiben vor und nach mehreren Testfahrten]{(a) Die finale und zum Zeitpunkt des Verfassens dieses Dokumentes noch verbaute Version. (b) Der Zustand des ersten funktionalen Prototypes nach etwa~\qty{100}{\kilo\metre} Testfahrt. Neben zu erwartender Verschmutzung sei insbesondere auf das Fehlen der Führungsstifte zu achten. Das Zahnprofil und die Komponenten als ganze weisen darüber hinaus jedoch keinerlei Anzeichen von Materialversagen auf.}
 			\label{fig:comparison printed parts used unused}
 		\end{figure}
-		%
+
+
 	\section{Kosten}\label{sec:cost}
+		Das im Rahmen dieses Projektes gefertigte Antriebssystem lag mit \dEUR{264,75} gut unterhalb des fest gesetzten Preisrahmens von \dEUR{300}.
+		Dies konnte allerdings nur realisiert werden, indem bereits vorhandene Aluminiumhalbzeuge und Schrauben genutzt und von einfachem und kostenfreiem Zugang zur FDM-Druck- und CNC-Fräsfertigung Gebrauch gemacht wurde.
+
+		Externe Fertigung der Druckteile schlüge sich zwar mit \dEUR{23,03} und damit vergleichsweise geringen Kosten nieder, um unterhalb der Preisobergrenze zu bleiben war die Ersparnis der Fertigungs- und Materialkosten der Motorhalterung von \dEUR{170} jedoch maßgeblich.\par\medskip
+		%
+		Eine Aufstellung der Einzelkosten findet sich in \cref{tab:costs}.
+		Die mit ``*'' gekennzeichneten Posten konnten im Rahmen des Projektes eingespart werden und sind mit Schätzwerten angegeben.
+		Herstellung ohne Einsparmöglichkeit schlüge demnach mit \(\approx \dEUR{458,78}\) zu buche.
 		\begin{table}[h]
-			\caption[Kostenaufstellung der Einzelteile]{Kostenaufstellung der Einzelteile. Da nicht alle Teile gekauft werden mussten sind wo zutreffend Schätzwerte angegeben.}%
+			\caption[Kostenaufstellung der Einzelteile]{Kostenaufstellung der Einzelteile. Da nicht alle Teile gekauft werden mussten, sind, wo zutreffend, Schätzwerte angegeben und mit ``*'' gekennzeichnet.}%
 			\label{tab:costs}
 			\centering
 			\begin{threeparttable}
 				\begin{tabular}{lp{1cm}r}
 					\toprule
-					Teil											&& Kosten\\ \midrule
-					Druckteile										&& \dEUR{2}\\
-					Motorhalterungen\tnote{a}						&& \dEUR{170}\\
-					\hspace{5mm}Nur Halbzeug						&& \dEUR{17,67}\\
+					Teil											&& Kosten\\
+					\midrule
+					Druckteile\tnote{a}								&& *\dEUR{23,03}\\
+					\hspace{5mm}Nur Material						&& \dEUR{0,86}\\
+					Motorhalterungen\tnote{a}						&& *\dEUR{170}\\
+					% \hspace{5mm}Nur Halbzeug						&& *\dEUR{17,67}\\
 					Motoren											&& \dEUR{177}\\
-					Schrauben										&& \dEUR{3}\\
+					Schrauben										&& *\dEUR{3}\\
 					Steckverbinder									&& \dEUR{2}\\
 					Rollen\tnote{b}									&& \dEUR{34,75}\\
 					Zahnriemen										&& \dEUR{29,4}\\
 					Zahnriemenscheiben								&& \dEUR{19,6}\\
-					&&\\
-					\textbf{Gesamt}									&& \dEUR{455,42}\\
+																	&&\\
+					\textbf{Gesamt}									&& \dEUR{264,75}\\
+																	&& *\dEUR{458,78}\\
 					\bottomrule
 				\end{tabular}
 				\begin{tablenotes}\footnotesize
