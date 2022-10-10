@@ -9,9 +9,11 @@
 \nomenclature[A]{ESC}{Elektronischer Speed Controller}%
 \nomenclature[A]{BLDC}{Brushless Direct Current}%
 %
-	Um Konsistenz mit Literatur und Marktrecherchen sicherzustellen werden im Rahmen dieser Arbeit technische Begriffe aus der Skaterszene genutzt.
-	Während Skateboarding einerseits keinesfalls als neuartiges Phänomen zu bezeichnen ist und andererseits in den vergangenen fünf Jahren eine Renaissance erlebt hat, kann, gerade im nicht-englischsprachigen Raum, nicht davon ausgegangen werden, dass alle Lesenden mit der Terminologie vertraut sind.
-	Daher wird im Folgenden zunächst Fokus auf eine Begriffskonvention gelegt und in diesem Rahmen funktionale Kernkomponenten eines Skate- bzw. Longboards\footnote{\hspace{1mm} Baulich zwar leicht zu unterscheiden, jedoch aus den gleichen Kernkomponenten und -funktionalitäten aufgebaut.}~erläutert.\par\medskip
+	Um Konsistenz mit Literatur und Marktrecherchen sicherzustellen werden im Rahmen dieser Arbeit technische Begriffe aus dem Skater-Jargon genutzt.
+	% Während Skateboarding einerseits keinesfalls als neuartiges Phänomen zu bezeichnen ist und andererseits in den vergangenen fünf Jahren eine Renaissance erlebt hat, kann, gerade im nicht-englischsprachigen Raum, nicht davon ausgegangen werden, dass alle Lesenden mit der Terminologie vertraut sind.
+	Zu einigen Komponenten existieren keine definierte deutschsprachigen Begriffe.
+	Daher wird im Folgenden zunächst Fokus auf eine Begriffskonvention gelegt und in diesem Rahmen funktionale Kernkomponenten eines Skate- bzw. Longboards\footnote{\hspace{1mm} Baulich zwar leicht zu unterscheiden, jedoch aus den gleichen Kernkomponenten und -funktionalitäten aufgebaut.} erläutert.
+	Freie Übersetzungen des Autors sind kursiv und befinden sich in Klammer.\par\medskip
 	%
 	Das Antriebssystem soll in ein vorgegebenes, übergeordnetes System bestehend aus mechanischen und elektronischen Komponenten eingebettet werden.
 	Sowohl das übergeordnete System, als auch die Einsatzumgebung definieren konstruktive Einschränkungen, die in einem weiteren Unterkapitel herausgearbeitet werden sollen.\par\medskip
@@ -27,50 +29,48 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Longboard.svg}
-			\caption[Grundlegender Aufbau eines Longboards]{Grundlegender Aufbau eines Longboards. 15~Deck, 16~Truck Bolts, 17~Truck Bolt Nuts, 18~Riser Pad.}\label{fig:longboard}
+			\caption[Grundlegender Aufbau eines Longboards]{Grundlegender Aufbau eines Longboards. 15~Deck (dt. Brett), 16~Truck Bolt (meist Senkschrauben mit Innensechskant), 17~Truck Bolt Nut (dt. Sechskantmutter mit Klemmteil), 18~Riser Pad (dt. \textit{Unterlage}).}\label{fig:longboard}
 		\end{figure}
 		%
 		\Cref{fig:longboard} zeigt den grundlegenden Aufbau eines Longboards.
-		Erkennbar sind hier vordergründig das Deck~(15), welches die fahrende Person trägt und hierbei einen Großteil der wirkenden Kräfte aufnehmen muss.
+		Erkennbar sind hier vordergründig das Deck (dt. Brett)~(15), welches die fahrende Person trägt und hierbei einen Großteil der wirkenden Kräfte aufnehmen muss.
 		Je nach Fahrstil werden weichere oder härtere Materialien gewünscht um etwa Unebenheiten des Untergrundes auszugleichen oder die Ausführung von Tricks\footnote{\hspace{1mm} Über die rein laterale Fortbewegung hinausgehende, meist kunstvoll ausgeführte Bewegungen des Boards mit und unter den Füßen.}~positiv zu beeinflussen.
-
-		Meist kommt hier Schichtholz mit oder ohne eingearbeiteten Glas-, Aramid- oder Kohlefasergewebes zum Einsatz, es sind bisweilen aber auch exotischere Materialien wie Aluminium oder ABS\footnote{\hspace{1mm} Acrylnitrilbutadienstyrol.}~vertreten.
-		In \cref{fig:longboard} befinden sich links und rechts, zentral entlang der Längsachse des Decks angeordnet die Trucks genannten Baugruppen zusammen mit jeweils zwei Rollen.
-		Eine mechanisch belastbare Verbindung zum Deck wird durch Truck Bolts~(16) und Truck Bolt Nuts~(17) hergestellt.
-		Gegenüber den mit deutlich kleineren Rollen ausgestatteten Skateboards ist es im Longboarding üblich zwischen Deck und Truck Riser Pads~(18) einzusetzen.
-		Hierbei handelt es sich um aus flexiblem Material verschiedener Härtegrade gefertigte Pufferplatten mit Doppelfunktion:
-		Einerseits unterstützen sie die Entkopplung der Füße von Vibration und verhindern andererseits sogenannte Wheel Bites -~ein Kontakt des Decks mit den Rollen während eines Lenkmanövers mit meist fataler Konsequenz.
-
-		%
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Truck}
-			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textsc{Caliper II}. Sichtbar sind hier: 1~Baseplate, 2~Pivot Cup, 3~Kingpin, 4~Hanger, 5~RS Bushing, 6~BS Bushing, 7~BS Washer, 8~RS Washer, 9~Kingpin Nut.}\label{fig:caliper exploded}
+			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textsc{Caliber II}. Sichtbar sind hier: 1~Baseplate (dt. \textit{Basisplatte}), 2~Pivot Cup (dt. \textit{Drehpunktbecher}), 3~Kingpin (oft eigens angefertigte Außensechskantschraube), 4~Hanger (dt. \textit{Bügel}), 5~RS Bushing (dt. straßenseitiger Lenkgummi), 6~BS Bushing (dt. brettseitiger Lenkgummi), 7~BS Washer (dt. brettseitige Unterlegscheibe), 8~RS Washer (dt. straßenseitige unterlegscheibe), 9~Kingpin Nut (dt. Sechskantmutter mit Klemmteil).}\label{fig:caliper exploded}
 		\end{figure}
-		%
+
+		Meist kommt hier Schichtholz mit oder ohne eingearbeiteten Glas-, Aramid- oder Kohlefasergewebes zum Einsatz, es sind bisweilen aber auch exotischere Materialien wie Aluminium oder ABS\footnote{\hspace{1mm} Acrylnitrilbutadienstyrol.}~vertreten.
+		In \cref{fig:longboard} befinden sich links und rechts, zentral entlang der Längsachse des Decks angeordnet die Trucks genannten Baugruppen zusammen mit jeweils zwei Rollen.
+		Eine mechanisch belastbare Verbindung zum Deck wird durch Truck Bolts (meist Senkschrauben mit Innensechskant)~(16) und Truck Bolt Nuts (Sechskantmutter mit Klemmteil)~(17) hergestellt.
+		Gegenüber den mit deutlich kleineren Rollen ausgestatteten Skateboards ist es im Longboarding üblich zwischen Deck und Truck Riser Pads (dt. \textit{Unterlagen})~(18) einzusetzen.
+		Hierbei handelt es sich um aus flexiblem Material verschiedener Härtegrade gefertigte Pufferplatten mit Doppelfunktion:
+		Einerseits unterstützen sie die Entkopplung der Füße von Vibration und verhindern andererseits sogenannte Wheel Bites -~ein Kontakt des Decks mit den Rollen während eines Lenkmanövers mit meist fataler Konsequenz.
+
 		Der Aufbau der Trucks selbst wird in \cref{fig:caliper exploded} exemplarisch am Typ \textsc{Caliber II} gezeigt.
-		Der Hanger~(4) bildet hier das zentrale Bauteil und muss den Großteil der wirkenden Kräfte aufnehmen.
-		Er wird drehbar und gleitend in der Baseplate~(1) gelagert.
+		Der Hanger (dt. \textit{Bügel})~(4) bildet hier das zentrale Bauteil und muss den Großteil der wirkenden Kräfte aufnehmen.
+		Er wird drehbar und gleitend in der Baseplate (dt. \textit{Basisplatte})~(1) gelagert.
 		Direkter Kontakt zwischen Hanger und Baseplate hätte erhöhten Abrieb und reduziertes Gleitverhalten zur Konsequenz wozu hier ein meist aus POM\footnote{\hspace{1mm} Polyoxymethylen.}~gefertigter Pivot Cup~(2) eingesetzt wird.
-		In Position gehalten wird der Hanger mittels Kingpin~(3) und Kingpin Nut~(9).
-		Das Rückstellmoment nach Ende eines Lenkmanövers wird durch zwei Bushings --~vergleichsweise dicke Gummiringe -- erzeugt, die mit der Kingpin-Achse koaxial beidseitig mit dem Hanger in mechanischem Kontakt stehen.
-		Deckseitig befindet sich der BS Bushing~(6), straßenseitig angeordnet der RS Bushing.
-		Die Präfixe stehen für Board Side bzw. Road Side und spiegeln ihre Positionen wider.
+		In Position gehalten wird der Hanger mittels Kingpin (oft eigens angefertigte Außensechskantschraube)~(3) und Kingpin Nut (dt. Sechskantmutter mit Klemmteil)~(9).
+		Das Rückstellmoment nach Ende eines Lenkmanövers wird durch zwei Bushings --~vergleichsweise dicke Gummiringe --~erzeugt, die mit der Kingpin-Achse koaxial beidseitig mit dem Hanger in mechanischem Kontakt stehen.
+		Deckseitig befindet sich der BS Bushing (dt. brettseitiger Lenkgummi)~(6), straßenseitig angeordnet der RS Bushing (dt. straßenseitiger Lenkgummi)~(5).
+		Die Präfixe stehen für Board Side bzw. Road Side und spiegeln ihre jeweiligen Positionen innerhalb der Baugruppe wider.
 		Unterschieden wird hier, da sich verschiedene Geometrien und Härtegrade der Bushings abhängig ihrer Position merklich auf das Fahrgefühl und Lenkvermögen auswirken können\footnote{\hspace{1mm} Durch Drehen der Kingpin Nut und damit einer Änderung der Vorspannung der Bushings~kann hier auch im Feld relativ unkompliziert nachjustiert werden}.
-		Um die Lasten flächig auf die Oberfläche der Bushings zu verteilen, werden RS und BS Washer~(7,8), üblicherweise tellerförmige Scheiben, auf der dem Hanger abgewandten Seite platziert.\par\medskip
+		Um die Lasten flächig auf die Oberfläche der Bushings zu verteilen, werden RS und BS Washer (dt. straßen- und brettseitige \textit{Unterlegscheiben})~(7,8), üblicherweise tellerförmige Scheiben, auf der dem Hanger abgewandten Seite platziert.\par\medskip
 		%
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Wheels NT}
-			\caption[Montage der Rollen an der Achse des Hanger]{Montage der Rollen an der Achse des Hangers. Links in explodierter und rechts in Schnittansicht. Zu sehen sind: 10~Rolle, 11~Kugellager, 12~Speedring, 13~Spacer, 14~Achsmutter.}\label{fig:wheel NT exploded}
+			\caption[Montage der Rollen an der Achse des Hanger]{Montage der Rollen an der Achse des Hangers. Links in explodierter und rechts in Schnittansicht. Zu sehen sind: 10~Rolle, 11~Kugellager, 12~Speedring (dt. \textit{Distanzring}), 13~Spacer (dt. \textit{Abstandhalter}), 14~Achsmutter.}\label{fig:wheel NT exploded}
 		\end{figure}
 		%
 		Je nach gewünschter Laufruhe und in Abwägung zwischen Traktion und Rollwiderstand werden Rollen verschiedener Größen und Materialien drehbar auf den Hanger-Achsen gelagert.
 		Mit Blick auf \cref{fig:wheel NT exploded} wird konzentrisch in den Kern der Rolle~(10) --~vergleichbar mit einer Felge, die das weichere Mantelmaterial trägt --~beidseitig jeweils ein Radialrillenkugellager~(11) platziert.
 		Hier hat sich historisch über quasi-sämtliche Rollenbauerten hinweg das 608-Kugellager durchgesetzt.
-		Um potenziell den Lagern gegenüber destruktive axiale Kräfte in Kurven oder durch das Anzugsmoment der Achsmutter~(14) zu minimieren, wird, ebenfalls in den Kern der Rolle und zwischen die beiden Lager, der Spacer~(13) angeordnet.
+		Um potenziell den Lagern gegenüber destruktive axiale Kräfte in Kurven oder durch das Anzugsmoment der Achsmutter~(14) zu minimieren, wird, ebenfalls in den Kern der Rolle und zwischen die beiden Lager, der Spacer (dt. \textit{Abstandhalter})~(13) angeordnet.
 		Er besteht aus hartem Metall, hat einen Innendurchmesser gleich des nominellen Durchmessers der Hanger-Achse, eine Wandstärke von \(\approx \qty{1}{\milli\metre}\) und eine Länge, die gerade so gewählt ist, dass er an beiden Flanken mit den Innenringen der Lager in Kontakt steht, wenn sie beide vollständig im Kern eingelassen sind.
-		Ein schleiffreies Laufen der Lager wird durch Speedrings~(12) sichergestellt.
+		Ein schleiffreies Laufen der Lager wird durch Speedrings (dt. \textit{Distanzring})~(12) sichergestellt.
 		Ihre Dimensionen entsprechen denen des Spacers, allerdings mit einer deutlich geringeren Länge von nur \qty{1}{\milli\metre}.
 		Letztlich werden alle Komponenten mit einer Achsmutter auf der Hanger-Achse fixiert.
 		%
@@ -111,7 +111,7 @@
 			\end{figure}
 
 			%
-			Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei elektronischen Speed Controllern (ESC) des Typs \textsc{FSESC 4.12}\footnote{\hspace{1mm} Die wiederum industriell gefertigte 1:1 Nachbauten des populären Open-Source \textsc{VESC} von Benjamin~Vedder sind.} angesteuert werden.
+			Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei elektronischen Speed Controllern (ESC) des Typs \textsc{FSESC 4.12}\footnote{\hspace{1mm} Die wiederum industriell gefertigte 1:1 Nachbauten des populären Open-Source ESC ``\textsc{VESC}'' von Benjamin~Vedder sind \cites{vesc.project}{vedder.se}{vesc.documentation.2015}.} angesteuert werden.
 			ESC sind elektronische Komponenten vornehmlich zur elektronischen Kommutation von bürstenlosen Gleichstrommotoren (Brushless Direct Current, BLDC).
 			\begin{figure}[h]
 				\centering
@@ -138,7 +138,7 @@
 		So muss das System\ldots
 		\begin{itemize}
 			\item \ldots in der Lage sein, mindestens das angenommene Gesamtgewicht von \qty{100}{\kilo\gram} moderate Steigungen hinauf befördern zu können.
-			Als Designrichtlinie wird hier eine Steigung von \qty{5}{\percent} festgelegt.
+			Als Designrichtlinie wird hier ein Gefälle von \qty{5}{\percent} festgelegt.
 			\item \ldots entlang ebenen Asphaltes auf mindestens \qty{25}{\kilo\metre\per\hour} beschleunigen können\footnote{\hspace{1mm}Womit die Maschine nach derzeitiger deutscher Gesetzeslage nicht mehr als Elektro\textbf{kleinst}fahrzeug kategorisiert werden kann~\cite{Bundesgesetzblatt.2019}.}.
 			In Kombination mit obiger Forderung wird hier auf das Festlegen eines Zeitintervalls, innerhalb dessen die Endgeschwindigkeit erreicht werden soll, verzichtet.
 			\item \ldots einfach zu Warten sein.

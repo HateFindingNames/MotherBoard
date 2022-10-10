@@ -26,6 +26,7 @@
   \item [{\(c_\text{Luft}\)}]\begingroup Strömungswiderstandkoeffizient\nomunit{1}\nomeqref {3.0}\nompageref{8}
   \item [{\(F_\text{Hang}\)}]\begingroup Hangabtriebskraft\nomunit{\newton}\nomeqref {3.0}\nompageref{8}
   \item [{\(F_\text{Ström}\)}]\begingroup Strömungswiderstand\nomunit{\newton}\nomeqref {3.0}\nompageref{8}
+  \item [{\(G\)}]\begingroup Gefälle\nomunit{\percent}\nomeqref {3.0}\nompageref{8}
   \item [{\(I_\text{Motor}\)}]\begingroup Phasenstrom\nomunit{\ampere}\nomeqref {3.0}\nompageref{8}
   \item [{\(K_\text{T}\)}]\begingroup Drehmomentkonstante\nomunit{\newtonmetre\per\ampere}\nomeqref {3.0}\nompageref{8}
   \item [{\(K_\text{V}\)}]\begingroup Drehzahlkonstante\nomunit{\per\minute\per\volt}\nomeqref {3.0}\nompageref{8}
@@ -39,7 +40,5 @@
   \item [{\(U_\text{Bat}\)}]\begingroup Batteriespannung\nomunit{\volt}\nomeqref {3.0}\nompageref{8}
   \item [{\(v\)}]\begingroup Laterale Geschwindigkeit\nomunit{\metre\per\second}\nomeqref {3.0}\nompageref{8}
   \item [{\(v_\text{max}\)}]\begingroup Maximalgeschwindigkeit\nomunit{\kilo\metre\per\hour}\nomeqref {3.0}\nompageref{8}
-\nomgroup{S}
-  \item [{\(\angle\)}]\begingroup Hangneigung\nomunit{\percent}\nomeqref {3.0}\nompageref{8}
 
 \end{thenomenclature}

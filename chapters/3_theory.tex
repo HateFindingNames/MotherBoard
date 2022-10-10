@@ -1,11 +1,12 @@
 % LTeX: language=de-DE
 \chapter{Theorie}\label{sec:theory}
+\nocite{Meschede.2015}\nocite{Demtroder.2018}
 % ===============================================
 % Nomenclatures
 % ===============================================
 \nomenclature[G]{\(\theta\)}{Hangneigungswinkel\nomunit{rad}}%
 \nomenclature[L]{\(F_\text{Hang}\)}{Hangabtriebskraft\nomunit{\newton}}%
-\nomenclature[S]{\(\angle\)}{Hangneigung\nomunit{\percent}}%
+\nomenclature[L]{\(G\)}{Gefälle\nomunit{\percent}}%
 \nomenclature[G]{\(\mu_\text{Roll}\)}{Rollreibungskoeffizient\nomunit{\metre}}%
 \nomenclature[L]{\(F_\text{Ström}\)}{Strömungswiderstand\nomunit{\newton}}%
 \nomenclature[G]{\(\rho\)}{Gasdichte\nomunit{\kilo\gram\per\cubic\metre}}%
@@ -34,9 +35,9 @@
 		\label{eq:downhill force}
 	\end{equation}%
 	
-	gegeben und wird mit der Umrechnung der im Straßenverkehr üblichen Angaben in~\unit{\percent} zu~\unit{\radian} durch \(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\) zu
+	gegeben und wird mit der Umrechnung der im Straßenverkehr üblichen Angaben in~\unit{\percent} zu~\unit{\radian} durch \(\arctan\!\left(\frac{G}{\qty{100}{\percent}}\right)\) zu
 	\begin{equation}
-		F_\text{Hang} = m \, g \, \sin\!\left(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\right).%
+		F_\text{Hang} = m \, g \, \sin\!\left(\arctan\!\left(\frac{G}{\qty{100}{\percent}}\right)\right).%
 		\label{eq:downhill force incline to radian}
 	\end{equation}
 	\begin{figure}[h]
@@ -63,7 +64,7 @@
 	Nun lässt sich mit bekanntem Radius der Rolle und unter Berücksichtigung von \crefrange{eq:downhill force incline to radian}{eq:air drag} für das rückwirkende Drehmoment schreiben:
 	\begin{align}
 		M_\text{Hang}	&= \left(F_\text{Hang} + F_\text{Roll} + F_\text{Ström}\right) r \nonumber \\
-						&= \left[ m \, g \left( \sin\!\left(\arctan\!\left(\frac{\angle}{\qty{100}{\percent}}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} \, c_\text{Ström} \, \rho \, A \, v^2 \right] r%
+						&= \left[ m \, g \left( \sin\!\left(\arctan\!\left(\frac{G}{\qty{100}{\percent}}\right)\right) + c_\text{Roll} \right) + \frac{1}{2} \, c_\text{Ström} \, \rho \, A \, v^2 \right] r%
 		\label{eq:incline plus roll plus drag torque}
 	\end{align}%
 	\section{Elektromotorische Zusammenhänge}
@@ -98,5 +99,4 @@
 		\begin{align}
 			M	&= K_\text{T} \, I_\text{Motor} \, \zeta
 			\label{eq:frictionless torque}
-		\end{align}%
-		\nocite{Meschede.2015}\nocite{Demtroder.2018}
+		\end{align}
