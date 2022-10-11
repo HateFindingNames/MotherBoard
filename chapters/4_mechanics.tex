@@ -145,7 +145,7 @@
 
 		Auf der getriebenen Seite muss die Zahnriemenscheibe kraftschlüssig mit der Rolle verbunden werden.
 		So ist es wünschenswert, dass sich bereits durch die Bauart der Rollen eine einfache Installation anbietet.
-		Verwendet werden hier \qty{80}{\milli\metre} \textsc{Kegel} des Herstellers \textsc{Orangatang}.
+		Verwendet werden hier \qty{80}{\milli\metre} \textit{Kegel} des Herstellers \textit{Orangatang}.
 		Sie besitzen einen Kern aus hartem Kunststoff mit 10 radial um ihre Hauptachse angeordneten Bohrungen von \qty{5,8}{\milli\metre} Durchmesser (vgl. \cref{fig:kegels}).
 		
 		Unter Zuhilfenahme einer Fühlerlehre, ermitteln der Maße und mehreren Iterationen im FDM-Verfahren 3D-gedruckter Modelle konnten die inneren Profile der Rollen in ausreichender Genauigkeit so in ein CAD-Modell übertragen werden, dass daraus eine Passung für die getriebeseitige Zahnriemenscheibe modelliert werden kann.
@@ -219,7 +219,7 @@
 			\label{fig:hanger clamp drawing}
 		\end{figure}
 		\Cref{fig:hanger clamp drawing} zeigt eine Zeichnung der Zange mit allen relevanten Dimensionen.
-		Erkennbar ist mittig eine Aussparung in Form des Profils des \textsc{Caliber II} Hangers mit Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
+		Erkennbar ist mittig eine Aussparung in Form des Profils des \textit{Caliber II} Hangers mit Nut, um durch eine M5 Schraube an den beiden flachen Flanken des Hanger angespannt werden zu können.
 		Um hier die Kontaktfläche zu maximieren wurde als Halbzeug ein Blech größtmöglich zur Verfügung stehender Materialstärke gewählt.
 		Kreisförmig um die Rollachse des Hangers befinden sich sechs M4-Durchgangsbohrungen, um flach anliegend den Motorarm anbringen zu können.
 		Sollte die Einspannung des Hangers in der Zange ein Driften entlang der bzw. Kippen gegen die Hangerachse nicht zuverlässig verhindern können, so sollen später an den drei Aussparungen entlang des äußeren Bogens Querverbindungen zwischen zwei gegenüberliegenden Zangen möglich sein.
@@ -234,6 +234,12 @@
 		In \cref{fig:motor piece drawing} links befinden sich radial um die Rollachse angeordnet sechs Langlöcher zur Montage an der Zange.
 		Da der gesamte Aufbau sich unterhalb des Decks befinden wird, ist es wichtig bezüglich der Motoren ein Optimum zwischen Bodenabstand und Distanz zum Deck zu finden.
 		Um auch nach Zusammenbau die Abstände nachjustieren zu können, kann der Anstellwinkel des Armes innerhalb eines Winkels von \qty{22,5}{\degree} so auf einfache Weise angepasst werden.
+		\begin{figure}[h]
+			\centering
+			\includesvg[width=.75\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain inclined}
+			\caption[Zeichnung des Gesamtaufbaus]{Zeichnung des Gesamtaufbaus montiert als Hinterachse.}
+			\label{fig:drivetrain inclined}
+		\end{figure}
 		Rechts befinden sich vier weitere Langlöcher von \qty{6}{\milli\metre} Länge zur Befestigung des Motors.
 		Hier dienen die Langlöcher der Möglichkeit nach Zusammenbau durch Variation des Abstandes von Roll- zu Motorachse die Riemenspannung nachjustieren zu können.
 		Nach \cref{fig:timing belt length} ist mit der in \cref{sec:transmission} beschriebenen Konfiguration ein theoretischer Mittelpunktabstand von \(\approx \qty{74,34}{\milli\metre}\) zu erwarten.
@@ -241,3 +247,12 @@
 
 		Vier Bohrungen durch die äußeren Erhebungen um die Motorachse herum sollen es später ermöglichen bei Bedarf einen Riemenschutz anbringen zu können.
 		Die Erhebungen selbst sollen den Zweck eines Puffermaterial im Falle eines Bodenkontaktes erfüllen.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[angle=180, width=.5\textwidth]{Footage/Pictures/Drivetrain close up v2.jpg}
+			\caption[Fertiger Aufbau des Antriebssystems]{Fertiger Aufbau des Antriebssystems nach etwa~\qty{100}{\kilo\metre} Testfahrt durch urbanes Terrain.}
+			\label{fig:real world assembly}
+		\end{figure}
+
+		\Cref{fig:drivetrain inclined} zeigt eine Zeichnung des Gesamtaufbaus des Systems mit zwei Motoren, den Unterbaugruppen der Motorhalterungen, den Rollen und den Truck montiert an der Heckseite des Decks in eingelenkter Position.
+		Zum Vergleich in \cref{fig:real world assembly} der reale Aufbau.

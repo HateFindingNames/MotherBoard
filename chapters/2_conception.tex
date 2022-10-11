@@ -38,7 +38,7 @@
 		\begin{figure}[h]
 			\centering
 			\includesvg[width=.9\textwidth]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain - Truck}
-			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textsc{Caliber II}. Sichtbar sind hier: 1~Baseplate (dt. \textit{Basisplatte}), 2~Pivot Cup (dt. \textit{Drehpunktbecher}), 3~Kingpin (oft eigens angefertigte Außensechskantschraube), 4~Hanger (dt. \textit{Bügel}), 5~RS Bushing (dt. straßenseitiger Lenkgummi), 6~BS Bushing (dt. brettseitiger Lenkgummi), 7~BS Washer (dt. brettseitige Unterlegscheibe), 8~RS Washer (dt. straßenseitige unterlegscheibe), 9~Kingpin Nut (dt. Sechskantmutter mit Klemmteil).}\label{fig:caliper exploded}
+			\caption[Explosionsansicht eines der Trucks]{Aufbau eines der Trucks als Explosionsansicht exemplarisch an einem \textit{Caliber II}. Sichtbar sind hier: 1~Baseplate (dt. \textit{Basisplatte}), 2~Pivot Cup (dt. \textit{Drehpunktbecher}), 3~Kingpin (oft eigens angefertigte Außensechskantschraube), 4~Hanger (dt. \textit{Bügel}), 5~RS Bushing (dt. straßenseitiger Lenkgummi), 6~BS Bushing (dt. brettseitiger Lenkgummi), 7~BS Washer (dt. brettseitige Unterlegscheibe), 8~RS Washer (dt. straßenseitige unterlegscheibe), 9~Kingpin Nut (dt. Sechskantmutter mit Klemmteil).}\label{fig:caliper exploded}
 		\end{figure}
 
 		Meist kommt hier Schichtholz mit oder ohne eingearbeiteten Glas-, Aramid- oder Kohlefasergewebes zum Einsatz, es sind bisweilen aber auch exotischere Materialien wie Aluminium oder ABS\footnote{\hspace{1mm} Acrylnitrilbutadienstyrol.}~vertreten.
@@ -48,7 +48,7 @@
 		Hierbei handelt es sich um aus flexiblem Material verschiedener Härtegrade gefertigte Pufferplatten mit Doppelfunktion:
 		Einerseits unterstützen sie die Entkopplung der Füße von Vibration und verhindern andererseits sogenannte Wheel Bites -~ein Kontakt des Decks mit den Rollen während eines Lenkmanövers mit meist fataler Konsequenz.
 
-		Der Aufbau der Trucks selbst wird in \cref{fig:caliper exploded} exemplarisch am Typ \textsc{Caliber II} gezeigt.
+		Der Aufbau der Trucks selbst wird in \cref{fig:caliper exploded} exemplarisch am Typ \textit{Caliber II} gezeigt.
 		Der Hanger (dt. \textit{Bügel})~(4) bildet hier das zentrale Bauteil und muss den Großteil der wirkenden Kräfte aufnehmen.
 		Er wird drehbar und gleitend in der Baseplate (dt. \textit{Basisplatte})~(1) gelagert.
 		Direkter Kontakt zwischen Hanger und Baseplate hätte erhöhten Abrieb und reduziertes Gleitverhalten zur Konsequenz wozu hier ein meist aus POM\footnote{\hspace{1mm} Polyoxymethylen.}~gefertigter Pivot Cup~(2) eingesetzt wird.
@@ -81,10 +81,10 @@
 		%
 		\subsection{Bestehendes System}
 			%
-			Die Batterie besteht aus 40~Lithium-Ionen Zellen in 10S4P-Konfiguration vom Typ \textsc{Samsung INR18650-30Q} mit einer nominellen Zellspannung von \qty{3,6}{\volt}, einer Mindestzellentladekapazität von \qty{2950}{\milli\amperehour} und einem maximalen Entladestrom von \qty{15}{\ampere} (vgl.~\cref{tab:cellspecifications}~\cite{INR18650.30Q.Specs.202202}).
+			Die Batterie besteht aus 40~Lithium-Ionen Zellen in 10S4P-Konfiguration vom Typ \textit{Samsung INR18650-30Q} mit einer nominellen Zellspannung von \qty{3,6}{\volt}, einer Mindestzellentladekapazität von \qty{2950}{\milli\amperehour} und einem maximalen Entladestrom von \qty{15}{\ampere} (vgl.~\cref{tab:cellspecifications}~\cite{INR18650.30Q.Specs.202202}).
 			%
 			\begin{table}[h]
-				\caption[Zellspezifikationen \textsc{Samsung INR18650-30Q}]{Zellspezifikationen \textsc{Samsung INR18650-30Q}~\cite{INR18650.30Q.Specs.202202}.}%
+				\caption[Zellspezifikationen \textit{Samsung INR18650-30Q}]{Zellspezifikationen \textit{Samsung INR18650-30Q}~\cite{INR18650.30Q.Specs.202202}.}%
 				\label{tab:cellspecifications}
 				\centering
 				\begin{tabular}{p{.4\textwidth}l}
@@ -111,12 +111,12 @@
 			\end{figure}
 
 			%
-			Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei elektronischen Speed Controllern (ESC) des Typs \textsc{FSESC 4.12}\footnote{\hspace{1mm} Die wiederum industriell gefertigte 1:1 Nachbauten des populären Open-Source ESC ``\textsc{VESC}'' von Benjamin~Vedder sind \cites{vesc.project}{vedder.se}{vesc.documentation.2015}.} angesteuert werden.
+			Das Drehmoment soll durch Elektromotoren erzeugt werden, die von zwei elektronischen Speed Controllern (ESC) des Typs \textit{FSESC 4.12}\footnote{\hspace{1mm} Die wiederum industriell gefertigte 1:1 Nachbauten des populären Open-Source ESC ``\textit{VESC}'' von Benjamin~Vedder sind \cites{vesc.project}{vedder.se}{vesc.documentation.2015}.} angesteuert werden.
 			ESC sind elektronische Komponenten vornehmlich zur elektronischen Kommutation von bürstenlosen Gleichstrommotoren (Brushless Direct Current, BLDC).
 			\begin{figure}[h]
 				\centering
 				\includegraphics[width=.9\textwidth]{Footage/Pictures/Electronics.jpg}
-				\caption[Eingesetzte ESC]{(1) die eingesetzten ESC vom Typ \textsc{FSESC 4.12}, (2) ein HC-06 Bluetooth Modul, (3) passives Batteriemanagementsystem zur Regelung des Ladestromes, (4) \qty{5}{\volt}~Spannungsregler, (5) elektronischer Ein-Aus-Schalter mit zwei parallel geschalteten \qty{80}{\ampere} Sicherungen, (6) Arduino Nano mit NRF24 Transceiver, (7) Steckverbinder der Hall-Effekt-Sensoren, (8) Phasenanschlüsse der Motoren.}\label{fig:electronics}
+				\caption[Eingesetzte ESC]{(1) die eingesetzten ESC vom Typ \textit{FSESC 4.12}, (2) ein HC-06 Bluetooth Modul, (3) passives Batteriemanagementsystem zur Regelung des Ladestromes, (4) \qty{5}{\volt}~Spannungsregler, (5) elektronischer Ein-Aus-Schalter mit zwei parallel geschalteten \qty{80}{\ampere} Sicherungen, (6) Arduino Nano mit NRF24 Transceiver, (7) Steckverbinder der Hall-Effekt-Sensoren, (8) Phasenanschlüsse der Motoren.}\label{fig:electronics}
 			\end{figure}
 			Als solche schränken sie die Auswahl der Motortypen zwar nicht exklusiv auf BLDCs ein --~Gleichstrommotoren mit Schleifkontakt sind auch denkbar -- allerdings bieten sie in Kombination mit BLDCs einen deutlich höheren Funktionsumfang.
 			Darüber hinaus sind BLDC gegenüber Gleichstrommotoren mit Schleifkontakten effizienter, bieten eine höhere Leistungsdichte, sind bauartbedingt unempfindlich gegenüber Nässe und quasi-wartungsfrei\footnote{\hspace{1mm} Je nach Art der Lagerung. Dies betrifft jedoch ausschließlich die mechanischen Komponenten der Motoren.}.

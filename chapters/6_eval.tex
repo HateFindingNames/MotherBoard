@@ -9,26 +9,9 @@
 	Die verwendeten Parameter für Tests auf der Werkbank und im Feld können \cref{fig:ESC motor params} und \cref{fig:ESC erpm setting} entnommen werden.
 	% Da aus Sicherheitsgründen einige Testläufe auf der Werkbank durchgeführt wurden und Messungen per GPS jedoch eine tatsächliche Bewegung im freien zwingend erforderlich machen, wurden zusätzlich Logginginformationen der ESC ausgelesen, um aus Umdrehungen pro Minute und Anzahl der Umdrehungen Werte zur Geschwindigkeit rechnerisch ermitteln zu können.\par\medskip
 	%
-
-	\begin{figure}[h]
-		\centering
-		\includesvg[width=.75\textwidth, inkscapelatex=false]{Footage/AwesomeBoard Transmission CAD/Drawings/Drivetrain inclined}
-		\caption[Zeichnung des Gesamtaufbaus]{Zeichnung des Gesamtaufbaus montiert als Hinterachse.}
-		\label{fig:drivetrain inclined}
-	\end{figure}
-
-	\Cref{fig:drivetrain inclined} zeigt eine Zeichnung des Gesamtaufbaus des Systems mit zwei Motoren, den Unterbaugruppen der Motorhalterungen, den Rollen und den Truck montiert an der Heckseite des Decks in eingelenkter Position.
-	Zum Vergleich in \cref{fig:real world assembly} der reale Aufbau.
-	\begin{figure}[h]
-		\centering
-		\includegraphics[angle=180, width=.5\textwidth]{Footage/Pictures/Drivetrain close up v2.jpg}
-		\caption[Fertiger Aufbau des Antriebssystems]{Fertiger Aufbau des Antriebssystems nach etwa~\qty{100}{\kilo\metre} Testfahrt durch urbanes Terrain.}
-		\label{fig:real world assembly}
-	\end{figure}
-	%
 	\section{Performanz}
 		Während mehrerer Testfahrten wurde das Drehmoment auf einer Strecke von etwa~\qty{250}{\metre} entlang eines Hanges mit einer maximalen Steigung von~\qty{7,5}{\percent} auf gepflastertem Untergrund getestet.
-		Während das System am Hang und aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich mit bereits moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
+		Während das System am Hang und aus dem Stand heraus nur schwer in der Lage ist zu beschleunigen, ist es ohne weiteres möglich, mit bereits moderater Anfangsgeschwindigkeit die Steigung zu überwinden.
 		% \begin{figure}[h]
 		% 	\centering
 		% 	\includesvg[width=.85\textwidth, inkscapelatex=false]{Calc/ESC_plot}
@@ -44,13 +27,13 @@
 		\nomenclature[L]{\(s\)}{Zurückgelegte Strecke\nomunit{\metre}}%
 		%
 		Die Geschwindigkeitstests wurden entlang einer frisch asphaltierten, ebenen Strecke durchgeführt.
-		Ab etwa~\qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren --~auch bekannt unter dem Begriff der Speed Wobbles --~was Tests bei höheren Geschwindigkeiten zunehmend gefährlich macht.
+		Ab etwa~\qty{20}{\kilo\metre\per\hour} wird das System zunehmend instabil und beginnt zu oszillieren --~ein Effekt bekannt unter dem Begriff der Speed Wobbles --~was Tests bei höheren Geschwindigkeiten zunehmend gefährlich macht.
 		Dem lässt sich zwar mit festerer Einspannung der Bushings begegnen, das würde allerdings zu einem vergrößerten Kurvenradius führen.
 		Von Feldtests bei Geschwindigkeiten höher als~\qty{25}{\kilo\metre\per\hour} ohne erweiterte Sicherheitsausrüstung wurde aus oben genannten Gründen abgesehen.
 		Via Software wurde nach \cref{eq:max speed by ERPM} die maximale Geschwindigkeit auf~\qty{25}{\kilo\metre\per\hour} begrenzt (vgl. \cref{fig:ESC erpm setting}).
 		
 		%
-	\section{Material}\label{sec:material}
+	\section{Werkstoffe}\label{sec:material}
 		Die Montage der Zangen am Hanger bedarf ein hohes Maß an Geschicklichkeit, um die Flanken der Zangen möglichst koplanar an den Flanken der Rollen auszurichten und zeitgleich ein Anzugsmoment anzuwenden, dass ein Verkippen oder Verschieben der Zangen im Betrieb sicher verhindert.
 		Nicht koplanar ausgerichtete Flanken würden zu einem seitlichen Drift der Riemen auf den Zahnriemenscheiben führen.
 		Einmal montiert hielten die Motorhalterungen sämtlichen Belastungen des Normalbetriebes und nicht-intendierte Spitzenbelastungen bei Kollisionen mit gehobener Geschwindigkeit (vgl. \cref{fig:real world assembly}) stand\footnote{\hspace{1mm}Die tatsächliche Geschwindigkeit konnte leider nicht festgestellt werden.}.\par\medskip
@@ -74,7 +57,12 @@
 		Eine Aufstellung der Einzelkosten findet sich in \cref{tab:costs}.
 		Die mit ``*'' gekennzeichneten Posten konnten im Rahmen des Projektes eingespart werden und sind mit Schätzwerten angegeben.
 		Herstellung ohne Einsparmöglichkeit betrüge demnach \(\approx \dEUR{458,78}\).
-		\begin{table}[h]
+
+		Das im Rahmen dieses Projektes hergestellte Antriebssystem lag mit \dEUR{264,75} gut unterhalb des fest gesetzten Preisrahmens von \dEUR{300} und mit rund \qty{58}{\percent} deutlich unterhalb der geschätzten Kosten von \dEUR{458,78}.
+		Dies konnte allerdings nur realisiert werden, indem bereits vorhandene Aluminiumhalbzeuge genutzt und von einfacher und allem voran kostenfreier Möglichkeit des FDM-Drucks und der CNC-Fräsbearbeitung Gebrauch gemacht wurde.
+		Das Kostenniveau extern gefertigter Druckteile wäre zwar mit \dEUR{23,03} als vergleichsweise moderat zu beschreiben, um unterhalb der Preisobergrenze zu bleiben war die Ersparnis der Fertigungs- und Materialkosten der Motorhalterung von \dEUR{170} jedoch maßgeblich\footnote{\hspace{1mm}Kostenvoranschläge für Druck- und Frästeile wurden jeweils unter online \url{www.pcbway.com} eingeholt.}.
+		\newpage
+		\begin{table}[ht!]
 			\caption[Kostenaufstellung der Einzelteile]{Kostenaufstellung der Einzelteile. Da nicht alle Teile gekauft werden mussten, sind, wo zutreffend, Schätzwerte angegeben und mit ``*'' gekennzeichnet.}%
 			\label{tab:costs}
 			\centering
@@ -104,7 +92,3 @@
 				\end{tablenotes}
 			\end{threeparttable}
 		\end{table}
-
-		Das im Rahmen dieses Projektes hergestellte Antriebssystem lag mit \dEUR{264,75} gut unterhalb des fest gesetzten Preisrahmens von \dEUR{300} und mit rund \qty{58}{\percent} deutlich unterhalb der geschätzten Kosten von \dEUR{458,78}.
-		Dies konnte allerdings nur realisiert werden, indem bereits vorhandene Aluminiumhalbzeuge genutzt und von einfacher und allem voran kostenfreier Möglichkeit des FDM-Drucks und der CNC-Fräsbearbeitung Gebrauch gemacht wurde.
-		Das Kostenniveau extern gefertigter Druckteile wäre zwar mit \dEUR{23,03} als vergleichsweise moderat zu beschreiben, um unterhalb der Preisobergrenze zu bleiben war die Ersparnis der Fertigungs- und Materialkosten der Motorhalterung von \dEUR{170} jedoch maßgeblich\footnote{\hspace{1mm}Kostenvoranschläge für Druck- und Frästeile wurden jeweils unter online \url{www.pcbway.com} eingeholt.}.
